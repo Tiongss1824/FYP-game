@@ -3,14 +3,6 @@
   "WorkspaceRootPath": "D:\\Unity Project\\Final Year Project\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|d:\\unity project\\final year project\\assets\\script\\npctalk.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\npctalk.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|d:\\unity project\\final year project\\assets\\script\\mainmenumanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\mainmenumanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|d:\\unity project\\final year project\\assets\\script\\cinematictrigger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\cinematictrigger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -19,8 +11,32 @@
       "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\playerinteract.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|d:\\unity project\\final year project\\assets\\script\\npctalk.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\npctalk.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|d:\\unity project\\final year project\\assets\\script\\doorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\doorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|d:\\unity project\\final year project\\assets\\script\\iinteractable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\iinteractable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|d:\\unity project\\final year project\\assets\\script\\merchantnpc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\merchantnpc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|d:\\unity project\\final year project\\assets\\script\\mainmenumanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\mainmenumanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|d:\\unity project\\final year project\\assets\\script\\shopmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\shopmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|d:\\unity project\\final year project\\assets\\script\\walletmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\walletmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|d:\\unity project\\final year project\\assets\\starterassets\\firstpersoncontroller\\scripts\\firstpersoncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -50,11 +66,63 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
+              "Title": "IInteractable.cs",
+              "DocumentMoniker": "D:\\Unity Project\\Final Year Project\\Assets\\Script\\IInteractable.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\IInteractable.cs",
+              "ToolTip": "D:\\Unity Project\\Final Year Project\\Assets\\Script\\IInteractable.cs",
+              "RelativeToolTip": "Assets\\Script\\IInteractable.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-14T08:34:34.08Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "MerchantNPC.cs",
+              "DocumentMoniker": "D:\\Unity Project\\Final Year Project\\Assets\\Script\\MerchantNPC.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\MerchantNPC.cs",
+              "ToolTip": "D:\\Unity Project\\Final Year Project\\Assets\\Script\\MerchantNPC.cs",
+              "RelativeToolTip": "Assets\\Script\\MerchantNPC.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-14T07:51:28.563Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ShopManager.cs",
+              "DocumentMoniker": "D:\\Unity Project\\Final Year Project\\Assets\\Script\\ShopManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\ShopManager.cs",
+              "ToolTip": "D:\\Unity Project\\Final Year Project\\Assets\\Script\\ShopManager.cs",
+              "RelativeToolTip": "Assets\\Script\\ShopManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAD4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-14T07:47:54.359Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "WalletManager.cs",
+              "DocumentMoniker": "D:\\Unity Project\\Final Year Project\\Assets\\Script\\WalletManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\WalletManager.cs",
+              "ToolTip": "D:\\Unity Project\\Final Year Project\\Assets\\Script\\WalletManager.cs",
+              "RelativeToolTip": "Assets\\Script\\WalletManager.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABcAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-14T06:44:48.231Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "MainMenuManager.cs",
               "DocumentMoniker": "D:\\Unity Project\\Final Year Project\\Assets\\Script\\MainMenuManager.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\MainMenuManager.cs",
@@ -67,7 +135,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "CinematicTrigger.cs",
               "DocumentMoniker": "D:\\Unity Project\\Final Year Project\\Assets\\Script\\CinematicTrigger.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\CinematicTrigger.cs",
@@ -80,91 +148,39 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "PlayerInteract.cs",
               "DocumentMoniker": "D:\\Unity Project\\Final Year Project\\Assets\\Script\\PlayerInteract.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\PlayerInteract.cs",
               "ToolTip": "D:\\Unity Project\\Final Year Project\\Assets\\Script\\PlayerInteract.cs",
               "RelativeToolTip": "Assets\\Script\\PlayerInteract.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAsAAAAAAAAAA==",
+              "ViewState": "AgIAAD0AAAAAAAAAAAAgwCoAAABJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-06-17T12:36:07.008Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "DoorController.cs",
               "DocumentMoniker": "D:\\Unity Project\\Final Year Project\\Assets\\Script\\DoorController.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\DoorController.cs",
               "ToolTip": "D:\\Unity Project\\Final Year Project\\Assets\\Script\\DoorController.cs",
               "RelativeToolTip": "Assets\\Script\\DoorController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADoAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAiwEIAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-06-17T11:44:34.011Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "FirstPersonController.cs",
-              "DocumentMoniker": "D:\\Unity Project\\Final Year Project\\Assets\\StarterAssets\\FirstPersonController\\Scripts\\FirstPersonController.cs",
-              "RelativeDocumentMoniker": "Assets\\StarterAssets\\FirstPersonController\\Scripts\\FirstPersonController.cs",
-              "ToolTip": "D:\\Unity Project\\Final Year Project\\Assets\\StarterAssets\\FirstPersonController\\Scripts\\FirstPersonController.cs",
-              "RelativeToolTip": "Assets\\StarterAssets\\FirstPersonController\\Scripts\\FirstPersonController.cs",
-              "ViewState": "AgIAAJkAAAAAAAAAAAAcwKQAAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-17T09:39:28.501Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "ObjectGrabbable.cs",
-              "DocumentMoniker": "D:\\Unity Project\\Final Year Project\\Assets\\Script\\ObjectGrabbable.cs",
-              "RelativeDocumentMoniker": "Assets\\Script\\ObjectGrabbable.cs",
-              "ToolTip": "D:\\Unity Project\\Final Year Project\\Assets\\Script\\ObjectGrabbable.cs",
-              "RelativeToolTip": "Assets\\Script\\ObjectGrabbable.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-13T04:07:32.902Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "PlayerMovement.cs",
-              "DocumentMoniker": "D:\\Unity Project\\Final Year Project\\Assets\\Script\\PlayerMovement.cs",
-              "RelativeDocumentMoniker": "Assets\\Script\\PlayerMovement.cs",
-              "ToolTip": "D:\\Unity Project\\Final Year Project\\Assets\\Script\\PlayerMovement.cs",
-              "RelativeToolTip": "Assets\\Script\\PlayerMovement.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-01T01:30:09.156Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "DialogueManager.cs",
-              "DocumentMoniker": "D:\\Unity Project\\Final Year Project\\Assets\\Script\\DialogueManager.cs",
-              "RelativeDocumentMoniker": "Assets\\Script\\DialogueManager.cs",
-              "ToolTip": "D:\\Unity Project\\Final Year Project\\Assets\\Script\\DialogueManager.cs",
-              "RelativeToolTip": "Assets\\Script\\DialogueManager.cs",
-              "ViewState": "AgIAACsAAAAAAAAAAAAcwDkAAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-28T15:45:30.266Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "NPCtalk.cs",
               "DocumentMoniker": "D:\\Unity Project\\Final Year Project\\Assets\\Script\\NPCtalk.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\NPCtalk.cs",
               "ToolTip": "D:\\Unity Project\\Final Year Project\\Assets\\Script\\NPCtalk.cs",
               "RelativeToolTip": "Assets\\Script\\NPCtalk.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADUAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADEAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-28T14:48:18.351Z",
               "EditorCaption": ""
@@ -172,6 +188,54 @@
             {
               "$type": "Document",
               "DocumentIndex": 9,
+              "Title": "FirstPersonController.cs",
+              "DocumentMoniker": "D:\\Unity Project\\Final Year Project\\Assets\\StarterAssets\\FirstPersonController\\Scripts\\FirstPersonController.cs",
+              "RelativeDocumentMoniker": "Assets\\StarterAssets\\FirstPersonController\\Scripts\\FirstPersonController.cs",
+              "ToolTip": "D:\\Unity Project\\Final Year Project\\Assets\\StarterAssets\\FirstPersonController\\Scripts\\FirstPersonController.cs",
+              "RelativeToolTip": "Assets\\StarterAssets\\FirstPersonController\\Scripts\\FirstPersonController.cs",
+              "ViewState": "AgIAAJkAAAAAAAAAAAAcwKQAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-17T09:39:28.501Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ObjectGrabbable.cs",
+              "DocumentMoniker": "D:\\Unity Project\\Final Year Project\\Assets\\Script\\ObjectGrabbable.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\ObjectGrabbable.cs",
+              "ToolTip": "D:\\Unity Project\\Final Year Project\\Assets\\Script\\ObjectGrabbable.cs",
+              "RelativeToolTip": "Assets\\Script\\ObjectGrabbable.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-13T04:07:32.902Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "PlayerMovement.cs",
+              "DocumentMoniker": "D:\\Unity Project\\Final Year Project\\Assets\\Script\\PlayerMovement.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\PlayerMovement.cs",
+              "ToolTip": "D:\\Unity Project\\Final Year Project\\Assets\\Script\\PlayerMovement.cs",
+              "RelativeToolTip": "Assets\\Script\\PlayerMovement.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-01T01:30:09.156Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "DialogueManager.cs",
+              "DocumentMoniker": "D:\\Unity Project\\Final Year Project\\Assets\\Script\\DialogueManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\DialogueManager.cs",
+              "ToolTip": "D:\\Unity Project\\Final Year Project\\Assets\\Script\\DialogueManager.cs",
+              "RelativeToolTip": "Assets\\Script\\DialogueManager.cs",
+              "ViewState": "AgIAACsAAAAAAAAAAAAcwDkAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-28T15:45:30.266Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
               "Title": "PlayerCamera.cs",
               "DocumentMoniker": "D:\\Unity Project\\Final Year Project\\Assets\\Script\\PlayerCamera.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\PlayerCamera.cs",
@@ -179,8 +243,7 @@
               "RelativeToolTip": "Assets\\Script\\PlayerCamera.cs",
               "ViewState": "AgIAABoAAAAAAAAAAAAQwCoAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-26T14:23:49.578Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-26T14:23:49.578Z"
             }
           ]
         }

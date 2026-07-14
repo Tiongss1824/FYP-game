@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class DoorController : MonoBehaviour
+public class DoorController : MonoBehaviour, IInteractable
 {
     private bool isOpen = false;
 
@@ -55,5 +55,15 @@ public class DoorController : MonoBehaviour
 
         // Set the new target rotation (it will ignore the 'ajar' angle forever now)
         targetRotation = isOpen ? openRotation : closedRotation;
+    }
+
+    public string GetInteractPrompt()
+    {
+        return "Press [E] to Interact";
+    }
+
+    public void OnInteract()
+    {
+        ToggleDoor();
     }
 }

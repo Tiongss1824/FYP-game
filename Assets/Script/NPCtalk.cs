@@ -7,7 +7,7 @@ public class Conversation
     public string[] lines;
 }
 
-public class NPCtalk : MonoBehaviour
+public class NPCtalk : MonoBehaviour, IInteractable
 {
     [Header("NPC Info")]
     public string npcName = "Pinut";
@@ -50,5 +50,15 @@ public class NPCtalk : MonoBehaviour
         {
             currentConvoIndex++;
         }
+    }
+
+    public string GetInteractPrompt()
+    {
+        return "Press [F] to Talk";
+    }
+
+    public void OnInteract()
+    {
+        Interact();
     }
 }
