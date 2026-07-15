@@ -1,4 +1,6 @@
 using UnityEngine;
+using UnityEngine.Events;
+using System.Collections;
 
 [System.Serializable]
 public class Conversation
@@ -7,58 +9,99 @@ public class Conversation
     public string[] lines;
 }
 
-public class NPCtalk : MonoBehaviour, IInteractable
+public class NpcTalk : MonoBehaviour, IInteractable
 {
     [Header("NPC Info")]
     public string npcName = "Pinut";
 
-    [Header("Standard Dialogue")]
-    [Tooltip("Add multiple conversations here. The NPC will cycle through them.")]
-    public Conversation[] standardConversations;
+    [Header("Custom UI Prompts")]
+    public string defaultPrompt = "Press [F] to Talk";
+    public string readyToTurnInPrompt = "Press [F] to Complete Quest";
 
-    private int currentConvoIndex = 0;
+    [Header("Task Settings")]
+    public bool isTaskCompleted = false;
+    private bool hasTriggeredEvent = false;
+
+    [Header("Before Task Dialogue")]
+    public Conversation[] preTaskConversations;
+    private int preTaskIndex = 0;
+
+    [Header("After Task Dialogue")]
+    public Conversation[] postTaskConversations;
+    private int postTaskIndex = 0;
+
+    // --- CHANGED: Split the events into two separate timers! ---
+    [Header("Reward Event (Money / Items)")]
+    [Tooltip("Seconds to wait before giving money (Time it with dialogue!)")]
+    public float rewardDelay = 2.0f;
+    public UnityEvent onRewardGiven;
+
+    [Header("Final Cutscene Event (Fainting)")]
+    [Tooltip("Seconds to wait before the cutscene triggers")]
+    public float cutsceneDelay = 4.5f;
+    public UnityEvent onCutsceneStart;
+
     private DialogueManager dialogueManager;
 
     private void Start()
     {
-        // Find the manager ONCE when the game boots up.
         dialogueManager = FindAnyObjectByType<DialogueManager>();
+    }
 
-        if (dialogueManager == null)
+    public string GetInteractPrompt()
+    {
+        return (isTaskCompleted && !hasTriggeredEvent) ? readyToTurnInPrompt : defaultPrompt;
+    }
+
+    public void OnInteract()
+    {
+        if (!isTaskCompleted)
         {
-            Debug.LogError("No DialogueManager found in the scene! Did you forget to add it?");
+            if (preTaskConversations.Length > 0)
+            {
+                dialogueManager.StartDialogue(npcName, preTaskConversations[preTaskIndex].lines);
+                if (preTaskIndex < preTaskConversations.Length - 1) preTaskIndex++;
+            }
+        }
+        else
+        {
+            if (postTaskConversations.Length > 0)
+            {
+                dialogueManager.StartDialogue(npcName, postTaskConversations[postTaskIndex].lines);
+                if (postTaskIndex < postTaskConversations.Length - 1) postTaskIndex++;
+            }
+
+            if (!hasTriggeredEvent)
+            {
+                hasTriggeredEvent = true;
+                // Start both timers independently!
+                StartCoroutine(TriggerRewardWithDelay());
+                StartCoroutine(TriggerCutsceneWithDelay());
+            }
         }
     }
 
     public void Interact()
     {
-        // Safety check: If we forgot to write dialogue in the editor, don't crash.
-        if (standardConversations.Length == 0) return;
-
-        // 1. Pick the current conversation
-        Conversation convoToPlay = standardConversations[currentConvoIndex];
-
-        // 2. Send it to the screen
-        if (dialogueManager != null)
-        {
-            dialogueManager.StartDialogue(npcName, convoToPlay.lines);
-        }
-
-        // 3. Move to the next conversation for the NEXT time we talk to them
-        // (But stop at the very last one so they don't run out of things to say!)
-        if (currentConvoIndex < standardConversations.Length - 1)
-        {
-            currentConvoIndex++;
-        }
+        OnInteract();
     }
 
-    public string GetInteractPrompt()
+    public void CompleteTask()
     {
-        return "Press [F] to Talk";
+        isTaskCompleted = true;
     }
 
-    public void OnInteract()
+    // Timer 1: Gives the money
+    private IEnumerator TriggerRewardWithDelay()
     {
-        Interact();
+        yield return new WaitForSeconds(rewardDelay);
+        onRewardGiven.Invoke();
+    }
+
+    // Timer 2: Starts the faint
+    private IEnumerator TriggerCutsceneWithDelay()
+    {
+        yield return new WaitForSeconds(cutsceneDelay);
+        onCutsceneStart.Invoke();
     }
 }

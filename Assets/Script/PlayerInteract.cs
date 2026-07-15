@@ -36,25 +36,26 @@ public class PlayerInteract : MonoBehaviour
         // 2. We are NOT holding anything, shoot the raycast!
         if (Physics.Raycast(playerCameraTransform.position, playerCameraTransform.forward, out RaycastHit hit, pickUpDistance, pickUpLayerMask))
         {
-            // Look for the Interface instead of a specific script!
+            // Look for the Interface (NPCs)
             if (hit.transform.TryGetComponent(out IInteractable interactableObject))
             {
-                // Ask the object what text it wants to display
+                // Ask the NPC what text it wants to display
                 pickUpText.text = interactableObject.GetInteractPrompt();
                 pickUpPromptUI.SetActive(true);
 
-                // Allow either E or F to interact
-                if (Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.F))
+                // --- CHANGED: Now ONLY accepts the 'F' key to talk! ---
+                if (Input.GetKeyDown(KeyCode.F))
                 {
                     interactableObject.OnInteract();
                 }
             }
-            // Check for the Grabbable item (Since grabbing has special logic like holding/dropping)
+            // Look for the Grabbable item (Vegetables)
             else if (hit.transform.TryGetComponent(out ObjectGrabbable grabbableTarget))
             {
                 pickUpText.text = "Press [E] to Grab";
                 pickUpPromptUI.SetActive(true);
 
+                // --- Grabbing remains strictly on the 'E' key! ---
                 if (Input.GetKeyDown(KeyCode.E))
                 {
                     objectGrabbable = grabbableTarget;
