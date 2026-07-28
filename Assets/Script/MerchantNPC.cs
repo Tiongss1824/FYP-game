@@ -1,21 +1,53 @@
 using UnityEngine;
+using System.Collections;
 
-// Add ", IInteractable" to sign the contract!
-public class MerchantNPC : MonoBehaviour, IInteractable
+public class MerchantNpc : MonoBehaviour, IInteractable
 {
-    [Header("Custom Prompt Text")]
-    [Tooltip("Type exactly what you want the screen to say when looking at this NPC")]
-    public string promptText = "Press [E] to Trade"; // <--- NEW
+    [Header("Merchant Settings")]
+    public string npcName = "Merchant";
 
-    // 1. Satisfy the contract by providing the text
-    public string GetInteractPrompt()
+    [Tooltip("What the merchant says before the shop opens")]
+    [TextArea(2, 5)]
+    public string[] welcomeLines;
+
+    private DialogueManager dialogueManager;
+
+    private void Start()
     {
-        return promptText; // <--- CHANGED: Now returns your custom string!
+        dialogueManager = FindAnyObjectByType<DialogueManager>();
     }
 
-    // 2. Satisfy the contract by providing the action
+    public string GetInteractPrompt()
+    {
+        return "Press [F] to Talk";
+    }
+
     public void OnInteract()
     {
-        ShopManager.Instance.OpenShop();
+        if (welcomeLines.Length > 0)
+        {
+            // 1. Tell the DialogueManager: "When you finish this text, run my OpenTheShopMenu function!"
+            dialogueManager.onDialogueFinished += OpenTheShopMenu;
+
+            // 2. Start the dialogue
+            dialogueManager.StartDialogue(npcName, welcomeLines);
+        }
+        else
+        {
+            // If the merchant has no text setup, just open the shop instantly
+            OpenTheShopMenu();
+        }
+    }
+
+    private void OpenTheShopMenu()
+    {
+        if (ShopManager.Instance != null)
+        {
+            ShopManager.Instance.OpenShop();
+        }
+        else
+        {
+            Debug.LogError("ShopManager Instance is missing! Make sure ShopManager is in the scene.");
+        }
     }
 }

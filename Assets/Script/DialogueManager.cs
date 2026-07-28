@@ -1,7 +1,8 @@
+using System; // <--- NEW: Required for Actions/Callbacks
 using System.Collections;
 using UnityEngine;
 using TMPro;
-using StarterAssets; // <--- NEW: Tells the script where to find your FirstPersonController
+using StarterAssets;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -13,9 +14,13 @@ public class DialogueManager : MonoBehaviour
 
     [Header("Scripts")]
     public MonoBehaviour interactScript;
-    public FirstPersonController playerController; // <--- NEW: Slot for your movement script
+    public FirstPersonController playerController;
 
     [HideInInspector] public bool isTyping = false;
+
+    // --- NEW: The "Flare Gun" that will signal when dialogue is done ---
+    public Action onDialogueFinished;
+
     private string[] sentences;
     private int currentLineIndex = 0;
     private string currentSentenceText = "";
@@ -51,7 +56,6 @@ public class DialogueManager : MonoBehaviour
         sentences = dialogueLines;
         currentLineIndex = 0;
 
-        // --- NEW: Freeze the player! ---
         if (interactScript != null) interactScript.enabled = false;
         if (playerController != null) playerController.enabled = false;
 
@@ -97,11 +101,18 @@ public class DialogueManager : MonoBehaviour
 
     private IEnumerator RestoreInteraction()
     {
+        // Wait 1 frame so Unity processes the UI closing smoothly
         yield return null;
 
-        // --- NEW: Unfreeze the player! ---
         if (interactScript != null) interactScript.enabled = true;
         if (playerController != null) playerController.enabled = true;
+
+        // --- NEW: Fire the flare gun to tell other scripts the text is done! ---
+        if (onDialogueFinished != null)
+        {
+            onDialogueFinished.Invoke();
+            onDialogueFinished = null; // Reset it so it doesn't accidentally trigger for other NPCs
+        }
     }
 
     private IEnumerator TypeSentence(string sentence)

@@ -40,6 +40,8 @@ public class ShopManager : MonoBehaviour
         // Lock and hide the mouse cursor for first-person gameplay
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+
+        UnityEngine.EventSystems.EventSystem.current.SetSelectedGameObject(null);
     }
 
     // 3. The actual purchase logic

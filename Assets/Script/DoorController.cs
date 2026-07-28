@@ -12,6 +12,8 @@ public class DoorController : MonoBehaviour, IInteractable
     [Tooltip("How fast the door swings open")]
     [SerializeField] private float swingSpeed = 5f;
 
+    [SerializeField] private float openAngle;
+
     [Header("Level Design Hints")]
     [Tooltip("Check this to make the door start slightly open.")]
     [SerializeField] private bool startAjar = false;
@@ -24,7 +26,7 @@ public class DoorController : MonoBehaviour, IInteractable
         closedRotation = transform.localRotation;
 
         // 2. Calculate the fully open position (90 degrees)
-        openRotation = Quaternion.Euler(transform.localEulerAngles.x, transform.localEulerAngles.y + 90f, transform.localEulerAngles.z);
+        openRotation = Quaternion.Euler(transform.localEulerAngles.x, transform.localEulerAngles.y + openAngle, transform.localEulerAngles.z);
 
         // 3. Calculate the slightly open hint position (e.g., 20 degrees)
         ajarRotation = Quaternion.Euler(transform.localEulerAngles.x, transform.localEulerAngles.y + ajarAngle, transform.localEulerAngles.z);

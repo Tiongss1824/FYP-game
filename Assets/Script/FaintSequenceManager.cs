@@ -1,99 +1,115 @@
-using UnityEngine;
 using System.Collections;
+using UnityEngine;
 using UnityEngine.UI;
-using StarterAssets;
 
 public class FaintSequenceManager : MonoBehaviour
 {
-    [Header("UI Reference")]
-    [SerializeField] private Image blackoutScreen;
+    [Header("UI References")]
+    [Tooltip("The UI Image that covers the screen")]
+    public Image blackoutScreen;
 
-    [Header("Player & Camera")]
-    [SerializeField] private FirstPersonController playerController;
-    [SerializeField] private Transform playerCamera;
+    [Header("Audio (Optional)")]
+    public AudioSource audioSource;
+    public AudioClip fallSound;
 
-    [Header("Teleport Target")]
-    [SerializeField] private Transform merchantRoomSpawnPoint;
+    [Header("Dialogue Trigger")]
+    public string npcName = "JOHNNY";
+    [TextArea(2, 5)]
+    public string[] blackoutDialogueLines;
 
-    // This is the public button the Old Man will push!
+    [Header("Teleportation")]
+    public Transform playerTransform;
+    public Transform merchantRoomSpawnPoint;
+
+    private DialogueManager dialogueManager;
+
+    private void Start()
+    {
+        dialogueManager = FindAnyObjectByType<DialogueManager>();
+
+        // Ensure the screen starts completely clear
+        if (blackoutScreen != null)
+        {
+            Color c = blackoutScreen.color;
+            c.a = 0f;
+            blackoutScreen.color = c;
+            blackoutScreen.gameObject.SetActive(false);
+        }
+    }
+
     public void StartFaintingSequence()
     {
-        StartCoroutine(MasterTimeline());
+        StartCoroutine(FaintRoutine());
     }
 
-    private IEnumerator MasterTimeline()
+    private IEnumerator FaintRoutine()
     {
-        // 1. Freeze the player
-        playerController.enabled = false;
+        blackoutScreen.gameObject.SetActive(true);
 
-        // 2. Play the fall and fade to black
-        yield return StartCoroutine(Phase1_FallAndFade());
+        // --- BLINK 1 (Heavy eyelids) ---
+        yield return FadeToAlpha(0.6f, 0.4f); // Fade to 60% black
+        yield return FadeToAlpha(0.0f, 0.3f); // Open eyes
 
-        // 3. Teleport while the screen is completely black
-        Phase2_TeleportBehindScenes();
+        // --- BLINK 2 (Almost passed out) ---
+        yield return FadeToAlpha(0.85f, 0.4f); // Fade to 85% black
+        yield return FadeToAlpha(0.0f, 0.3f);  // Open eyes weak
 
-        // 4. Wait for 2 seconds in the dark
-        yield return new WaitForSeconds(2f);
+        // --- FINAL FADE (Pitch Black) ---
+        yield return FadeToAlpha(1.0f, 0.8f); // Fade to 100% black
 
-        // 5. Wake up and clear the screen
-        yield return StartCoroutine(Phase3_WakeUpAndClear());
-
-        // Phase 4 has been completely deleted! You will wake up peacefully now.
-        playerController.enabled = true;
-    }
-
-    private IEnumerator Phase1_FallAndFade()
-    {
-        float elapsed = 0f;
-        float duration = 2f;
-
-        Quaternion originalCamRot = playerCamera.localRotation;
-        Quaternion fallCamRot = Quaternion.Euler(originalCamRot.eulerAngles.x, originalCamRot.eulerAngles.y, 75f);
-
-        while (elapsed < duration)
+        // Play the heavy fall sound effect (if you assigned one)
+        if (audioSource != null && fallSound != null)
         {
-            elapsed += Time.deltaTime;
+            audioSource.PlayOneShot(fallSound);
+            yield return new WaitForSeconds(1.0f);
+        }
 
-            // Fade to black
-            Color c = blackoutScreen.color;
-            c.a = Mathf.Clamp01(elapsed / duration);
-            blackoutScreen.color = c;
+        // --- TRIGGER DIALOGUE ---
+        // Tell DialogueManager: "When this text finishes, run my Delay routine!"
+        dialogueManager.onDialogueFinished += OnBlackoutDialogueFinished;
+        dialogueManager.StartDialogue(npcName, blackoutDialogueLines);
+    }
 
-            // Tilt camera
-            playerCamera.localRotation = Quaternion.Slerp(originalCamRot, fallCamRot, elapsed / duration);
+    // Helper function to handle fading smoothly
+    private IEnumerator FadeToAlpha(float targetAlpha, float duration)
+    {
+        Color color = blackoutScreen.color;
+        float startAlpha = color.a;
+        float timeElapsed = 0f;
 
+        while (timeElapsed < duration)
+        {
+            timeElapsed += Time.deltaTime;
+            color.a = Mathf.Lerp(startAlpha, targetAlpha, timeElapsed / duration);
+            blackoutScreen.color = color;
             yield return null;
         }
+
+        color.a = targetAlpha;
+        blackoutScreen.color = color;
     }
 
-    private void Phase2_TeleportBehindScenes()
+    private void OnBlackoutDialogueFinished()
     {
-        CharacterController cc = playerController.GetComponent<CharacterController>();
-        cc.enabled = false;
+        // Unsubscribe immediately so it only happens once
+        dialogueManager.onDialogueFinished -= OnBlackoutDialogueFinished;
 
-        playerController.transform.position = merchantRoomSpawnPoint.position;
-        playerController.transform.rotation = merchantRoomSpawnPoint.rotation;
-
-        cc.enabled = true;
-
-        // Reset the camera tilt back to straight ahead
-        playerCamera.localRotation = Quaternion.identity;
+        // Start the final delay before teleporting
+        StartCoroutine(WakeUpRoutine());
     }
 
-    private IEnumerator Phase3_WakeUpAndClear()
+    private IEnumerator WakeUpRoutine()
     {
-        float elapsed = 0f;
-        float duration = 2f;
+        // 1. Wait 1.5 seconds in the dark AFTER dialogue closes
+        yield return new WaitForSeconds(1.5f);
 
-        while (elapsed < duration)
-        {
-            elapsed += Time.deltaTime;
+        // 2. Teleport the player
+        playerTransform.position = merchantRoomSpawnPoint.position;
 
-            Color c = blackoutScreen.color;
-            c.a = Mathf.Clamp01(1f - (elapsed / duration));
-            blackoutScreen.color = c;
-
-            yield return null;
-        }
+        // 3. Wake up! (Instantly clear the screen)
+        Color c = blackoutScreen.color;
+        c.a = 0f;
+        blackoutScreen.color = c;
+        blackoutScreen.gameObject.SetActive(false);
     }
 }

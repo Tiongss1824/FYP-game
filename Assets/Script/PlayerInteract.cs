@@ -18,7 +18,7 @@ public class PlayerInteract : MonoBehaviour
 
     private void Update()
     {
-        // 1. Are we currently holding an object?
+        // 1. Are we currently holding an object? (Like a vegetable)
         if (objectGrabbable != null)
         {
             pickUpPromptUI.SetActive(true);
@@ -36,17 +36,28 @@ public class PlayerInteract : MonoBehaviour
         // 2. We are NOT holding anything, shoot the raycast!
         if (Physics.Raycast(playerCameraTransform.position, playerCameraTransform.forward, out RaycastHit hit, pickUpDistance, pickUpLayerMask))
         {
-            // Look for the Interface (NPCs)
+            // Look for the Interface (NPCs and Doors)
             if (hit.transform.TryGetComponent(out IInteractable interactableObject))
             {
-                // Ask the NPC what text it wants to display
                 pickUpText.text = interactableObject.GetInteractPrompt();
                 pickUpPromptUI.SetActive(true);
 
-                // --- CHANGED: Now ONLY accepts the 'F' key to talk! ---
-                if (Input.GetKeyDown(KeyCode.F))
+                // --- SMART KEY SORTING ---
+                // If it is an NPC, demand the 'F' key to talk
+                if (interactableObject is NpcTalk || interactableObject is MerchantNpc)
                 {
-                    interactableObject.OnInteract();
+                    if (Input.GetKeyDown(KeyCode.F))
+                    {
+                        interactableObject.OnInteract();
+                    }
+                }
+                // If it is anything else (like a Door), demand the 'E' key to interact
+                else
+                {
+                    if (Input.GetKeyDown(KeyCode.E))
+                    {
+                        interactableObject.OnInteract();
+                    }
                 }
             }
             // Look for the Grabbable item (Vegetables)
@@ -55,7 +66,7 @@ public class PlayerInteract : MonoBehaviour
                 pickUpText.text = "Press [E] to Grab";
                 pickUpPromptUI.SetActive(true);
 
-                // --- Grabbing remains strictly on the 'E' key! ---
+                // Grabbing strictly uses the 'E' key
                 if (Input.GetKeyDown(KeyCode.E))
                 {
                     objectGrabbable = grabbableTarget;
@@ -65,13 +76,11 @@ public class PlayerInteract : MonoBehaviour
             }
             else
             {
-                // Hit a normal wall
                 pickUpPromptUI.SetActive(false);
             }
         }
         else
         {
-            // Looking at the sky
             pickUpPromptUI.SetActive(false);
         }
     }

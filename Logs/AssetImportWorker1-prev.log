@@ -1,27 +1,27 @@
 [Licensing::Module] Trying to connect to existing licensing client channel...
-[Licensing::IpcConnector] Successfully connected to: "LicenseClient-Tiong" at "2026-07-15T01:25:10.7795076Z"
 Built from '6000.4/staging' branch; Version is '6000.4.4f1 (360f97ecca93) revision 3542935'; Using compiler version '194234433'; Build Type 'Release'
 OS: 'Windows 11  (10.0.26200) Professional' Language: 'en' Physical Memory: 32693 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1
 System  architecture: x64
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-Tiong1824" at "2026-07-26T09:50:22.6654503Z"
 Process architecture: x64
-Date: 2026-07-15T01:25:10Z
+Date: 2026-07-26T09:50:22Z
 
 COMMAND LINE ARGUMENTS:
-D:\Unity\Hub\6000.4.4f1\Editor\Unity.exe
+D:\Unity\Hub\Editor\6000.4.4f1\Editor\Unity.exe
 -adb2
 -batchMode
 -noUpm
 -name
 AssetImportWorker1
 -projectPath
-D:/Unity Project/Final Year Project
+D:/UnityProject/FYP-game
 -logFile
 Logs/AssetImportWorker1.log
 -srvPort
-53892
+51316
 -licensingIpc
-LicenseClient-Tiong
+LicenseClient-Tiong1824
 -force-d3d12
 -job-worker-count
 5
@@ -31,8 +31,8 @@ LicenseClient-Tiong
 1
 -name
 AssetImport
-Successfully changed project path to: D:/Unity Project/Final Year Project
-D:/Unity Project/Final Year Project
+Successfully changed project path to: D:/UnityProject/FYP-game
+D:/UnityProject/FYP-game
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
@@ -68,12 +68,12 @@ D:/Unity Project/Final Year Project
     "memorysetup-job-temp-allocator-block-size=2097152"
     "memorysetup-job-temp-allocator-block-size-background=1048576"
     "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
-Player connection [8664]  Target information:
+Player connection [12920]  Target information:
 
-Player connection [8664]  * "[IP] 172.20.10.2 [Port] 0 [Flags] 2 [Guid] 143662047 [EditorId] 143662047 [Version] 1048832 [Id] WindowsEditor(7,Tiong1824) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+Player connection [12920]  * "[IP] 192.168.1.19 [Port] 0 [Flags] 2 [Guid] 2562279804 [EditorId] 2562279804 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-ENL0ACT) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
 
-Player connection [8664] Host joined multi-casting on [225.0.0.222:54997]...
-Player connection [8664] Host joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [12920] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [12920] Host joined alternative multi-casting on [225.0.0.222:34997]...
 JobSystem: Creating JobQueue using job-worker-count value 5
 Input System module state changed to: Initialized.
 [Physics::Module] Initialized fallback backend.
@@ -85,10 +85,10 @@ Library Redirect Path: Library/
 [Physics::Module] SDK Version: 4.1.2
 [Physics::Module] Integration Version: 1.0.0
 [Physics::Module] Threading Mode: Multi-Threaded
-Refreshing native plugins compatible for Editor in 11.94 ms, found 8 plugins.
+Refreshing native plugins compatible for Editor in 8.78 ms, found 5 plugins.
 Initialize engine version: 6000.4.4f1 (360f97ecca93)
-[Subsystems] Discovering subsystems at path D:/Unity/Hub/6000.4.4f1/Editor/Data/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path D:/Unity Project/Final Year Project/Assets
+[Subsystems] Discovering subsystems at path D:/Unity/Hub/Editor/6000.4.4f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path D:/UnityProject/FYP-game/Assets
 Forcing GfxDevice: Direct3D 12
 GfxDevice: creating device client; kGfxThreadingModeNonThreaded
 d3d12: failed to query info queue interface (0x80004002).
@@ -98,49 +98,47 @@ Direct3D:
     Vendor:          NVIDIA
     VRAM:            7956 MB
     App VRAM Budget: 7188 MB
-    Driver:          32.0.16.1062
+    Driver:          32.0.16.1074
 Initialize mono
-Mono path[0] = 'D:/Unity/Hub/6000.4.4f1/Editor/Data/Managed'
-Mono path[1] = 'D:/Unity/Hub/6000.4.4f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
-Mono config path = 'D:/Unity/Hub/6000.4.4f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56732
+Mono path[0] = 'D:/Unity/Hub/Editor/6000.4.4f1/Editor/Data/Managed'
+Mono path[1] = 'D:/Unity/Hub/Editor/6000.4.4f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'D:/Unity/Hub/Editor/6000.4.4f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56440
 CodeReloadManager initialized
 Begin MonoManager ReloadAssembly
-Registering precompiled unity dll's ...
-Register platform support module: D:/Unity/Hub/6000.4.4f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
-Register platform support module: D:/Unity/Hub/6000.4.4f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.001695 seconds.
 [Licensing::Client] Error: HandshakeResponse reported an error:
 	ResponseCode: 505
 	ResponseStatus: Unsupported protocol version '1.18.1'.
-[Licensing::Module] Error: Failed to handshake to channel: "LicenseClient-Tiong"
-[Licensing::IpcConnector] LicenseClient-Tiong channel disconnected successfully.
-[Licensing::IpcConnector] Successfully connected to: "LicenseClient-Tiong-6000.4.4" at "2026-07-15T01:25:12.8978584Z"
+[Licensing::Module] Error: Failed to handshake to channel: "LicenseClient-Tiong1824"
+[Licensing::IpcConnector] LicenseClient-Tiong1824 channel disconnected successfully.
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-Tiong1824-6000.4.4" at "2026-07-26T09:50:23.6305219Z"
+Registering precompiled unity dll's ...
+Register platform support module: D:/Unity/Hub/Editor/6000.4.4f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.000901 seconds.
 Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
 Package Manager log level set to [2]
 [Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
 [Package Manager] Unable to send message (not connected to server process).
 [Package Manager] Cannot connect to Unity Package Manager local server
 ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.588 seconds
-Domain Reload Profiling: 1253ms
-	BeginReloadAssembly (190ms)
-	RebuildCommonClasses (68ms)
-	RebuildNativeTypeToScriptingClass (19ms)
-	initialDomainReloadingComplete (76ms)
-	LoadAllAssembliesAndSetupDomain (309ms)
-		LoadAssemblies (189ms)
-		AnalyzeDomain (297ms)
-			TypeCache.Refresh (296ms)
-				TypeCache.ScanAssembly (280ms)
-	FinalizeReload (590ms)
+- Finished resetting the current domain, in  0.340 seconds
+Domain Reload Profiling: 781ms
+	BeginReloadAssembly (134ms)
+	RebuildCommonClasses (40ms)
+	RebuildNativeTypeToScriptingClass (16ms)
+	initialDomainReloadingComplete (61ms)
+	LoadAllAssembliesAndSetupDomain (189ms)
+		LoadAssemblies (133ms)
+		AnalyzeDomain (180ms)
+			TypeCache.Refresh (179ms)
+				TypeCache.ScanAssembly (168ms)
+	FinalizeReload (342ms)
 		SetupLoadedEditorAssemblies (0ms)
-			InitializePlatformSupportModulesInManaged (71ms)
-			BeforeProcessingInitializeOnLoad (135ms)
-			ProcessInitializeOnLoadAttributes (163ms)
-			ProcessInitializeOnLoadMethodAttributes (130ms)
+			InitializePlatformSupportModulesInManaged (37ms)
+			BeforeProcessingInitializeOnLoad (82ms)
+			ProcessInitializeOnLoadAttributes (95ms)
+			ProcessInitializeOnLoadMethodAttributes (71ms)
 Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
 ========================================================================
 Worker process is ready to serve import requests
@@ -151,14 +149,14 @@ Begin MonoManager ReloadAssembly
 [Licensing::Module] Licensing is not yet initialized.
 [Licensing::Client] Handshaking with LicensingClient:
   Version:                 1.18.1+9fbee8e
-  Session Id:              41a122910bba424f892a1dc032e0c959
-  Correlation Id:          b8258a2c0f8e287252101a1ab1bb3262
-  External correlation Id: 2740454960414965931
-  Machine Id:              vuJwtK21NfrBr0ZUt/InO/Skm7I=
-[Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-Tiong-6000.4.4" (connect: 0.00s, validation: 0.00s, handshake: 1.80s)
-[Licensing::IpcConnector] Successfully connected to: "LicenseClient-Tiong-6000.4.4-notifications" at "2026-07-15T01:25:14.6984001Z"
-[Licensing::Module] Licensing Background thread has ended after 3.92s
-[Licensing::Module] Licensing is initialized (took 0.55s).
+  Session Id:              6a4eecc58dba4cb69cf0abb30d5c0495
+  Correlation Id:          d66816e46ed30085915f9eaa7144a3a8
+  External correlation Id: 5199756762626873209
+  Machine Id:              A1s0c6fEpTDN7KDylYhhwDTqc9o=
+[Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-Tiong1824-6000.4.4" (connect: 0.00s, validation: 0.00s, handshake: 0.86s)
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-Tiong1824-6000.4.4-notifications" at "2026-07-26T09:50:24.4947411Z"
+[Licensing::Module] Licensing Background thread has ended after 1.83s
+[Licensing::Module] Licensing is initialized (took 0.00s).
 [Licensing::Client] Successfully resolved entitlement details
 [Licensing::Module] License group:
   Id: 18967849876286-UnityPersXXXX
@@ -201,209 +199,4 @@ Assembly UnityEngine.UI.Tests.dll at Library/ScriptAssemblies/UnityEngine.UI.Tes
 Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
 'Packages/com.unity.cinemachine/Editor/Obsolete/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
 'Packages/com.unity.cinemachine/Editor/Editors/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
-Refreshing native plugins compatible for Editor in 2.27 ms, found 8 plugins.
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
-[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] Unable to send message (not connected to server process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-[MODES] ModeService[none].Initialize
-[MODES] ModeService[none].LoadModes
-[MODES] Loading mode Default (0) for mode-current-id-Final Year Project
-[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] Unable to send message (not connected to server process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] Unable to send message (not connected to server process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-Refreshing native plugins compatible for Editor in 3.42 ms, found 8 plugins.
-ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  1.243 seconds
-Domain Reload Profiling: 2767ms
-	BeginReloadAssembly (744ms)
-		DisableScriptedObjects (6ms)
-		CreateAndSetChildDomain (29ms)
-	RebuildCommonClasses (48ms)
-	RebuildNativeTypeToScriptingClass (12ms)
-	initialDomainReloadingComplete (72ms)
-	LoadAllAssembliesAndSetupDomain (648ms)
-		LoadAssemblies (402ms)
-		AnalyzeDomain (353ms)
-			TypeCache.Refresh (251ms)
-				TypeCache.ScanAssembly (235ms)
-			BuildScriptInfoCaches (88ms)
-			ResolveRequiredComponents (12ms)
-	FinalizeReload (1243ms)
-		SetupLoadedEditorAssemblies (0ms)
-			BeforeProcessingInitializeOnLoad (193ms)
-			ProcessInitializeOnLoadAttributes (698ms)
-			ProcessInitializeOnLoadMethodAttributes (87ms)
-		AwakeInstancesAfterBackupRestoration (8ms)
-WARNING: Shader Unsupported: 'Hidden/Builtin_TerrainVisualization' - All subshaders removed
-WARNING: Shader Did you use #pragma only_renderers and omit this platform?
-WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.03 seconds
-Refreshing native plugins compatible for Editor in 2.75 ms, found 8 plugins.
-Unloading 37 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 7505 unused Assets / (8.0 MB). Loaded Objects now: 8394.
-Memory consumption went from 187.2 MB to 179.2 MB.
-Total: 13.447500 ms (FindLiveObjects: 1.141300 ms CreateObjectMapping: 0.642400 ms MarkObjects: 7.967200 ms  DeleteObjects: 3.694100 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 330.390741 seconds.
-  path: Assets/Script/MerchantNPC.cs
-  importAddress: Guid(14b881ebb78164d41a866cbdac98fd6a) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Script/MerchantNPC.cs using Guid(14b881ebb78164d41a866cbdac98fd6a) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '2ef2499b9e743742bbef00fb3676eaa1') in 0.082895 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=375a31e4311377896a55e931e5b0654a DependenciesID=7ecf2fa8ecd14dfacd68b726afd4e6bc StaticDependenciesID=e4bff7b3ec7640a667019d13a49c40b1 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000031 seconds.
-  path: Assets/Scenes/MainScene.unity
-  importAddress: Guid(99c9720ab356a0642a771bea13969a05) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Scenes/MainScene.unity using Guid(99c9720ab356a0642a771bea13969a05) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '25b33bc9106102b0e935baf6e8cb01c2') in 0.0150328 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=1cd53ae29b2bfc80ccf7ed44962ba76f DependenciesID=3e44b9e42395b8b4bba588fc11c65c69 StaticDependenciesID=2bfd48aecdbbc091cd03be13843a15b9 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 1900.427872 seconds.
-  path: Assets/project/3D model Pack Baskets/Prefabs/light/Basket_01_light.prefab
-  importAddress: Guid(ce9520f263a539743aa91faf78eea596) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/project/3D model Pack Baskets/Prefabs/light/Basket_01_light.prefab using Guid(ce9520f263a539743aa91faf78eea596) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'ff88f0b89f6253cfce7aad19782d3ebb') in 0.1236155 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=89d0300749328a76dc40b4cba1269eb3 DependenciesID=916be3fbad4641f1538455430c142b7f StaticDependenciesID=bdafcae78221d430e86dabcbbc778332 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000100 seconds.
-  path: Assets/project/3D model Pack Baskets/Textures/light/Basket_light_Height.png
-  importAddress: Guid(5363835ed87bbbd4ebe2059d0e8ca635) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/project/3D model Pack Baskets/Textures/light/Basket_light_Height.png using Guid(5363835ed87bbbd4ebe2059d0e8ca635) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'aa706d771c52c987eadae09940b00a2c') in 0.0402573 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=9b48882d8785d2496c008feadc2e00a8 DependenciesID=284b28c3561f34418315e860964c4ac5 StaticDependenciesID=0b48cae97b23fa787466fe968ff72724 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000027 seconds.
-  path: Assets/project/3D model Pack Baskets/Prefabs/dark/Basket_02_dark.prefab
-  importAddress: Guid(4a3fde058a77388468606ec71deb17ee) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/project/3D model Pack Baskets/Prefabs/dark/Basket_02_dark.prefab using Guid(4a3fde058a77388468606ec71deb17ee) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'b58c861943f9ba05a617c85f3ea58c0f') in 0.0114435 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=97514a8e6b9db1b0562c8580dce9c099 DependenciesID=aecb92a8963c258a1756e087d38f5cf8 StaticDependenciesID=8545bb77dc5c8b07591a39c895f00fd3 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000017 seconds.
-  path: Assets/project/3D model Pack Baskets/Demo.unity
-  importAddress: Guid(f73ea06d087b13148bcc715ad5d2a616) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/project/3D model Pack Baskets/Demo.unity using Guid(f73ea06d087b13148bcc715ad5d2a616) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '1c0d202dd19f26d40fa836ab178010a6') in 0.0070093 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=47a03c8d3b5eec622219f85391fc0c5b DependenciesID=d58b9081b52484a4973cc519db2b59eb StaticDependenciesID=462b5af8bd5755af8953f19ba1d3bd39 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000020 seconds.
-  path: Assets/project/3D model Pack Baskets/Meshes/Basket_02.fbx
-  importAddress: Guid(834b35c8123924d4c8e87023d13b60ae) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/project/3D model Pack Baskets/Meshes/Basket_02.fbx using Guid(834b35c8123924d4c8e87023d13b60ae) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'c5e756ea7663bb06dd4d5298774f1316') in 0.0638676 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=daaca12c60149bd174409a9627d11a1e DependenciesID=b2f57da9661b1a585520bae410529e8f StaticDependenciesID=07cc3270d6b594ae6ea5fa192cb5f0bd 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 11
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000024 seconds.
-  path: Assets/project/3D model Pack Baskets/Textures/light/Basket_light_Roughness.png
-  importAddress: Guid(955a22b6d59a04641a12c8201ebc6f02) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/project/3D model Pack Baskets/Textures/light/Basket_light_Roughness.png using Guid(955a22b6d59a04641a12c8201ebc6f02) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '872dfcc30e30fd3e805c225320eb67e5') in 0.0119082 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=b12ed25c6167226b71acdba311fb1f75 DependenciesID=1a806d99b7d36943490e1535994be959 StaticDependenciesID=61290d6f27042a7a6b2ad96bd10a2ea3 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000027 seconds.
-  path: Assets/project/3D model Pack Baskets/Textures/dark/Basket_dark_Metallic.png
-  importAddress: Guid(e06926bc4a995644cb06f9c620383aa4) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/project/3D model Pack Baskets/Textures/dark/Basket_dark_Metallic.png using Guid(e06926bc4a995644cb06f9c620383aa4) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '1fa1981acb7b595f7fbbb1c9f2ad4cb5') in 0.0102456 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=0d9fd030f3ed8800f2c6a89fca2ecb06 DependenciesID=720acb5ace26c37e79e14c8908e7f6ee StaticDependenciesID=583eb07c47a3fc6b0c499c7c170e95cd 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000020 seconds.
-  path: Assets/project/3D model Pack Baskets/Textures/light/Basket_light_Normal_OpenGL.png
-  importAddress: Guid(17e957b35a5ae0a4b9d5c395fb18a047) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/project/3D model Pack Baskets/Textures/light/Basket_light_Normal_OpenGL.png using Guid(17e957b35a5ae0a4b9d5c395fb18a047) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'd6885db654e040632d9b3a750b4f377b') in 0.011374 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=003c8d7acaf64dda32e6d1ca6ebbe23f DependenciesID=d0766c9e68a834cc4a330727c7c46a38 StaticDependenciesID=3c0e5da602ab6f762b1205b984735984 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000019 seconds.
-  path: Assets/project/3D model Pack Baskets/Materials
-  importAddress: Guid(bc0bb8803cf91324db2ccf04d018d3ea) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/project/3D model Pack Baskets/Materials using Guid(bc0bb8803cf91324db2ccf04d018d3ea) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '6c1fec2f1282dea8f10e8fd9c426c0fc') in 0.0059022 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=efc97275dfada3f5a5c1736455b2537b DependenciesID=63db5ceb9d0cec0bdc38605e32a482b6 StaticDependenciesID=83c87d6db1bdffaa49528ed6ba3303dd 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000020 seconds.
-  path: Assets/project/3D model Pack Baskets/Meshes/Basket_01.fbx
-  importAddress: Guid(85bb58f8a51949f4881271e77c6a6895) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/project/3D model Pack Baskets/Meshes/Basket_01.fbx using Guid(85bb58f8a51949f4881271e77c6a6895) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'a67d1fa67a8d48bf8561889f17c3abc0') in 0.0159019 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=c993fb807a2efb6453163758f70850bb DependenciesID=6a88e3b69bd76071d27a73d709c9426a StaticDependenciesID=c7180338e704090ea404cc4ec71d4d49 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 11
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000029 seconds.
-  path: Assets/project/3D model Pack Baskets/Textures/dark/Basket_dark_Normal_OpenGL.png
-  importAddress: Guid(25d7dff6c057b6d42b8cad25f21a8ab5) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/project/3D model Pack Baskets/Textures/dark/Basket_dark_Normal_OpenGL.png using Guid(25d7dff6c057b6d42b8cad25f21a8ab5) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '1cf8d6ea7a795e47424270db53d5277e') in 0.0124773 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=0a988bcd9083e22233113941109e72ae DependenciesID=2761aa886192264748c49b552dd0e6ee StaticDependenciesID=c2849c18504b9a5cd590c51c70cc2409 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000031 seconds.
-  path: Assets/project/3D model Pack Baskets/Meshes/Basket_03.fbx
-  importAddress: Guid(7bae15a77f75b124d8c58b66493ca5c6) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/project/3D model Pack Baskets/Meshes/Basket_03.fbx using Guid(7bae15a77f75b124d8c58b66493ca5c6) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'bb6e1965b004300e658731b864b9b5de') in 0.0147125 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=4a25ac64a8ad49e33ca50cbb58f18b16 DependenciesID=67714f69d1a8a4a7ef9bfbc196a341ec StaticDependenciesID=3677a43aa880fb683b5a3740af585334 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 11
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000014 seconds.
-  path: Assets/project/3D model Pack Baskets
-  importAddress: Guid(b5f546bff62825143867c5f676ba6221) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/project/3D model Pack Baskets using Guid(b5f546bff62825143867c5f676ba6221) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '6e448e7d75b217b1975fc8d3930ed3a2') in 0.0044835 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=abf4d2c7984a8bc65a4fb67a0297317b DependenciesID=7195971185d409885db4b464907537ed StaticDependenciesID=b1b6b003b319a1e38b3a58fa5cc82c78 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000021 seconds.
-  path: Assets/project/3D model Pack Baskets/Materials/Basket_dark.mat
-  importAddress: Guid(118a6f84034946649bc0f75e904f5a1b) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/project/3D model Pack Baskets/Materials/Basket_dark.mat using Guid(118a6f84034946649bc0f75e904f5a1b) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '0efa8a3d24a6aefcfc4ae01f2711dac0') in 0.0694433 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=ee42efa00aec13aaddea828312c824ab DependenciesID=c99fb282926eb1366f6749eb5303c658 StaticDependenciesID=7d38924584e9483e79ab96d33e84ad34 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 7
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000022 seconds.
-  path: Assets/project/3D model Pack Baskets/Textures/light/Basket_light_Metallic.png
-  importAddress: Guid(58ca7b872f060844fba8a84aebd7a893) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/project/3D model Pack Baskets/Textures/light/Basket_light_Metallic.png using Guid(58ca7b872f060844fba8a84aebd7a893) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '6c282f4cd409754b41c3ea6450d96868') in 0.0080003 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=7f8cb4c3ae7c57263574845f587c3542 DependenciesID=686a7b9f55beaeae6c351bf684e4cd0f StaticDependenciesID=e48b299018cc654645ea09f77f7851b4 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000029 seconds.
-  path: Assets/project/3D model Pack Baskets/Textures/dark/Basket_dark_Base_Color.png
-  importAddress: Guid(a8ddafd35cbb4c24da0ee55920c4b35d) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/project/3D model Pack Baskets/Textures/dark/Basket_dark_Base_Color.png using Guid(a8ddafd35cbb4c24da0ee55920c4b35d) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '05bfa05aa53b31398149a86d51d6a478') in 0.0100564 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=3729b92f651b48bb3206647d2c7078da DependenciesID=0a238675e9e95c003e8dc4dcf8eaee6c StaticDependenciesID=fd91eae3a9f305060942af6e45452abc 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000014 seconds.
-  path: Assets/project/3D model Pack Baskets/Textures/dark
-  importAddress: Guid(6477042f90c15a344aad3e0fa3b4e990) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/project/3D model Pack Baskets/Textures/dark using Guid(6477042f90c15a344aad3e0fa3b4e990) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '4ef8c6b3d6b2438e4bb345d7f8bd4240') in 0.0040438 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=22ad3d2111e05574e4ca4c1934b05a59 DependenciesID=a34c7b3f0df8ab2592c2815e2e60b393 StaticDependenciesID=3ca9ba2125c358f2510c086912f48846 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
-AssetImportWorker is now disconnected from the server
-Process exiting
-Exiting without the bug reporter. Application will terminate with return code 0
+Refreshing native plugins compatible for Editor in 3.39 ms, found 5 plugins.

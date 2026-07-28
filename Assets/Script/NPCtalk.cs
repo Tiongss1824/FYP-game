@@ -1,6 +1,5 @@
 using UnityEngine;
 using UnityEngine.Events;
-using System.Collections;
 
 [System.Serializable]
 public class Conversation
@@ -30,16 +29,9 @@ public class NpcTalk : MonoBehaviour, IInteractable
     public Conversation[] postTaskConversations;
     private int postTaskIndex = 0;
 
-    // --- CHANGED: Split the events into two separate timers! ---
-    [Header("Reward Event (Money / Items)")]
-    [Tooltip("Seconds to wait before giving money (Time it with dialogue!)")]
-    public float rewardDelay = 2.0f;
-    public UnityEvent onRewardGiven;
-
-    [Header("Final Cutscene Event (Fainting)")]
-    [Tooltip("Seconds to wait before the cutscene triggers")]
-    public float cutsceneDelay = 4.5f;
-    public UnityEvent onCutsceneStart;
+    [Header("Quest Completion Events")]
+    [Tooltip("Fires exactly when the post-task dialogue box closes")]
+    public UnityEvent onQuestDialogueFinished;
 
     private DialogueManager dialogueManager;
 
@@ -65,18 +57,23 @@ public class NpcTalk : MonoBehaviour, IInteractable
         }
         else
         {
-            if (postTaskConversations.Length > 0)
-            {
-                dialogueManager.StartDialogue(npcName, postTaskConversations[postTaskIndex].lines);
-                if (postTaskIndex < postTaskConversations.Length - 1) postTaskIndex++;
-            }
-
             if (!hasTriggeredEvent)
             {
                 hasTriggeredEvent = true;
-                // Start both timers independently!
-                StartCoroutine(TriggerRewardWithDelay());
-                StartCoroutine(TriggerCutsceneWithDelay());
+
+                // 1. Tell DialogueManager: "When this text finishes, fire my generic event!"
+                dialogueManager.onDialogueFinished += TriggerQuestEvents;
+
+                // 2. Start the dialogue
+                if (postTaskConversations.Length > 0)
+                {
+                    dialogueManager.StartDialogue(npcName, postTaskConversations[postTaskIndex].lines);
+                    if (postTaskIndex < postTaskConversations.Length - 1) postTaskIndex++;
+                }
+                else
+                {
+                    TriggerQuestEvents(); // Failsafe if there is no text
+                }
             }
         }
     }
@@ -91,17 +88,8 @@ public class NpcTalk : MonoBehaviour, IInteractable
         isTaskCompleted = true;
     }
 
-    // Timer 1: Gives the money
-    private IEnumerator TriggerRewardWithDelay()
+    private void TriggerQuestEvents()
     {
-        yield return new WaitForSeconds(rewardDelay);
-        onRewardGiven.Invoke();
-    }
-
-    // Timer 2: Starts the faint
-    private IEnumerator TriggerCutsceneWithDelay()
-    {
-        yield return new WaitForSeconds(cutsceneDelay);
-        onCutsceneStart.Invoke();
+        onQuestDialogueFinished.Invoke();
     }
 }
