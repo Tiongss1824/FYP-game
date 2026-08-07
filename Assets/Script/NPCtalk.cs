@@ -21,6 +21,10 @@ public class NpcTalk : MonoBehaviour, IInteractable
     public bool isTaskCompleted = false;
     private bool hasTriggeredEvent = false;
 
+    // NEW: read-only flag so other scripts (like TaskProgressTracker) can tell
+    // when this NPC has assigned its quest, without needing any other changes here.
+    public bool HasBeenAssigned { get; private set; } = false;
+
     [Header("Before Task Dialogue")]
     public Conversation[] preTaskConversations;
     private int preTaskIndex = 0;
@@ -49,6 +53,8 @@ public class NpcTalk : MonoBehaviour, IInteractable
     {
         if (!isTaskCompleted)
         {
+            HasBeenAssigned = true; // NEW: just marks that the quest has been given
+
             if (preTaskConversations.Length > 0)
             {
                 dialogueManager.StartDialogue(npcName, preTaskConversations[preTaskIndex].lines);

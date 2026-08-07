@@ -10,6 +10,8 @@ public class MerchantNpc : MonoBehaviour, IInteractable
     [TextArea(2, 5)]
     public string[] welcomeLines;
 
+    private bool hasBeenIntroduced = false;
+
     private DialogueManager dialogueManager;
 
     private void Start()
@@ -37,6 +39,13 @@ public class MerchantNpc : MonoBehaviour, IInteractable
             // If the merchant has no text setup, just open the shop instantly
             OpenTheShopMenu();
         }
+    }
+
+    // NEW: call this from other scripts (e.g. CinematicTrigger) once the NPC
+    // has already been "met" through a cutscene, so the welcome line won't repeat later.
+    public void MarkAsIntroduced()
+    {
+        hasBeenIntroduced = true;
     }
 
     private void OpenTheShopMenu()

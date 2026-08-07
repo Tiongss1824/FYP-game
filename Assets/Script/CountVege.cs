@@ -22,6 +22,11 @@ public class CountVege : MonoBehaviour
 
     private bool questCompleted = false;
 
+    // NEW: read-only getters so other scripts (like TaskProgressTracker) can
+    // check progress without needing any changes to the pickup logic below.
+    public int CurrentVeggies => currentVeggies;
+    public int RequiredVeggies => requiredVeggies;
+
     private void Start()
     {
         UpdateQuestUI();

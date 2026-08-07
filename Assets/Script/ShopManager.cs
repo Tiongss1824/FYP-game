@@ -1,12 +1,13 @@
 using UnityEngine;
-using StarterAssets; // Needed to freeze your FirstPersonController
+using StarterAssets;
+using UnityEngine.EventSystems; // Required for the sticky button fix!
 
 public class ShopManager : MonoBehaviour
 {
     public static ShopManager Instance;
 
     [Header("UI References")]
-    public GameObject shopUIPanel; // Drag your ShopMenu_UI here
+    public GameObject shopUIPanel;
 
     [Header("Player References")]
     public FirstPersonController playerController;
@@ -24,6 +25,14 @@ public class ShopManager : MonoBehaviour
         // Freeze movement
         playerController.enabled = false;
 
+        // Tell StarterAssets to release the mouse and stop looking around
+        StarterAssetsInputs starterInputs = FindAnyObjectByType<StarterAssetsInputs>();
+        if (starterInputs != null)
+        {
+            starterInputs.cursorLocked = false;
+            starterInputs.cursorInputForLook = false;
+        }
+
         // Unlock and show the mouse cursor so you can click buttons!
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
@@ -37,11 +46,23 @@ public class ShopManager : MonoBehaviour
         // Unfreeze movement
         playerController.enabled = true;
 
+        // Tell StarterAssets to lock the mouse again and resume looking
+        StarterAssetsInputs starterInputs = FindAnyObjectByType<StarterAssetsInputs>();
+        if (starterInputs != null)
+        {
+            starterInputs.cursorLocked = true;
+            starterInputs.cursorInputForLook = true;
+        }
+
         // Lock and hide the mouse cursor for first-person gameplay
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
 
-        UnityEngine.EventSystems.EventSystem.current.SetSelectedGameObject(null);
+        // Clear the selected button so "Close" doesn't stay highlighted next time you open the shop
+        if (EventSystem.current != null)
+        {
+            EventSystem.current.SetSelectedGameObject(null);
+        }
     }
 
     // 3. The actual purchase logic
@@ -60,6 +81,12 @@ public class ShopManager : MonoBehaviour
         {
             Debug.Log("Not enough cash!");
             // Optional: You could make a UI text flash red here saying "Not enough money"
+        }
+
+        // Clear the selected button so "Buy" doesn't stay highlighted!
+        if (EventSystem.current != null)
+        {
+            EventSystem.current.SetSelectedGameObject(null);
         }
     }
 }

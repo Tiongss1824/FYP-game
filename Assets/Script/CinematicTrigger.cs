@@ -72,10 +72,18 @@ public class CinematicTrigger : MonoBehaviour
         playerController.transform.rotation = targetBodyRotation;
         playerCameraRoot.rotation = targetCameraRotation;
 
-        // 5. --- UPGRADED: Ask the NPC for its contract and press Interact! ---
-        if (npcCharacter != null && npcCharacter.TryGetComponent(out IInteractable interactableNPC))
+        // 5. Specifically trigger the quest dialogue (NpcTalk), not whichever
+        // IInteractable component happens to come first on this GameObject.
+        if (npcCharacter != null && npcCharacter.TryGetComponent(out NpcTalk npcTalk))
         {
-            interactableNPC.OnInteract();
+            npcTalk.OnInteract();
+        }
+
+        // 6. This cutscene counts as "meeting" the merchant, so make sure her
+        // welcome dialogue and shop don't fire again when the player later presses F.
+        if (npcCharacter != null && npcCharacter.TryGetComponent(out MerchantNpc merchantNpc))
+        {
+            merchantNpc.MarkAsIntroduced();
         }
     }
 }

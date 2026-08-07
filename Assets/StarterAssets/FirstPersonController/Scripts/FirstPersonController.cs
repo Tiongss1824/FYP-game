@@ -101,6 +101,8 @@ namespace StarterAssets
 
         private void Update()
         {
+            if (PauseMenu.GameIsPaused) return;
+
             GravityOnly();
             GroundedCheck();
             Move();
@@ -108,6 +110,8 @@ namespace StarterAssets
 
         private void LateUpdate()
         {
+            if (PauseMenu.GameIsPaused) return;
+
             CameraRotation();
         }
 

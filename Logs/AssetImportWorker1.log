@@ -1,11 +1,11 @@
 [Licensing::Module] Trying to connect to existing licensing client channel...
 Built from '6000.4/staging' branch; Version is '6000.4.4f1 (360f97ecca93) revision 3542935'; Using compiler version '194234433'; Build Type 'Release'
-[Licensing::IpcConnector] Successfully connected to: "LicenseClient-Tiong1824" at "2026-07-27T14:15:15.4901609Z"
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-Tiong1824" at "2026-08-07T02:30:33.9350615Z"
 OS: 'Windows 11  (10.0.26200) Professional' Language: 'en' Physical Memory: 32693 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1
 System  architecture: x64
 Process architecture: x64
-Date: 2026-07-27T14:15:15Z
+Date: 2026-08-07T02:30:33Z
 
 COMMAND LINE ARGUMENTS:
 D:\Unity\Hub\Editor\6000.4.4f1\Editor\Unity.exe
@@ -19,7 +19,7 @@ D:/UnityProject/FYP-game
 -logFile
 Logs/AssetImportWorker1.log
 -srvPort
-59510
+49159
 -licensingIpc
 LicenseClient-Tiong1824
 -force-d3d12
@@ -68,12 +68,12 @@ D:/UnityProject/FYP-game
     "memorysetup-job-temp-allocator-block-size=2097152"
     "memorysetup-job-temp-allocator-block-size-background=1048576"
     "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
-Player connection [12980]  Target information:
+Player connection [14048]  Target information:
 
-Player connection [12980]  * "[IP] 192.168.1.9 [Port] 0 [Flags] 2 [Guid] 266743041 [EditorId] 266743041 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-ENL0ACT) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+Player connection [14048]  * "[IP] 192.168.1.14 [Port] 0 [Flags] 2 [Guid] 573730687 [EditorId] 573730687 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-ENL0ACT) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
 
-Player connection [12980] Host joined multi-casting on [225.0.0.222:54997]...
-Player connection [12980] Host joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [14048] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [14048] Host joined alternative multi-casting on [225.0.0.222:34997]...
 JobSystem: Creating JobQueue using job-worker-count value 5
 Input System module state changed to: Initialized.
 [Physics::Module] Initialized fallback backend.
@@ -85,7 +85,7 @@ Library Redirect Path: Library/
 [Physics::Module] SDK Version: 4.1.2
 [Physics::Module] Integration Version: 1.0.0
 [Physics::Module] Threading Mode: Multi-Threaded
-Refreshing native plugins compatible for Editor in 7.76 ms, found 5 plugins.
+Refreshing native plugins compatible for Editor in 7.48 ms, found 5 plugins.
 Initialize engine version: 6000.4.4f1 (360f97ecca93)
 [Subsystems] Discovering subsystems at path D:/Unity/Hub/Editor/6000.4.4f1/Editor/Data/Resources/UnitySubsystems
 [Subsystems] Discovering subsystems at path D:/UnityProject/FYP-game/Assets
@@ -103,18 +103,18 @@ Initialize mono
 Mono path[0] = 'D:/Unity/Hub/Editor/6000.4.4f1/Editor/Data/Managed'
 Mono path[1] = 'D:/Unity/Hub/Editor/6000.4.4f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'D:/Unity/Hub/Editor/6000.4.4f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56852
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56756
 CodeReloadManager initialized
 Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: D:/Unity/Hub/Editor/6000.4.4f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.000903 seconds.
 [Licensing::Client] Error: HandshakeResponse reported an error:
 	ResponseCode: 505
 	ResponseStatus: Unsupported protocol version '1.18.1'.
 [Licensing::Module] Error: Failed to handshake to channel: "LicenseClient-Tiong1824"
 [Licensing::IpcConnector] LicenseClient-Tiong1824 channel disconnected successfully.
-[Licensing::IpcConnector] Successfully connected to: "LicenseClient-Tiong1824-6000.4.4" at "2026-07-27T14:15:16.4204754Z"
-Registering precompiled unity dll's ...
-Register platform support module: D:/Unity/Hub/Editor/6000.4.4f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.000946 seconds.
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-Tiong1824-6000.4.4" at "2026-08-07T02:30:34.7435497Z"
 Native extension for WindowsStandalone target not found
 Package Manager log level set to [2]
 [Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
@@ -122,38 +122,38 @@ Package Manager log level set to [2]
 [Package Manager] Cannot connect to Unity Package Manager local server
 ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.381 seconds
-Domain Reload Profiling: 778ms
-	BeginReloadAssembly (111ms)
-	RebuildCommonClasses (40ms)
-	RebuildNativeTypeToScriptingClass (11ms)
-	initialDomainReloadingComplete (52ms)
-	LoadAllAssembliesAndSetupDomain (182ms)
-		LoadAssemblies (110ms)
-		AnalyzeDomain (173ms)
-			TypeCache.Refresh (172ms)
-				TypeCache.ScanAssembly (162ms)
-	FinalizeReload (382ms)
+- Finished resetting the current domain, in  0.414 seconds
+Domain Reload Profiling: 868ms
+	BeginReloadAssembly (100ms)
+	RebuildCommonClasses (43ms)
+	RebuildNativeTypeToScriptingClass (14ms)
+	initialDomainReloadingComplete (61ms)
+	LoadAllAssembliesAndSetupDomain (235ms)
+		LoadAssemblies (99ms)
+		AnalyzeDomain (225ms)
+			TypeCache.Refresh (223ms)
+				TypeCache.ScanAssembly (208ms)
+	FinalizeReload (415ms)
 		SetupLoadedEditorAssemblies (0ms)
-			InitializePlatformSupportModulesInManaged (42ms)
-			BeforeProcessingInitializeOnLoad (87ms)
-			ProcessInitializeOnLoadAttributes (115ms)
-			ProcessInitializeOnLoadMethodAttributes (83ms)
+			InitializePlatformSupportModulesInManaged (48ms)
+			BeforeProcessingInitializeOnLoad (102ms)
+			ProcessInitializeOnLoadAttributes (106ms)
+			ProcessInitializeOnLoadMethodAttributes (71ms)
 Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
 ========================================================================
 Worker process is ready to serve import requests
 Import Worker Mode flag is 0x00
 Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
 [Licensing::Client] Handshaking with LicensingClient:
   Version:                 1.18.1+9fbee8e
-  Session Id:              38c48eef8ef14b12b1f5632c8b628a6b
-  Correlation Id:          aa95c6f0ce37ca50a22c1c0a5bcbfb9f
-  External correlation Id: 7724937663524439122
+  Session Id:              f24c9f50d1ad4628b0666531a29969d7
+  Correlation Id:          12e0d6bd7dd119e69f9746e5dacc0680
+  External correlation Id: 2584593324607490826
   Machine Id:              A1s0c6fEpTDN7KDylYhhwDTqc9o=
-[Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-Tiong1824-6000.4.4" (connect: 0.00s, validation: 0.00s, handshake: 0.85s)
-[Licensing::IpcConnector] Successfully connected to: "LicenseClient-Tiong1824-6000.4.4-notifications" at "2026-07-27T14:15:17.2759764Z"
-[Licensing::Module] Licensing Background thread has ended after 1.79s
-Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+[Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-Tiong1824-6000.4.4" (connect: 0.00s, validation: 0.00s, handshake: 0.86s)
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-Tiong1824-6000.4.4-notifications" at "2026-08-07T02:30:35.6033066Z"
+[Licensing::Module] Licensing Background thread has ended after 1.67s
 Begin MonoManager ReloadAssembly
 [Licensing::Client] Successfully resolved entitlement details
 [Licensing::Module] License group:
@@ -197,7 +197,6 @@ Assembly UnityEngine.UI.Tests.dll at Library/ScriptAssemblies/UnityEngine.UI.Tes
 Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
 'Packages/com.unity.cinemachine/Editor/Obsolete/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
 'Packages/com.unity.cinemachine/Editor/Editors/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
-Refreshing native plugins compatible for Editor in 2.19 ms, found 5 plugins.
 Native extension for WindowsStandalone target not found
 Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
 [Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
@@ -214,469 +213,33 @@ Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInter
 [Package Manager] Cannot connect to Unity Package Manager local server
 ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  1.051 seconds
-Domain Reload Profiling: 1837ms
-	BeginReloadAssembly (217ms)
-		DisableScriptedObjects (7ms)
-		CreateAndSetChildDomain (33ms)
-	RebuildCommonClasses (50ms)
-	RebuildNativeTypeToScriptingClass (15ms)
-	initialDomainReloadingComplete (76ms)
-	LoadAllAssembliesAndSetupDomain (427ms)
-		LoadAssemblies (328ms)
-		AnalyzeDomain (220ms)
-			TypeCache.Refresh (151ms)
-				TypeCache.ScanAssembly (138ms)
-			BuildScriptInfoCaches (57ms)
+- Finished resetting the current domain, in  0.659 seconds
+Domain Reload Profiling: 1368ms
+	BeginReloadAssembly (142ms)
+		DisableScriptedObjects (5ms)
+		CreateAndSetChildDomain (24ms)
+	RebuildCommonClasses (31ms)
+	RebuildNativeTypeToScriptingClass (10ms)
+	initialDomainReloadingComplete (48ms)
+	LoadAllAssembliesAndSetupDomain (477ms)
+		LoadAssemblies (291ms)
+		AnalyzeDomain (259ms)
+			TypeCache.Refresh (192ms)
+				TypeCache.ScanAssembly (180ms)
+			BuildScriptInfoCaches (55ms)
 			ResolveRequiredComponents (11ms)
-	FinalizeReload (1052ms)
+	FinalizeReload (659ms)
 		SetupLoadedEditorAssemblies (0ms)
-			BeforeProcessingInitializeOnLoad (192ms)
-			ProcessInitializeOnLoadAttributes (471ms)
-			ProcessInitializeOnLoadMethodAttributes (94ms)
-		AwakeInstancesAfterBackupRestoration (8ms)
+			BeforeProcessingInitializeOnLoad (117ms)
+			ProcessInitializeOnLoadAttributes (300ms)
+			ProcessInitializeOnLoadMethodAttributes (60ms)
+		AwakeInstancesAfterBackupRestoration (5ms)
 WARNING: Shader Unsupported: 'Hidden/Builtin_TerrainVisualization' - All subshaders removed
 WARNING: Shader Did you use #pragma only_renderers and omit this platform?
 WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.01 seconds
 Unloading 37 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6755 unused Assets / (8.3 MB). Loaded Objects now: 7644.
-Memory consumption went from 176.4 MB to 168.1 MB.
-Total: 12.638300 ms (FindLiveObjects: 0.659500 ms CreateObjectMapping: 1.333000 ms MarkObjects: 6.382800 ms  DeleteObjects: 4.260600 ms)
+Unloading 6755 unused Assets / (8.1 MB). Loaded Objects now: 7641.
+Memory consumption went from 174.2 MB to 166.1 MB.
+Total: 7.860100 ms (FindLiveObjects: 0.651500 ms CreateObjectMapping: 0.438900 ms MarkObjects: 4.429300 ms  DeleteObjects: 2.338800 ms)
 
-========================================================================
-Received Import Request.
-  Time since last request: 612551.534653 seconds.
-  path: Assets/ThreeBox/Match3D Object Pack - Fruits and Vegetables/Resources/Materials/Vegetables/Vegetables_mtl.mat
-  importAddress: Guid(f91e85056688a7240828809076135d3b) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/ThreeBox/Match3D Object Pack - Fruits and Vegetables/Resources/Materials/Vegetables/Vegetables_mtl.mat using Guid(f91e85056688a7240828809076135d3b) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '1fc0ff6983a77915d23d89ca47ae628e') in 0.1349447 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=248df266e77de8e6de9ac3af5278c9aa DependenciesID=56cbc7ec080e08a666bbe005d6b46cda StaticDependenciesID=2f07bc3396ac10921c18f86f53cb1434 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 5
-
-========================================================================
-Received Import Request.
-  Time since last request: 905.763147 seconds.
-  path: Assets/FencesPack/Prefabs/MeshFence.prefab
-  importAddress: Guid(cdb30a236ae4ea146acc9d3bab111744) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/FencesPack/Prefabs/MeshFence.prefab using Guid(cdb30a236ae4ea146acc9d3bab111744) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'd72276c113899783b421a7ee11672671') in 0.050029 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=bebc11635069b98ddb75c38cc6390b25 DependenciesID=4981bbbb713b74c5b03dc4074e47cd75 StaticDependenciesID=002a6b891d484cb0d853c7c6fc41cabe 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 9
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000026 seconds.
-  path: Assets/FencesPack/Prefabs/RoadBarrier.prefab
-  importAddress: Guid(7332b761240aced4bade4c46b8f57aeb) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/FencesPack/Prefabs/RoadBarrier.prefab using Guid(7332b761240aced4bade4c46b8f57aeb) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '5b48bca74e1e5e1aca125abde02158d9') in 0.0175321 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=9f9f092e4c5a1c5d6844cfb14a6a7ad1 DependenciesID=d7cee4f94942554c1e24dcde9f5d80d2 StaticDependenciesID=4a304a6b59802c831b5714f4b4a11f5f 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 9
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000027 seconds.
-  path: Assets/FencesPack/ModelsFBX/RoadFences.fbx
-  importAddress: Guid(192cfc715806cd043870b38848606cd8) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/FencesPack/ModelsFBX/RoadFences.fbx using Guid(192cfc715806cd043870b38848606cd8) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '6e1812ecd4e8ec248a703f252a8594f6') in 0.0384505 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=1bae2482b5e088bd18c2edf243760e80 DependenciesID=5726de621bc1a2a7676e8dff15af5083 StaticDependenciesID=02b1dec966ef57d2bcddbf7ac2ca7f08 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 31
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000018 seconds.
-  path: Assets/FencesPack/ModelsFBX
-  importAddress: Guid(7238bff34c11cc34ab80863bbbdd4fbb) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/FencesPack/ModelsFBX using Guid(7238bff34c11cc34ab80863bbbdd4fbb) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '6e15de3935c9c97522bdfc98f435d72e') in 0.0148966 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=7dfbae0902113ae3e757306eb69c81f3 DependenciesID=8e27b92fd9bea46c5118bf236705f8dd StaticDependenciesID=1381c4c38ac0eab3e89298a46a3d8f33 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000017 seconds.
-  path: Assets/FencesPack/Materials/MetalRed.mat
-  importAddress: Guid(033df913fc91e814ea914b1d4be77338) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/FencesPack/Materials/MetalRed.mat using Guid(033df913fc91e814ea914b1d4be77338) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'c3991cc77391a0cbf519c86d62094247') in 0.0470313 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=9284a93eb55d6706e96a81a0478f7d36 DependenciesID=e69ee6f2334042e66e89ddab7ddd1c48 StaticDependenciesID=b99fd49255da247606492e73cd0200c6 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000020 seconds.
-  path: Assets/FencesPack/Prefabs/Gates.prefab
-  importAddress: Guid(a8e06623935fbfd4d895ac3a79532eb3) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/FencesPack/Prefabs/Gates.prefab using Guid(a8e06623935fbfd4d895ac3a79532eb3) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '745ad0dff531867304020ddd3b4efcf3') in 0.0147735 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=c871d72ff28a67e0e3e52278b4517164 DependenciesID=ae9ae045d40c947da358efec9e84ac2f StaticDependenciesID=acfebf8cc74f7f937f6a2d6c063d2f5e 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 50
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000030 seconds.
-  path: Assets/FencesPack/Materials/BrickRed.mat
-  importAddress: Guid(53d7818ba18b15742b7b65275015c33e) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/FencesPack/Materials/BrickRed.mat using Guid(53d7818ba18b15742b7b65275015c33e) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '96de59f80b20afb210870f6544f1c260') in 0.0128843 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=783c4d4ec04ab1addc8febe5252df2f0 DependenciesID=da687eacdfa6829ecac098e2024db363 StaticDependenciesID=bc31c3ca4870f261fc1c716ea494f806 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000016 seconds.
-  path: Assets/FencesPack/Prefabs/MetalSheetRackBlue.prefab
-  importAddress: Guid(68a360e854e9bfc469170ff705961a7c) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/FencesPack/Prefabs/MetalSheetRackBlue.prefab using Guid(68a360e854e9bfc469170ff705961a7c) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'cee9acc66444df6e06dc84df466be288') in 0.0209162 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=50b55a140c7be7df252e42b60c169ded DependenciesID=b21898b635defc5a017758bd66cbef92 StaticDependenciesID=3248f368ffbc02c11093c86adf99855d 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 19
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000014 seconds.
-  path: Assets/FencesPack/ModelsFBX/newWoodFance.fbx
-  importAddress: Guid(143cbdad0c5fe7641a9bd2fd0b4ae4c6) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/FencesPack/ModelsFBX/newWoodFance.fbx using Guid(143cbdad0c5fe7641a9bd2fd0b4ae4c6) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '669fa8d18ebb91a588924e5d97ef613f') in 0.0176008 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=fe3eb678116343d930b91f24769d4538 DependenciesID=cd221c34156520add84aaa2759a42434 StaticDependenciesID=de86d864d06b9e0ca5d8f9723bd3044e 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 20
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000019 seconds.
-  path: Assets/FencesPack/Prefabs/ConcreteFance.prefab
-  importAddress: Guid(123c15bdc3d1d484c8e34649090d7b70) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/FencesPack/Prefabs/ConcreteFance.prefab using Guid(123c15bdc3d1d484c8e34649090d7b70) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'a334338f4a09b725af39c6b2981bb0c3') in 0.019592 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=606dbf15effe098cff26f536e3e51b6a DependenciesID=285d21e4e70dd235d3c8a3d12995245c StaticDependenciesID=c4bbc75c78704e3bb1a5f19a0664cf53 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 34
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000022 seconds.
-  path: Assets/FencesPack/Materials/Concrete.mat
-  importAddress: Guid(11fbccbff90d91b46aaff20b9cd3a695) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/FencesPack/Materials/Concrete.mat using Guid(11fbccbff90d91b46aaff20b9cd3a695) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '43411e7a5078243004f3d13234eaa0bd') in 0.012411 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=9f641c90df53d24a65462699295c6346 DependenciesID=59b3b2c757656db116030ac8e7817462 StaticDependenciesID=c1498e71007ddfe1b4c6f8d243cbfe90 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000035 seconds.
-  path: Assets/FencesPack/Materials/MetalRust.mat
-  importAddress: Guid(d40e1e07e2f8dc542b7b3d0f514e3429) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/FencesPack/Materials/MetalRust.mat using Guid(d40e1e07e2f8dc542b7b3d0f514e3429) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '074516bf94eb75204a64cbe67c1eea4c') in 0.0115288 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=7836e119da632a5ca01d3b9163b10621 DependenciesID=a23c2953f80b92f3df33018718101dad StaticDependenciesID=45aecf9de20b2613bd667c40fe921d83 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000018 seconds.
-  path: Assets/FencesPack/ModelsFBX/BrickWalls.fbx
-  importAddress: Guid(070f413921c169e458883a9576ed30ee) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/FencesPack/ModelsFBX/BrickWalls.fbx using Guid(070f413921c169e458883a9576ed30ee) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'c46f9cfbc71f080a51cca2226b6055cc') in 0.0358052 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=85fa92c58c4f56550b5d1b52cc503ddb DependenciesID=1ecccfa3a7e1670a47fea0791fe3258c StaticDependenciesID=9b98a75148236d63218940276e412fc1 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 54
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000020 seconds.
-  path: Assets/FencesPack/Materials/WoodWhite.mat
-  importAddress: Guid(e454b68479104714e8f45f3c0ca1fd65) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/FencesPack/Materials/WoodWhite.mat using Guid(e454b68479104714e8f45f3c0ca1fd65) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '5837fed9f527b3685839e37ccefcfdd7') in 0.0180059 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=302087569286dcea23d34e3ee3a9240c DependenciesID=ef076aa1590e3712dbdfc80b4ef41112 StaticDependenciesID=170154b3da6656cb7ac824fe068da847 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000027 seconds.
-  path: Assets/FencesPack/ModelsFBX/OldWoodFance.fbx
-  importAddress: Guid(fc8961575ab14da49b201fcd661d9754) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/FencesPack/ModelsFBX/OldWoodFance.fbx using Guid(fc8961575ab14da49b201fcd661d9754) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '7d3737c4bdb98c2a3c7ed00a6cecd2fe') in 0.0296407 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=110b225bf2707b944295133291c1d675 DependenciesID=fa4cdd34ccf23370b820aee71d2987ca StaticDependenciesID=c9176d0a93f7f05651b1890b454a62f0 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 27
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000039 seconds.
-  path: Assets/FencesPack/Materials/MetalCore.mat
-  importAddress: Guid(8c15c09b710a5314dbff7905426596ba) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/FencesPack/Materials/MetalCore.mat using Guid(8c15c09b710a5314dbff7905426596ba) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'd74b3045610f77b00f0197191152d853') in 0.0346337 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=3a4eff85036afd1a8feabf1b70ccd4e4 DependenciesID=0cff6f227e04cd7ef0e487c79d145821 StaticDependenciesID=43182f669c26f2c118cd5cf7416f4269 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000018 seconds.
-  path: Assets/FencesPack/Materials/MetalCoreOld.mat
-  importAddress: Guid(867c9c27d92cf3342bc6d6c3acc7511f) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/FencesPack/Materials/MetalCoreOld.mat using Guid(867c9c27d92cf3342bc6d6c3acc7511f) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '7871292eb1c3d529b821f7b9df0f6216') in 0.0124781 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=72b9407176df86edea2c6bbc84141101 DependenciesID=4a782a2b6b9247220fe645dbf6dfc0ae StaticDependenciesID=e72c3fdf469b8c35b1000c29848e489b 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000017 seconds.
-  path: Assets/FencesPack/Materials
-  importAddress: Guid(6791b0bd8df7e9747ae29958a01ad891) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/FencesPack/Materials using Guid(6791b0bd8df7e9747ae29958a01ad891) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '6f585c62f10bfb3d769f9a0562610be4') in 0.0088627 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=23259824fd7bbdf5bd40f474ce1231af DependenciesID=ff23bb91b946837f00f06ccef8b7513d StaticDependenciesID=d4b9d07358590374d1330e1782f88580 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000014 seconds.
-  path: Assets/FencesPack/Materials/MetalRedOld.mat
-  importAddress: Guid(937b73ceb2a72da4487b94eef853cc56) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/FencesPack/Materials/MetalRedOld.mat using Guid(937b73ceb2a72da4487b94eef853cc56) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'cc20ad06a28603c002b3f76e7d2f1037') in 0.0138547 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=3b519b30497333a133ec31da2130533d DependenciesID=1dbf10374024ffa443336f5577fb74fa StaticDependenciesID=3c01c3a4bcc15c05ec27b3bd54a424d6 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000022 seconds.
-  path: Assets/FencesPack/Prefabs/ConcreteFance1.prefab
-  importAddress: Guid(4789a66a4bfe1a04f8ec617aa13f8e28) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/FencesPack/Prefabs/ConcreteFance1.prefab using Guid(4789a66a4bfe1a04f8ec617aa13f8e28) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '754216075f4d035222015ae1314c342e') in 0.0138744 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=d1149f5311382769d285c721c932d404 DependenciesID=74b2f2cbb977cfdc2323e9c41709e060 StaticDependenciesID=44a8feb81c32789e06c7edd8fc10ac13 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 28
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000027 seconds.
-  path: Assets/FencesPack/Prefabs/MetalSheetRack.prefab
-  importAddress: Guid(45ac25bcb171c1f4bae5c18bb09f890a) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/FencesPack/Prefabs/MetalSheetRack.prefab using Guid(45ac25bcb171c1f4bae5c18bb09f890a) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '493bd49eee65ddcc8b286fa0db2a0320') in 0.0140952 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=259375e0197994b4b79338c0cd82db0c DependenciesID=e6407c1c74434ce6ff3d64cf9094ca03 StaticDependenciesID=ddfda9a0f028d28c85c7ffa0c580aa9f 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 19
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000037 seconds.
-  path: Assets/FencesPack/Prefabs/MeshFencePillar.prefab
-  importAddress: Guid(cd83c8163b09c374fb3ea0c253e57fbe) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/FencesPack/Prefabs/MeshFencePillar.prefab using Guid(cd83c8163b09c374fb3ea0c253e57fbe) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '51976e13fd46b9884a1069e145c20402') in 0.016074 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=f68c84770c847a0618cc970ab59641b1 DependenciesID=cf4777e05b64b318519f2bae5836eb44 StaticDependenciesID=ac40034c74fb004eb605bf0022883ef8 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 9
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000014 seconds.
-  path: Assets/FencesPack/Materials/MetalBlue.mat
-  importAddress: Guid(b9a9fdd0df9832f4e9ed44e58b62fe58) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/FencesPack/Materials/MetalBlue.mat using Guid(b9a9fdd0df9832f4e9ed44e58b62fe58) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'cbf96b1942a8f339fb37b6b9a4466200') in 0.0122034 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=3d0ecabf2b388fe6aa847c35fa802e97 DependenciesID=3deb0a48c0bb90cca89b0296ce95aa6e StaticDependenciesID=989f82da9d8b65a2a193bfba93c85b03 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000017 seconds.
-  path: Assets/FencesPack/Prefabs
-  importAddress: Guid(0fb90f958a6e6ba45b24754447c2d593) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/FencesPack/Prefabs using Guid(0fb90f958a6e6ba45b24754447c2d593) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '60c9af437cfb51401613a4cf4d1f5b96') in 0.0141857 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=4242aa551e4df9903d128d169d127b91 DependenciesID=f7f6ff1023f565f54f2ffbdfe757a0e6 StaticDependenciesID=b8ccf6b3b4bf0ce77b9e7829db9b9cbe 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000015 seconds.
-  path: Assets/FencesPack/Materials/MetalGray.mat
-  importAddress: Guid(309d54b9b3c7a6c4badb50ec6550789e) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/FencesPack/Materials/MetalGray.mat using Guid(309d54b9b3c7a6c4badb50ec6550789e) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '1336a2f420597fea6c0ec73a9f9b47a5') in 0.0700696 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=6dea8991f134dfa6d581fa04858f5073 DependenciesID=8e43a8493ca92010187b9ed056437c1f StaticDependenciesID=a216b404bdd9a6c3c00d2ebc6814f8d7 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000024 seconds.
-  path: Assets/FencesPack/Prefabs/ConcretePlate.prefab
-  importAddress: Guid(a397a487254c09e4b9ca682fc816a2e1) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/FencesPack/Prefabs/ConcretePlate.prefab using Guid(a397a487254c09e4b9ca682fc816a2e1) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'a8157f72f0ed3765970a47393def716a') in 0.0139953 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=28fbcf7f425950dfda162bce3cfb63b7 DependenciesID=5200f9fb8a5757467ebd9af21fb9666b StaticDependenciesID=4abd40782b4cd969f3f05b5c61d17921 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 9
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000023 seconds.
-  path: Assets/FencesPack/Prefabs/OldWoodDoorWay.prefab
-  importAddress: Guid(5d3bdc03d17ee2049a68f7ab951eef17) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/FencesPack/Prefabs/OldWoodDoorWay.prefab using Guid(5d3bdc03d17ee2049a68f7ab951eef17) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'e713ee8cfc01aa64651ab698ea85fc03') in 0.0163808 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=6376c967449d5ac323a0fc9fe27d07ab DependenciesID=b5febf951c9afec876e8c1b4e05cd9d6 StaticDependenciesID=9216a3d2f1ab267690056439612217bc 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 18
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000014 seconds.
-  path: Assets/FencesPack/Materials/OldWoodEnd.mat
-  importAddress: Guid(9450da410aab0124489ff0a5cb807645) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/FencesPack/Materials/OldWoodEnd.mat using Guid(9450da410aab0124489ff0a5cb807645) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '41891cd8ad95c06d24dca323c05956b2') in 0.0160963 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=c4cb8aa3d80317ed1d7910eba17a367e DependenciesID=f180eb98e3792c9645760a3d6a57f087 StaticDependenciesID=041c5114f4482d6c5bcf7928f7eeb326 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000015 seconds.
-  path: Assets/FencesPack/Prefabs/MetalSheetRackRed.prefab
-  importAddress: Guid(0f89752548c748b4e86161a546ff4b55) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/FencesPack/Prefabs/MetalSheetRackRed.prefab using Guid(0f89752548c748b4e86161a546ff4b55) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '48c5fc56b6174949704eb4508a7edee8') in 0.0227456 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=1583a4cb1772c7e717d9340035637b84 DependenciesID=0f08418f46769438e675c83db5dd802f StaticDependenciesID=1102efbadb52abc0af05b107f39523d4 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 19
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000035 seconds.
-  path: Assets/FencesPack/Prefabs/WoodFencePillar.prefab
-  importAddress: Guid(84d4fbca7c5fff945b81d633ce9c84b3) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/FencesPack/Prefabs/WoodFencePillar.prefab using Guid(84d4fbca7c5fff945b81d633ce9c84b3) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'f370389e02123fe1e708b8f126886960') in 0.0150167 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=f884231a423afd326970d860caca3b7b DependenciesID=7eac6dae26cb3e3859297e9667180874 StaticDependenciesID=3d90edf236673988ab7a9b2fcde174bd 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 9
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000029 seconds.
-  path: Assets/FencesPack/Materials/ForestGround.terrainlayer
-  importAddress: Guid(f3b79600d71843c4aad48aac16b8a6b2) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/FencesPack/Materials/ForestGround.terrainlayer using Guid(f3b79600d71843c4aad48aac16b8a6b2) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'ff349ec4eb0a1d68fc5277dad40bbe41') in 0.0165174 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=ff2f13f5f4ba8739862b190daab00c8b DependenciesID=3bb17467ed03d56c90813750672d8289 StaticDependenciesID=c36e9936db1d3d24da43bca7db5635f9 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000027 seconds.
-  path: Assets/FencesPack/Materials/OldWood.mat
-  importAddress: Guid(ac3ceb12a49bad749a474c20c5140d25) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/FencesPack/Materials/OldWood.mat using Guid(ac3ceb12a49bad749a474c20c5140d25) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '4f5e5ef49e91fe9cb299c6b3c028e5e7') in 0.0111445 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=7d98293a6ee4f4ed66e2269ba0df611a DependenciesID=f3758a7506103bd12964d09bad4f5969 StaticDependenciesID=1da28edaef5bd514149ab6893922d3fe 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000015 seconds.
-  path: Assets/FencesPack/Prefabs/OldWoodFence.prefab
-  importAddress: Guid(ddae8703de8a63742af7ff389827b4eb) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/FencesPack/Prefabs/OldWoodFence.prefab using Guid(ddae8703de8a63742af7ff389827b4eb) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'c09799c00f376c12f6975c8bbd5dcebd') in 0.0151724 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=e5676aa321eca22c4e99362d8ddfbfb9 DependenciesID=75b5d8f52bbf47ee1993d645f22ecd6a StaticDependenciesID=f420f9a4be58a7f3c03c0c20bfcb632e 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 9
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000017 seconds.
-  path: Assets/FencesPack/ModelsFBX/Gates.fbx
-  importAddress: Guid(70fe68e0bc76a5e4fae2b2e0193d4abb) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/FencesPack/ModelsFBX/Gates.fbx using Guid(70fe68e0bc76a5e4fae2b2e0193d4abb) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'f1d2787f1ff84fe40a905001cdcf6876') in 0.0219285 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=906bb7257d5794adf45f7aed3e01c961 DependenciesID=3e4d57c6af750c623e7267d84c1976c7 StaticDependenciesID=50c1ec30ad407648b10fb98ccf56664c 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 46
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000018 seconds.
-  path: Assets/FencesPack/Prefabs/MeshFenceHole.prefab
-  importAddress: Guid(a3c449c80e5138946bc1c34f9dd7b0cc) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/FencesPack/Prefabs/MeshFenceHole.prefab using Guid(a3c449c80e5138946bc1c34f9dd7b0cc) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '154eb796eb055b641173a702ae54e974') in 0.0144259 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=c3ddd7bc43d380b516752a176703791b DependenciesID=fd076dcbad6ce8dfd1711e7e4aa706cb StaticDependenciesID=6c668b3545ac2985ad650274b39198b3 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 11
-
-========================================================================
-Received Import Request.
-  Time since last request: 21.906061 seconds.
-  path: Assets/FencesPack/Prefabs/BrickWall.prefab
-  importAddress: Guid(85361bd192e684c4aae377722ca1ba24) Importer(2089858483,e11c23a36db5f54750b8cd40eac0985b)
-Start importing Assets/FencesPack/Prefabs/BrickWall.prefab using Guid(85361bd192e684c4aae377722ca1ba24) Importer(2089858483,e11c23a36db5f54750b8cd40eac0985b) (ScriptedImporter) -> (Import Result ID: '224b83821cad29d17994b0c2eb3c6a0f') in 0.0536605 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=8fd5197d7379980f37bef2a2856bcfd9 DependenciesID=adb33f6413a93d1a84e1d75ffd890d06 StaticDependenciesID=9d143274b4b08daf19fc51d1d53bd2ec 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 14
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000017 seconds.
-  path: Assets/FencesPack/Prefabs/BrickWallPillar.prefab
-  importAddress: Guid(d407fac58221628439e93e884e0355c9) Importer(2089858483,e11c23a36db5f54750b8cd40eac0985b)
-Start importing Assets/FencesPack/Prefabs/BrickWallPillar.prefab using Guid(d407fac58221628439e93e884e0355c9) Importer(2089858483,e11c23a36db5f54750b8cd40eac0985b) (ScriptedImporter) -> (Import Result ID: 'fb58587d8b6bd4d55fc1f4a7842cf8e8') in 0.019579 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=0cb3b0e134a603f19b32a1ebd872e819 DependenciesID=f454ff9ee78bc82f8d6fe0187c559e2e StaticDependenciesID=b6178b9137b5d32519c1120d8e371dc4 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 12
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000029 seconds.
-  path: Assets/FencesPack/Prefabs/ConcreteFance.prefab
-  importAddress: Guid(123c15bdc3d1d484c8e34649090d7b70) Importer(2089858483,e11c23a36db5f54750b8cd40eac0985b)
-Start importing Assets/FencesPack/Prefabs/ConcreteFance.prefab using Guid(123c15bdc3d1d484c8e34649090d7b70) Importer(2089858483,e11c23a36db5f54750b8cd40eac0985b) (ScriptedImporter) -> (Import Result ID: '2788a5b3be050b5d7dac936fc11fd3b2') in 0.0349441 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=1f4278e67932ab09b66b5db3027c1f31 DependenciesID=f571c1b59dd7793f5a669b1964548139 StaticDependenciesID=cf9dd3b79711b68078ca9fa3855eb42d 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 35
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000020 seconds.
-  path: Assets/FencesPack/Prefabs/OldWoodPillar.prefab
-  importAddress: Guid(161e784eabf687a4598217971fb9a567) Importer(2089858483,e11c23a36db5f54750b8cd40eac0985b)
-Start importing Assets/FencesPack/Prefabs/OldWoodPillar.prefab using Guid(161e784eabf687a4598217971fb9a567) Importer(2089858483,e11c23a36db5f54750b8cd40eac0985b) (ScriptedImporter) -> (Import Result ID: 'a660030956246d2ed9e7806880be29c9') in 0.0180697 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=87148635805e1b65e6e8cdad30d11a3b DependenciesID=fdca76ae6aa1d1cc35a4186d74677576 StaticDependenciesID=c2c2b876d1c2cc774ec816d56d8f6ad7 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.027758 seconds.
-  path: Assets/FencesPack/Prefabs/BrickWall2.prefab
-  importAddress: Guid(b554f71252b1b694b876daa240aa01e8) Importer(2089858483,e11c23a36db5f54750b8cd40eac0985b)
-Start importing Assets/FencesPack/Prefabs/BrickWall2.prefab using Guid(b554f71252b1b694b876daa240aa01e8) Importer(2089858483,e11c23a36db5f54750b8cd40eac0985b) (ScriptedImporter) -> (Import Result ID: 'd55e46e588b9ad0a120c2f97c6726234') in 0.0165645 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=02d672d8d353297dea167864ebf16ef6 DependenciesID=90a1761d85b7cbf36756b0e12177e280 StaticDependenciesID=6b9f8f314b8422014f82e91773ce0078 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000019 seconds.
-  path: Assets/FencesPack/Prefabs/RoadBarrierMetalSheet.prefab
-  importAddress: Guid(f91890a6fea49e347b2409f661484b85) Importer(2089858483,e11c23a36db5f54750b8cd40eac0985b)
-Start importing Assets/FencesPack/Prefabs/RoadBarrierMetalSheet.prefab using Guid(f91890a6fea49e347b2409f661484b85) Importer(2089858483,e11c23a36db5f54750b8cd40eac0985b) (ScriptedImporter) -> (Import Result ID: '57427ebcf646b267e450a1ec2ce98651') in 0.0217127 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=0e5fdcb76cc015e5e5643c7f4e7f737e DependenciesID=5b685bf9861a22f7cf0626d6154eebc5 StaticDependenciesID=1eb822922b3b11f72b6e93494a08847b 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 22
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000032 seconds.
-  path: Assets/FencesPack/Prefabs/MeshFencePillar.prefab
-  importAddress: Guid(cd83c8163b09c374fb3ea0c253e57fbe) Importer(2089858483,e11c23a36db5f54750b8cd40eac0985b)
-Start importing Assets/FencesPack/Prefabs/MeshFencePillar.prefab using Guid(cd83c8163b09c374fb3ea0c253e57fbe) Importer(2089858483,e11c23a36db5f54750b8cd40eac0985b) (ScriptedImporter) -> (Import Result ID: '10210c6c861a71d6ddb2afe53ac652f4') in 0.0141101 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=4a3c1a741509f207cb9341e9d7f5681a DependenciesID=fa253de838b3385a25efe77260be12bd StaticDependenciesID=1714f38adc0c4ef24f0537d19c61279d 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 9
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000019 seconds.
-  path: Assets/FencesPack/Prefabs/LowWoodFencePillar.prefab
-  importAddress: Guid(b313937b79fdc2f48ba317592d62e2e7) Importer(2089858483,e11c23a36db5f54750b8cd40eac0985b)
-Start importing Assets/FencesPack/Prefabs/LowWoodFencePillar.prefab using Guid(b313937b79fdc2f48ba317592d62e2e7) Importer(2089858483,e11c23a36db5f54750b8cd40eac0985b) (ScriptedImporter) -> (Import Result ID: '283e8994ab09ccb1fbb03d46cf52e636') in 0.016459 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=ac8847d482996f6e2a94a474c0f5ed68 DependenciesID=7cdd01e14ace53707c0ee75abb2f59bc StaticDependenciesID=53bdc0d75a20daf76fb8ccf4505b1713 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 9
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000020 seconds.
-  path: Assets/FencesPack/Prefabs/MeshFence.prefab
-  importAddress: Guid(cdb30a236ae4ea146acc9d3bab111744) Importer(2089858483,e11c23a36db5f54750b8cd40eac0985b)
-Start importing Assets/FencesPack/Prefabs/MeshFence.prefab using Guid(cdb30a236ae4ea146acc9d3bab111744) Importer(2089858483,e11c23a36db5f54750b8cd40eac0985b) (ScriptedImporter) -> (Import Result ID: 'c817c8648f10f67482927f752d5f5794') in 0.0174917 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=477b012afcca4bda05ed29681379ebe2 DependenciesID=3a1195bdebaf1954a1020e6758a99f7d StaticDependenciesID=f7be365fd1175e9eb93a98ee8f1f868c 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 9
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000024 seconds.
-  path: Assets/FencesPack/Prefabs/MeshFence1.prefab
-  importAddress: Guid(824c00626fc1213408f78e303a5534c7) Importer(2089858483,e11c23a36db5f54750b8cd40eac0985b)
-Start importing Assets/FencesPack/Prefabs/MeshFence1.prefab using Guid(824c00626fc1213408f78e303a5534c7) Importer(2089858483,e11c23a36db5f54750b8cd40eac0985b) (ScriptedImporter) -> (Import Result ID: '5e208335fcb50fdaceea22ecf004d19d') in 0.0199498 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=f672de20f388515c1256f0bd98fc0442 DependenciesID=cd3b7167012931af338cd969f7819c30 StaticDependenciesID=7e6dbc8579099352586b6609b8849afc 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 9
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000017 seconds.
-  path: Assets/FencesPack/Prefabs/PO2StandV2.prefab
-  importAddress: Guid(fe799f1b1a760d345af415e5e87205e2) Importer(2089858483,e11c23a36db5f54750b8cd40eac0985b)
-Start importing Assets/FencesPack/Prefabs/PO2StandV2.prefab using Guid(fe799f1b1a760d345af415e5e87205e2) Importer(2089858483,e11c23a36db5f54750b8cd40eac0985b) (ScriptedImporter) -> (Import Result ID: '21d58975c80b33e53f08ad3947fbc469') in 0.0226914 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=96df3a17dbaf54322ff1450bab346a97 DependenciesID=1c6ed16722d9f88676a2496164317870 StaticDependenciesID=148c13f0f6639526821e36f70bf6b7d6 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 27
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000032 seconds.
-  path: Assets/FencesPack/Prefabs/ConcretePlate.prefab
-  importAddress: Guid(a397a487254c09e4b9ca682fc816a2e1) Importer(2089858483,e11c23a36db5f54750b8cd40eac0985b)
-Start importing Assets/FencesPack/Prefabs/ConcretePlate.prefab using Guid(a397a487254c09e4b9ca682fc816a2e1) Importer(2089858483,e11c23a36db5f54750b8cd40eac0985b) (ScriptedImporter) -> (Import Result ID: 'e6b6c916dcef47e5aa952942360eb1e2') in 0.0189657 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=c5e1bb77877cbd7aa99f1a7da5221dfa DependenciesID=8d499b587883161de9512bb0f6b87431 StaticDependenciesID=cd37c1b469c6a03be5de4593cc49f5a2 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 9
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000019 seconds.
-  path: Assets/FencesPack/Prefabs/LowWoodFenceSharp.prefab
-  importAddress: Guid(f544a2a9fed71534f85ea81385e80b16) Importer(2089858483,e11c23a36db5f54750b8cd40eac0985b)
-Start importing Assets/FencesPack/Prefabs/LowWoodFenceSharp.prefab using Guid(f544a2a9fed71534f85ea81385e80b16) Importer(2089858483,e11c23a36db5f54750b8cd40eac0985b) (ScriptedImporter) -> (Import Result ID: '57dfccd9324f49badcf3c0532422e529') in 0.0201251 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=0d741ab62ffd05858a7deccb8c170270 DependenciesID=1b181e34ccd8619d83025b613dfbc541 StaticDependenciesID=16a1deb8e5096921bc257d60a60f7bf7 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 9
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000020 seconds.
-  path: Assets/FencesPack/Prefabs/OldWoodFence.prefab
-  importAddress: Guid(ddae8703de8a63742af7ff389827b4eb) Importer(2089858483,e11c23a36db5f54750b8cd40eac0985b)
-Start importing Assets/FencesPack/Prefabs/OldWoodFence.prefab using Guid(ddae8703de8a63742af7ff389827b4eb) Importer(2089858483,e11c23a36db5f54750b8cd40eac0985b) (ScriptedImporter) -> (Import Result ID: '2fa083a9c5810dcefa7b036da9ac7251') in 0.0143283 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=60e74ca758c8bcfac20c46e4f5ac8752 DependenciesID=71332574b0aca41249a73a6eaeb5f695 StaticDependenciesID=32988680976e42c24c6263dacc77932d 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 9
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000027 seconds.
-  path: Assets/FencesPack/Prefabs/BrickWall3.prefab
-  importAddress: Guid(3253d2a413a7218469e2f013ba33d85d) Importer(2089858483,e11c23a36db5f54750b8cd40eac0985b)
-Start importing Assets/FencesPack/Prefabs/BrickWall3.prefab using Guid(3253d2a413a7218469e2f013ba33d85d) Importer(2089858483,e11c23a36db5f54750b8cd40eac0985b) (ScriptedImporter) -> (Import Result ID: '6f9fc0ff87d5e7982a96acc42a53fe3e') in 0.0145499 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=0cbdff1a59330bc9b9dc5a3562f00c10 DependenciesID=15de0dc275b6e19b741a3ef7ebdab6a7 StaticDependenciesID=6eafa394748a01b4fa467393b9370cd4 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 9
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000035 seconds.
-  path: Assets/FencesPack/Prefabs/WoodFence.prefab
-  importAddress: Guid(aea674ccbf98c5b4b96963afaf94cad7) Importer(2089858483,e11c23a36db5f54750b8cd40eac0985b)
-Start importing Assets/FencesPack/Prefabs/WoodFence.prefab using Guid(aea674ccbf98c5b4b96963afaf94cad7) Importer(2089858483,e11c23a36db5f54750b8cd40eac0985b) (ScriptedImporter) -> (Import Result ID: '17c9c0f4d2fe74cc36b931034c3ed96e') in 0.0168412 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=04a5fc1a98d6aa817dabccc1d9c9bf08 DependenciesID=90d25412f54ce16f22e30f21f9fdc129 StaticDependenciesID=a0596872aecc9b2491f570f8870f65c9 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 9
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000020 seconds.
-  path: Assets/FencesPack/Prefabs/Gates.prefab
-  importAddress: Guid(a8e06623935fbfd4d895ac3a79532eb3) Importer(2089858483,e11c23a36db5f54750b8cd40eac0985b)
-Start importing Assets/FencesPack/Prefabs/Gates.prefab using Guid(a8e06623935fbfd4d895ac3a79532eb3) Importer(2089858483,e11c23a36db5f54750b8cd40eac0985b) (ScriptedImporter) -> (Import Result ID: '8a80f9498b50d37fad539114884473c3') in 0.0430901 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=18cf491bc1c5abbc2f0fa01eba581c82 DependenciesID=2f2a35b7bed72c5780e193952fbbf7cc StaticDependenciesID=3e59fd058eb83b7a0521f7e170cc7f3f 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 52
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000018 seconds.
-  path: Assets/FencesPack/Prefabs/RoadBarrier.prefab
-  importAddress: Guid(7332b761240aced4bade4c46b8f57aeb) Importer(2089858483,e11c23a36db5f54750b8cd40eac0985b)
-Start importing Assets/FencesPack/Prefabs/RoadBarrier.prefab using Guid(7332b761240aced4bade4c46b8f57aeb) Importer(2089858483,e11c23a36db5f54750b8cd40eac0985b) (ScriptedImporter) -> (Import Result ID: '1cd6fdb89785ae15fcc072598e01a436') in 0.0144129 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=b3a56ca2509494f107d40a75d8e2110b DependenciesID=f87a0c5dcda3bcccc3e5ec5f7cc978a4 StaticDependenciesID=82e7214bec7582f1e6830f28b2fbe9f9 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 9
-
-Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
-AssetImportWorker is now disconnected from the server
-Process exiting
-Exiting without the bug reporter. Application will terminate with return code 0
