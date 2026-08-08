@@ -1,11 +1,11 @@
 [Licensing::Module] Trying to connect to existing licensing client channel...
 Built from '6000.4/staging' branch; Version is '6000.4.4f1 (360f97ecca93) revision 3542935'; Using compiler version '194234433'; Build Type 'Release'
 OS: 'Windows 11  (10.0.26200) Professional' Language: 'en' Physical Memory: 32693 MB
-[Licensing::IpcConnector] Successfully connected to: "LicenseClient-Tiong1824" at "2026-08-07T02:30:30.5353034Z"
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-Tiong1824" at "2026-08-08T03:01:43.0680382Z"
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1
 System  architecture: x64
 Process architecture: x64
-Date: 2026-08-07T02:30:30Z
+Date: 2026-08-08T03:01:43Z
 
 COMMAND LINE ARGUMENTS:
 D:\Unity\Hub\Editor\6000.4.4f1\Editor\Unity.exe
@@ -19,7 +19,7 @@ D:/UnityProject/FYP-game
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-49159
+52844
 -licensingIpc
 LicenseClient-Tiong1824
 -force-d3d12
@@ -68,12 +68,12 @@ D:/UnityProject/FYP-game
     "memorysetup-job-temp-allocator-block-size=2097152"
     "memorysetup-job-temp-allocator-block-size-background=1048576"
     "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
-Player connection [2988]  Target information:
+Player connection [6212]  Target information:
 
-Player connection [2988]  * "[IP] 192.168.1.14 [Port] 0 [Flags] 2 [Guid] 3677568093 [EditorId] 3677568093 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-ENL0ACT) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+Player connection [6212]  * "[IP] 192.168.1.10 [Port] 0 [Flags] 2 [Guid] 1246289834 [EditorId] 1246289834 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-ENL0ACT) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
 
-Player connection [2988] Host joined multi-casting on [225.0.0.222:54997]...
-Player connection [2988] Host joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [6212] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [6212] Host joined alternative multi-casting on [225.0.0.222:34997]...
 JobSystem: Creating JobQueue using job-worker-count value 5
 Input System module state changed to: Initialized.
 [Physics::Module] Initialized fallback backend.
@@ -85,7 +85,7 @@ Library Redirect Path: Library/
 [Physics::Module] SDK Version: 4.1.2
 [Physics::Module] Integration Version: 1.0.0
 [Physics::Module] Threading Mode: Multi-Threaded
-Refreshing native plugins compatible for Editor in 6.19 ms, found 5 plugins.
+Refreshing native plugins compatible for Editor in 10.01 ms, found 5 plugins.
 Initialize engine version: 6000.4.4f1 (360f97ecca93)
 [Subsystems] Discovering subsystems at path D:/Unity/Hub/Editor/6000.4.4f1/Editor/Data/Resources/UnitySubsystems
 [Subsystems] Discovering subsystems at path D:/UnityProject/FYP-game/Assets
@@ -103,18 +103,18 @@ Initialize mono
 Mono path[0] = 'D:/Unity/Hub/Editor/6000.4.4f1/Editor/Data/Managed'
 Mono path[1] = 'D:/Unity/Hub/Editor/6000.4.4f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'D:/Unity/Hub/Editor/6000.4.4f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56148
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56788
 CodeReloadManager initialized
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: D:/Unity/Hub/Editor/6000.4.4f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.001145 seconds.
+Registered in 0.000953 seconds.
 [Licensing::Client] Error: HandshakeResponse reported an error:
 	ResponseCode: 505
 	ResponseStatus: Unsupported protocol version '1.18.1'.
 [Licensing::Module] Error: Failed to handshake to channel: "LicenseClient-Tiong1824"
 [Licensing::IpcConnector] LicenseClient-Tiong1824 channel disconnected successfully.
-[Licensing::IpcConnector] Successfully connected to: "LicenseClient-Tiong1824-6000.4.4" at "2026-08-07T02:30:31.378137Z"
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-Tiong1824-6000.4.4" at "2026-08-08T03:01:44.0357756Z"
 Native extension for WindowsStandalone target not found
 Package Manager log level set to [2]
 [Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
@@ -122,41 +122,39 @@ Package Manager log level set to [2]
 [Package Manager] Cannot connect to Unity Package Manager local server
 ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.370 seconds
-Domain Reload Profiling: 728ms
-	BeginReloadAssembly (103ms)
-	RebuildCommonClasses (33ms)
+- Finished resetting the current domain, in  0.409 seconds
+Domain Reload Profiling: 856ms
+	BeginReloadAssembly (126ms)
+	RebuildCommonClasses (38ms)
 	RebuildNativeTypeToScriptingClass (12ms)
-	initialDomainReloadingComplete (48ms)
-	LoadAllAssembliesAndSetupDomain (161ms)
-		LoadAssemblies (102ms)
-		AnalyzeDomain (153ms)
-			TypeCache.Refresh (152ms)
-				TypeCache.ScanAssembly (141ms)
-	FinalizeReload (371ms)
+	initialDomainReloadingComplete (60ms)
+	LoadAllAssembliesAndSetupDomain (210ms)
+		LoadAssemblies (124ms)
+		AnalyzeDomain (201ms)
+			TypeCache.Refresh (199ms)
+				TypeCache.ScanAssembly (184ms)
+	FinalizeReload (411ms)
 		SetupLoadedEditorAssemblies (0ms)
-			InitializePlatformSupportModulesInManaged (42ms)
-			BeforeProcessingInitializeOnLoad (94ms)
-			ProcessInitializeOnLoadAttributes (93ms)
-			ProcessInitializeOnLoadMethodAttributes (73ms)
+			InitializePlatformSupportModulesInManaged (38ms)
+			BeforeProcessingInitializeOnLoad (105ms)
+			ProcessInitializeOnLoadAttributes (120ms)
+			ProcessInitializeOnLoadMethodAttributes (88ms)
 Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
 ========================================================================
 Worker process is ready to serve import requests
 Import Worker Mode flag is 0x00
 Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
 Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
-Begin MonoManager ReloadAssembly
-[Licensing::Module] Licensing is not yet initialized.
 [Licensing::Client] Handshaking with LicensingClient:
   Version:                 1.18.1+9fbee8e
-  Session Id:              1be231f0b64b4f76865bad3ecd18d2b7
-  Correlation Id:          12e0d6bd7dd119e69f9746e5dacc0680
-  External correlation Id: 877635526468342491
+  Session Id:              6a02b5753439414d937ffa3d5c08496d
+  Correlation Id:          ce71754f3e6c84a18a5ff3d55d872e89
+  External correlation Id: 5739651735887897529
   Machine Id:              A1s0c6fEpTDN7KDylYhhwDTqc9o=
-[Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-Tiong1824-6000.4.4" (connect: 0.00s, validation: 0.00s, handshake: 0.76s)
-[Licensing::IpcConnector] Successfully connected to: "LicenseClient-Tiong1824-6000.4.4-notifications" at "2026-08-07T02:30:32.1446459Z"
-[Licensing::Module] Licensing Background thread has ended after 1.61s
-[Licensing::Module] Licensing is initialized (took 0.00s).
+[Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-Tiong1824-6000.4.4" (connect: 0.00s, validation: 0.00s, handshake: 0.91s)
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-Tiong1824-6000.4.4-notifications" at "2026-08-08T03:01:44.9433459Z"
+[Licensing::Module] Licensing Background thread has ended after 1.88s
+Begin MonoManager ReloadAssembly
 [Licensing::Client] Successfully resolved entitlement details
 [Licensing::Module] License group:
   Id: 18967849876286-UnityPersXXXX
@@ -215,41 +213,117 @@ Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInter
 [Package Manager] Cannot connect to Unity Package Manager local server
 ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.661 seconds
-Domain Reload Profiling: 1285ms
-	BeginReloadAssembly (148ms)
+- Finished resetting the current domain, in  0.846 seconds
+Domain Reload Profiling: 1522ms
+	BeginReloadAssembly (155ms)
 		DisableScriptedObjects (5ms)
-		CreateAndSetChildDomain (24ms)
-	RebuildCommonClasses (30ms)
+		CreateAndSetChildDomain (25ms)
+	RebuildCommonClasses (33ms)
 	RebuildNativeTypeToScriptingClass (10ms)
-	initialDomainReloadingComplete (48ms)
-	LoadAllAssembliesAndSetupDomain (387ms)
-		LoadAssemblies (251ms)
-		AnalyzeDomain (212ms)
-			TypeCache.Refresh (145ms)
-				TypeCache.ScanAssembly (134ms)
-			BuildScriptInfoCaches (55ms)
-			ResolveRequiredComponents (10ms)
-	FinalizeReload (662ms)
+	initialDomainReloadingComplete (50ms)
+	LoadAllAssembliesAndSetupDomain (427ms)
+		LoadAssemblies (270ms)
+		AnalyzeDomain (239ms)
+			TypeCache.Refresh (165ms)
+				TypeCache.ScanAssembly (153ms)
+			BuildScriptInfoCaches (61ms)
+			ResolveRequiredComponents (11ms)
+	FinalizeReload (847ms)
 		SetupLoadedEditorAssemblies (0ms)
-			BeforeProcessingInitializeOnLoad (126ms)
-			ProcessInitializeOnLoadAttributes (288ms)
-			ProcessInitializeOnLoadMethodAttributes (60ms)
+			BeforeProcessingInitializeOnLoad (174ms)
+			ProcessInitializeOnLoadAttributes (345ms)
+			ProcessInitializeOnLoadMethodAttributes (77ms)
 		AwakeInstancesAfterBackupRestoration (5ms)
 WARNING: Shader Unsupported: 'Hidden/Builtin_TerrainVisualization' - All subshaders removed
 WARNING: Shader Did you use #pragma only_renderers and omit this platform?
 WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.01 seconds
 Unloading 37 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6755 unused Assets / (7.5 MB). Loaded Objects now: 7641.
-Memory consumption went from 174.2 MB to 166.7 MB.
-Total: 7.731400 ms (FindLiveObjects: 0.624100 ms CreateObjectMapping: 0.333500 ms MarkObjects: 4.523400 ms  DeleteObjects: 2.248100 ms)
+Unloading 6758 unused Assets / (8.0 MB). Loaded Objects now: 7644.
+Memory consumption went from 172.4 MB to 164.4 MB.
+Total: 10.611200 ms (FindLiveObjects: 0.659100 ms CreateObjectMapping: 0.800400 ms MarkObjects: 6.277000 ms  DeleteObjects: 2.873000 ms)
 
 ========================================================================
 Received Import Request.
-  Time since last request: 1520689.087634 seconds.
+  Time since last request: 1608965.149113 seconds.
   path: Assets/Scenes/MainScene.unity
   importAddress: Guid(99c9720ab356a0642a771bea13969a05) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Scenes/MainScene.unity using Guid(99c9720ab356a0642a771bea13969a05) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '9598e01fa3505e06a633c15d121de6dd') in 0.0746898 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=c006fe8cb0f0992158121b87f6e8cf84 DependenciesID=5ba55f44a8722e2ea420980b206e6a44 StaticDependenciesID=c4461e14b9c999dfa08276ce770e53a2 
+Start importing Assets/Scenes/MainScene.unity using Guid(99c9720ab356a0642a771bea13969a05) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'c5da43c75fe3e7f1e936f21ffa81c4df') in 0.0746691 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=5a65ca4726d623ae66dc13802774299a DependenciesID=ed89df950ae89a3d5c9754b7346748d6 StaticDependenciesID=1a6a55e137623cdf0fc980be8d5f1b28 
 Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
 
+========================================================================
+Received Import Request.
+  Time since last request: 4733.585162 seconds.
+  path: Assets/FencesPack
+  importAddress: Guid(2a6df0df1646b6d46a79f9d40ec8a27d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FencesPack using Guid(2a6df0df1646b6d46a79f9d40ec8a27d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (Import Result ID: '282b1a92bb1383a9a0c9bd0ed7d2a97f') in 0.0005507 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=2d82327b1418003a7d25bdaafe2d3911 DependenciesID=8fc1786e7cd7415f32f2098a2124e9e8 StaticDependenciesID=8edee017ae64376d8d54161dd2197413 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 456.561439 seconds.
+  path: Assets/Kevin Iglesias/Human Animations/Models
+  importAddress: Guid(7278ad681fe961a49a8889ba9f9d45df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Kevin Iglesias/Human Animations/Models using Guid(7278ad681fe961a49a8889ba9f9d45df) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (Import Result ID: 'd78b6e8744283aee2bd9ba6283161b7d') in 0.0005086 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=e0aac9ac21f47c8f9e02147c84f47dbf DependenciesID=d0a309c69f11648a558d00b1527e3617 StaticDependenciesID=a1db4241bbddeae80000d8071405adcb 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.369763 seconds.
+  path: Assets/Kevin Iglesias/Human Animations/Models/HumanF_Model.fbx
+  importAddress: Guid(1841c298173cdad4db8df8602c8f1c8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Kevin Iglesias/Human Animations/Models/HumanF_Model.fbx using Guid(1841c298173cdad4db8df8602c8f1c8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (Import Result ID: '360eb30eda34cd8babb40de55753a90e') in 0.6806131 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=4f3fb0c6e90d9c3a92ae1c912ba29819 DependenciesID=db2e2a9d4cb4010cc0df896720b2581e StaticDependenciesID=3abd24b12aa04372f82ac6fc3de6d8bb 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 124
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.808662 seconds.
+  path: Assets/Kevin Iglesias/Human Animations/Models/HumanM_Model.fbx
+  importAddress: Guid(2faa610713d3b3c439473daa55e8c60a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Kevin Iglesias/Human Animations/Models/HumanM_Model.fbx using Guid(2faa610713d3b3c439473daa55e8c60a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (Import Result ID: 'f0e20332da3bc2bc946f20502c6b4f8d') in 0.0297833 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=eee8a81b3d2b52269402dbaaf39e51e3 DependenciesID=2b8cfac7e14492a0a0840005aee85834 StaticDependenciesID=2244ea5f9462dd3d78b0cbf4401bfd07 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 124
+
+========================================================================
+Received Import Request.
+  Time since last request: 120.357633 seconds.
+  path: Assets/Animation
+  importAddress: Guid(06d533ce10f45ef42ac49a1e6ba51c9d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animation using Guid(06d533ce10f45ef42ac49a1e6ba51c9d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (Import Result ID: 'c48008bea20018b3a9999069ba99cca0') in 0.0005149 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=34d9303f507694f38db357ad8113ef59 DependenciesID=d050c082e1494cb49b3c31ab89b32888 StaticDependenciesID=d543f12852cdba94f14c6ef62565681e 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 2134.924483 seconds.
+  path: Assets/Kevin Iglesias/Human Animations/Unity Demo Scenes/Human Basic Motions/Textures/HumanBasicMotionsShadow.png
+  importAddress: Guid(2f6618ca4af94df49884ca327b3c36f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Kevin Iglesias/Human Animations/Unity Demo Scenes/Human Basic Motions/Textures/HumanBasicMotionsShadow.png using Guid(2f6618ca4af94df49884ca327b3c36f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (Import Result ID: 'b5c5f68894bbbb4a26f776aa4efbec28') in 0.0367302 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=dac5625fb4ad008404ee6a5d443fa679 DependenciesID=4b75de6ccc1b72d67a90864ae70b82d4 StaticDependenciesID=df64546c5d05a48043c8b4735d42096a 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000038 seconds.
+  path: Assets/StarterAssets/Mobile/UI/UI_Icon_Look.png
+  importAddress: Guid(af0ae2dbf3d1efb4f82af377950704a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/StarterAssets/Mobile/UI/UI_Icon_Look.png using Guid(af0ae2dbf3d1efb4f82af377950704a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (Import Result ID: '0ba474eb164e9120990b44f1d8c15ec8') in 0.01479 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=3133e7b70bb1aea5631d3540fdddb9c4 DependenciesID=91abc4b94e2fee2ef8d12d7765262011 StaticDependenciesID=7abfe1db20742d02089f0bec72dcf2c4 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000040 seconds.
+  path: Assets/StarterAssets/Mobile/UI/UI_Circle_Faded.png
+  importAddress: Guid(90ded0611e490aa4ba6961afbfc2280d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/StarterAssets/Mobile/UI/UI_Circle_Faded.png using Guid(90ded0611e490aa4ba6961afbfc2280d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (Import Result ID: '0c56c9f766be8cf81aa6f57b171f964e') in 0.0361396 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=52ef3c37dd577fe62e74a24998deaaf2 DependenciesID=8f532f7ac4fd1c1330d535b68fd0b4de StaticDependenciesID=42fc337ff6cd92d7cbfa2dfd7c458f15 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/StarterAssets/Mobile/UI/UI_Icon_Jump.png
+  importAddress: Guid(751aa1b6637101946b2fdbb7aa27d6ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/StarterAssets/Mobile/UI/UI_Icon_Jump.png using Guid(751aa1b6637101946b2fdbb7aa27d6ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (Import Result ID: 'f17e43767e8c6f46231dc843c29d49d9') in 0.0254521 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=3fbcf745e028aaba2533702530ea2b4c DependenciesID=105d43e5fb547b6852cc85ac84358376 StaticDependenciesID=b3b0d675bee16fddc506654ac569a5c1 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0

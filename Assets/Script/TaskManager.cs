@@ -57,6 +57,7 @@ public class TaskManager : MonoBehaviour
     private bool hasShownCabbageTask = false;
     private bool hasAdvancedPastCabbageTask = false;
     private bool hasShownTask2 = false;
+    private bool hasAdvancedPastTask2 = false;
 
     private void Awake()
     {
@@ -120,6 +121,13 @@ public class TaskManager : MonoBehaviour
         {
             hasShownTask2 = true;
             AdvanceToNextTask(); // moves from the cabbage task's index to the next one, e.g. "Arrange book"
+        }
+
+        // Once the book-sorting puzzle is fully complete, clear the task (go blank)
+        if (hasShownTask2 && !hasAdvancedPastTask2 && task2Talk != null && task2Talk.isTaskCompleted)
+        {
+            hasAdvancedPastTask2 = true;
+            ClearTask();
         }
 
         // --- Add Task 3+ watching here later, following the same clear-then-show pattern ---

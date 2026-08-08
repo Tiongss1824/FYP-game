@@ -192,8 +192,8 @@ MonoBehaviour:
     y: 0
     width: 257
     height: 706
-  m_MinSize: {x: 201, y: 226}
-  m_MaxSize: {x: 4001, y: 4026}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 15}
   m_Panes:
   - {fileID: 15}
@@ -274,8 +274,8 @@ MonoBehaviour:
     y: 0
     width: 378
     height: 981
-  m_MinSize: {x: 276, y: 76}
-  m_MaxSize: {x: 4001, y: 4026}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 20}
   m_Panes:
   - {fileID: 20}
@@ -764,14 +764,20 @@ MonoBehaviour:
     m_DynamicPanelBehavior: 0
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 1757}
-      m_SelectedIDs: []
+      scrollPos: {x: 0, y: 1949}
+      m_SelectedIDs:
+      - m_Data: 51188
       m_LastClickedID:
-        m_Data: 0
+        m_Data: 51188
       m_ExpandedIDs:
+      - m_Data: -26686
+      - m_Data: -21918
       - m_Data: -1392
-      - m_Data: 50590
-      - m_Data: 50702
+      - m_Data: 50010
+      - m_Data: 50778
+      - m_Data: 50998
+      - m_Data: 51216
+      - m_Data: 51290
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1365,9 +1371,9 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_DebugDrawModesUseInteractiveLightBakingData: 0
   m_Position:
-    m_Target: {x: -6.1640234, y: 1.3837827, z: 24.597355}
+    m_Target: {x: 107.10362, y: -5.2368536, z: -29.604378}
     speed: 2
-    m_Value: {x: -6.1640234, y: 1.3837827, z: 24.597355}
+    m_Value: {x: 107.10362, y: -5.2368536, z: -29.604378}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1414,13 +1420,13 @@ MonoBehaviour:
     m_gridOpacity: 0.482
     m_NearestPlaneToHandleMode: 0
   m_Rotation:
-    m_Target: {x: 0.31565815, y: 0.3144514, z: -0.11169859, w: 0.8883635}
+    m_Target: {x: -0.057361357, y: -0.82034785, z: 0.08341897, w: -0.5630424}
     speed: 2
-    m_Value: {x: 0.31512302, y: 0.31841624, z: -0.1131074, w: 0.88685703}
+    m_Value: {x: -0.05735458, y: -0.8202509, z: 0.083409116, w: -0.5629759}
   m_Size:
-    m_Target: 19.192926
+    m_Target: 46.591778
     speed: 2
-    m_Value: 19.192926
+    m_Value: 46.591778
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -1541,7 +1547,7 @@ MonoBehaviour:
     m_SkipHidden: 1
     m_SearchArea: 1
     m_Folders:
-    - Assets/BOKI/LowPolyNature/Prefabs/models
+    - Assets/Vlad Belza/Transformer HDRP/Prefab
     m_Globs: []
     m_ProductIds: 
     m_AnyWithAssetOrigin: 0
@@ -1551,25 +1557,34 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/BOKI/LowPolyNature/Prefabs/models
+  - Assets/Vlad Belza/Transformer HDRP/Prefab
   m_LastFoldersGridSize: 16
   m_LastProjectPath: D:\UnityProject\FYP-game
   m_LockTracker:
     m_IsLocked: 0
   m_LastLocalAssetsSearchArea: 1
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 27}
+    scrollPos: {x: 0, y: 907}
     m_SelectedIDs:
-    - m_Data: 61302
+    - m_Data: 71706
     m_LastClickedID:
-      m_Data: 61302
+      m_Data: 71706
     m_ExpandedIDs:
     - m_Data: 0
-    - m_Data: 60740
-    - m_Data: 60742
-    - m_Data: 60744
-    - m_Data: 60746
-    - m_Data: 61088
+    - m_Data: 60848
+    - m_Data: 60850
+    - m_Data: 60852
+    - m_Data: 60854
+    - m_Data: 61028
+    - m_Data: 61060
+    - m_Data: 61064
+    - m_Data: 61102
+    - m_Data: 61104
+    - m_Data: 61320
+    - m_Data: 61358
+    - m_Data: 71688
+    - m_Data: 71696
+    - m_Data: 71712
     - m_Data: 1000000000
     - m_Data: 2147483647
     m_RenameOverlay:
@@ -1605,10 +1620,10 @@ MonoBehaviour:
       m_Data: 0
     m_ExpandedIDs:
     - m_Data: 0
-    - m_Data: 60740
-    - m_Data: 60742
-    - m_Data: 60744
-    - m_Data: 60746
+    - m_Data: 60848
+    - m_Data: 60850
+    - m_Data: 60852
+    - m_Data: 60854
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1636,17 +1651,18 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: []
+    m_SelectedInstanceIDs:
+    - m_Data: 51188
     m_LastClickedEntityId:
-      m_Data: 0
+      m_Data: 51188
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs:
     - m_Data: 53428
     - m_Data: 53418
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
+      m_Name: WirePanelInteractable
+      m_OriginalName: WirePanelInteractable
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
@@ -1654,10 +1670,10 @@ MonoBehaviour:
         width: 0
         height: 0
       m_UserData:
-        m_Data: 0
+        m_Data: 71520
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 11
+      m_OriginalEventType: 0
       m_IsRenamingFilename: 1
       m_TrimLeadingAndTrailingWhitespace: 0
       m_ClientGUIView: {fileID: 10}

@@ -26,8 +26,10 @@ public class MerchantNpc : MonoBehaviour, IInteractable
 
     public void OnInteract()
     {
-        if (welcomeLines.Length > 0)
+        if (!hasBeenIntroduced && welcomeLines.Length > 0)
         {
+            hasBeenIntroduced = true; // Only plays once, ever
+
             // 1. Tell the DialogueManager: "When you finish this text, run my OpenTheShopMenu function!"
             dialogueManager.onDialogueFinished += OpenTheShopMenu;
 
@@ -36,12 +38,12 @@ public class MerchantNpc : MonoBehaviour, IInteractable
         }
         else
         {
-            // If the merchant has no text setup, just open the shop instantly
+            // Already introduced (or no welcome lines set) — go straight to the shop
             OpenTheShopMenu();
         }
     }
 
-    // NEW: call this from other scripts (e.g. CinematicTrigger) once the NPC
+    // Call this from other scripts (e.g. CinematicTrigger) once the NPC
     // has already been "met" through a cutscene, so the welcome line won't repeat later.
     public void MarkAsIntroduced()
     {
