@@ -17,6 +17,9 @@ public class WalletManager : MonoBehaviour
 
     private int currentCash = 0;
 
+    // NEW: read-only getter so other scripts (like ShopManager) can check the balance
+    public int CurrentCash => currentCash;
+
     private void Awake()
     {
         // Set up the Singleton when the game boots

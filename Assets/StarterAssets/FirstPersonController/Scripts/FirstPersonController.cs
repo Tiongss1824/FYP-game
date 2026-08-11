@@ -62,7 +62,7 @@ namespace StarterAssets
         private StarterAssetsInputs _input;
         private GameObject _mainCamera;
 
-        private const float _threshold = 0.01f;
+        private const float _threshold = 0.0001f;
 
         private bool IsCurrentDeviceMouse
         {
@@ -124,8 +124,13 @@ namespace StarterAssets
 
         private void CameraRotation()
         {
-            // if there is an input
-            if (_input.look.sqrMagnitude >= _threshold)
+            // The threshold check exists to filter out gamepad stick drift, not mouse movement.
+            // For mouse input, any non-zero delta should register — even tiny, slow movements.
+            bool hasInput = IsCurrentDeviceMouse
+                ? _input.look.sqrMagnitude > 0f
+                : _input.look.sqrMagnitude >= _threshold;
+
+            if (hasInput)
             {
                 //Don't multiply mouse input by Time.deltaTime
                 float deltaTimeMultiplier = IsCurrentDeviceMouse ? 1.0f : Time.deltaTime;

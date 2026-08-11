@@ -72,18 +72,18 @@ public class CinematicTrigger : MonoBehaviour
         playerController.transform.rotation = targetBodyRotation;
         playerCameraRoot.rotation = targetCameraRotation;
 
-        // 5. Specifically trigger the quest dialogue (NpcTalk), not whichever
-        // IInteractable component happens to come first on this GameObject.
+        // 5. Trigger the correct interaction depending on what's on this NPC.
+        // NpcTalk (quest NPCs like the old man) gets its normal quest dialogue.
         if (npcCharacter != null && npcCharacter.TryGetComponent(out NpcTalk npcTalk))
         {
             npcTalk.OnInteract();
         }
-
-        // 6. This cutscene counts as "meeting" the merchant, so make sure her
-        // welcome dialogue and shop don't fire again when the player later presses F.
-        if (npcCharacter != null && npcCharacter.TryGetComponent(out MerchantNpc merchantNpc))
+        // MerchantNpc gets a REAL interaction (not just a flag) — this plays her
+        // welcome line the first time, or skips straight to the shop on repeat
+        // visits, exactly like a normal F/E interaction would.
+        else if (npcCharacter != null && npcCharacter.TryGetComponent(out MerchantNpc merchantNpc))
         {
-            merchantNpc.MarkAsIntroduced();
+            merchantNpc.OnInteract();
         }
     }
 }

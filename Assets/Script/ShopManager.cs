@@ -12,6 +12,20 @@ public class ShopManager : MonoBehaviour
     [Header("Player References")]
     public FirstPersonController playerController;
 
+    [Header("Purchase Settings")]
+    public int medicinePrice = 150;
+
+    [Header("Not Enough Money Hint")]
+    [Tooltip("Drag your DialogueManager here")]
+    public DialogueManager dialogueManager;
+
+    [Tooltip("The name shown in the dialogue box for this hint")]
+    public string merchantName = "Merchant";
+
+    [Tooltip("What the merchant says when you leave without enough money for medicine")]
+    [TextArea(2, 5)]
+    public string[] notEnoughMoneyLines;
+
     private void Awake()
     {
         Instance = this;
@@ -65,11 +79,26 @@ public class ShopManager : MonoBehaviour
         }
     }
 
+    // NEW: wire this to your "Leave" button instead of CloseShop() directly.
+    // If the player can't afford the medicine yet, the merchant gives a hint before closing.
+    public void LeaveShop()
+    {
+        bool canAffordMedicine = WalletManager.Instance != null && WalletManager.Instance.CurrentCash >= medicinePrice;
+
+        if (!canAffordMedicine && notEnoughMoneyLines.Length > 0 && dialogueManager != null)
+        {
+            CloseShop();
+            dialogueManager.StartDialogue(merchantName, notEnoughMoneyLines);
+        }
+        else
+        {
+            CloseShop();
+        }
+    }
+
     // 3. The actual purchase logic
     public void BuyMedicine()
     {
-        int medicinePrice = 150;
-
         // Check with your WalletManager!
         if (WalletManager.Instance.TryBuyMedicine(medicinePrice))
         {

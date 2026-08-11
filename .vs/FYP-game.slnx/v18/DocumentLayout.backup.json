@@ -3,14 +3,6 @@
   "WorkspaceRootPath": "D:\\UnityProject\\FYP-game\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|d:\\unityproject\\fyp-game\\assets\\script\\merchantnpc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\merchantnpc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|d:\\unityproject\\fyp-game\\assets\\script\\taskmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\taskmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|d:\\unityproject\\fyp-game\\assets\\script\\bookslot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\bookslot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -21,6 +13,18 @@
     {
       "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|d:\\unityproject\\fyp-game\\assets\\script\\bookdrag.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\bookdrag.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|d:\\unityproject\\fyp-game\\assets\\script\\wirepanelinteractable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\wirepanelinteractable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|d:\\unityproject\\fyp-game\\assets\\script\\merchantnpc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\merchantnpc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|d:\\unityproject\\fyp-game\\assets\\script\\taskmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\taskmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|d:\\unityproject\\fyp-game\\assets\\script\\countvege.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -82,50 +86,63 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "WirePanelInteractable.cs",
+              "DocumentMoniker": "D:\\UnityProject\\FYP-game\\Assets\\Script\\WirePanelInteractable.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\WirePanelInteractable.cs",
+              "ToolTip": "D:\\UnityProject\\FYP-game\\Assets\\Script\\WirePanelInteractable.cs",
+              "RelativeToolTip": "Assets\\Script\\WirePanelInteractable.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-08T06:11:11.563Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "BookSortingManager.cs",
               "DocumentMoniker": "D:\\UnityProject\\FYP-game\\Assets\\Script\\BookSortingManager.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\BookSortingManager.cs",
               "ToolTip": "D:\\UnityProject\\FYP-game\\Assets\\Script\\BookSortingManager.cs",
               "RelativeToolTip": "Assets\\Script\\BookSortingManager.cs",
-              "ViewState": "AgIAAFYAAAAAAAAAAAAQwH8AAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAEcAAAAAAAAAAAAIwF8AAABOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-08-07T13:55:56.382Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "BookSlot.cs",
               "DocumentMoniker": "D:\\UnityProject\\FYP-game\\Assets\\Script\\BookSlot.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\BookSlot.cs",
               "ToolTip": "D:\\UnityProject\\FYP-game\\Assets\\Script\\BookSlot.cs",
               "RelativeToolTip": "Assets\\Script\\BookSlot.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAmwBcAAAA7AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-08-07T13:55:09.142Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "BookDrag.cs",
               "DocumentMoniker": "D:\\UnityProject\\FYP-game\\Assets\\Script\\BookDrag.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\BookDrag.cs",
               "ToolTip": "D:\\UnityProject\\FYP-game\\Assets\\Script\\BookDrag.cs",
               "RelativeToolTip": "Assets\\Script\\BookDrag.cs",
-              "ViewState": "AgIAACQAAAAAAAAAAAAowAYAAAAVAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-08-07T12:44:14.77Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "TaskManager.cs",
               "DocumentMoniker": "D:\\UnityProject\\FYP-game\\Assets\\Script\\TaskManager.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\TaskManager.cs",
@@ -133,12 +150,11 @@
               "RelativeToolTip": "Assets\\Script\\TaskManager.cs",
               "ViewState": "AgIAAMkAAAAAAAAAAAAxwPIAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-29T18:02:26.388Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-29T18:02:26.388Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "FirstPersonController.cs",
               "DocumentMoniker": "D:\\UnityProject\\FYP-game\\Assets\\StarterAssets\\FirstPersonController\\Scripts\\FirstPersonController.cs",
               "RelativeDocumentMoniker": "Assets\\StarterAssets\\FirstPersonController\\Scripts\\FirstPersonController.cs",
@@ -150,7 +166,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "PlayerCamera.cs",
               "DocumentMoniker": "D:\\UnityProject\\FYP-game\\Assets\\Script\\PlayerCamera.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\PlayerCamera.cs",
@@ -162,7 +178,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "PauseMenu.cs",
               "DocumentMoniker": "D:\\UnityProject\\FYP-game\\Assets\\Script\\PauseMenu.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\PauseMenu.cs",
@@ -174,7 +190,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "CinematicTrigger.cs",
               "DocumentMoniker": "D:\\UnityProject\\FYP-game\\Assets\\Script\\CinematicTrigger.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\CinematicTrigger.cs",
@@ -186,7 +202,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "MerchantNpc.cs",
               "DocumentMoniker": "D:\\UnityProject\\FYP-game\\Assets\\Script\\MerchantNpc.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\MerchantNpc.cs",
@@ -199,7 +215,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "CountVege.cs",
               "DocumentMoniker": "D:\\UnityProject\\FYP-game\\Assets\\Script\\CountVege.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\CountVege.cs",
@@ -211,7 +227,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "WalletManager.cs",
               "DocumentMoniker": "D:\\UnityProject\\FYP-game\\Assets\\Script\\WalletManager.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\WalletManager.cs",
@@ -223,7 +239,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "FaintSequenceManager.cs",
               "DocumentMoniker": "D:\\UnityProject\\FYP-game\\Assets\\Script\\FaintSequenceManager.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\FaintSequenceManager.cs",
@@ -235,7 +251,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 18,
               "Title": "DialogueManager.cs",
               "DocumentMoniker": "D:\\UnityProject\\FYP-game\\Assets\\Script\\DialogueManager.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\DialogueManager.cs",
@@ -247,7 +263,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "NpcTalk.cs",
               "DocumentMoniker": "D:\\UnityProject\\FYP-game\\Assets\\Script\\NpcTalk.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\NpcTalk.cs",
@@ -259,7 +275,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "StarterAssetsInputs.cs",
               "DocumentMoniker": "D:\\UnityProject\\FYP-game\\Assets\\StarterAssets\\InputSystem\\StarterAssetsInputs.cs",
               "RelativeDocumentMoniker": "Assets\\StarterAssets\\InputSystem\\StarterAssetsInputs.cs",
@@ -271,7 +287,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "ShopManager.cs",
               "DocumentMoniker": "D:\\UnityProject\\FYP-game\\Assets\\Script\\ShopManager.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\ShopManager.cs",
@@ -283,7 +299,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "PlayerInteract.cs",
               "DocumentMoniker": "D:\\UnityProject\\FYP-game\\Assets\\Script\\PlayerInteract.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\PlayerInteract.cs",
@@ -295,7 +311,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "DoorController.cs",
               "DocumentMoniker": "D:\\UnityProject\\FYP-game\\Assets\\Script\\DoorController.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\DoorController.cs",

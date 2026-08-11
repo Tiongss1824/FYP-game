@@ -7,19 +7,12 @@ public class WirePanelInteractable : MonoBehaviour, IInteractable
     [Tooltip("Same NPC reference as TaskManager's Task 2 Talk / BookSortingManager's Task 2 Talk")]
     public NpcTalk task2Talk;
 
-    [Header("Prompts")]
-    public string notAssignedPrompt = "Nothing to do here";
-    public string activePrompt = "Press [F] to Fix Wiring";
-    public string completedPrompt = "The wiring is fixed";
+    [Header("Prompt")]
+    public string interactPrompt = "Press [E] to Interact";
 
     public string GetInteractPrompt()
     {
-        if (task2Talk == null) return activePrompt;
-
-        if (task2Talk.isTaskCompleted) return completedPrompt;
-        if (!task2Talk.HasBeenAssigned) return notAssignedPrompt;
-
-        return activePrompt;
+        return interactPrompt;
     }
 
     public void OnInteract()

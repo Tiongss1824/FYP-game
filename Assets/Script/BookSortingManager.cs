@@ -17,10 +17,19 @@ public class BookSortingManager : MonoBehaviour
     public NpcTalk task2Talk;
 
     [Header("Puzzle Settings")]
-    [Tooltip("How many correct placements are needed to finish the task")]
-    public int totalBooksRequired = 5;
+    [Tooltip("Should equal the total number of slots — the puzzle completes when every slot has its correct color")]
+    public int totalBooksRequired = 12;
 
-    private int correctlyPlacedCount = 0;
+    [Header("Completion Cutscene")]
+    [Tooltip("Drag NPC2's actual GameObject/model in the scene (the one that moves around)")]
+    public Transform npcToMove;
+
+    [Tooltip("An empty GameObject placed wherever you want NPC2 to appear")]
+    public Transform arrivalPoint;
+
+    [Tooltip("The CinematicTrigger already set up with NPC2 as its npcCharacter — no collider needed since this calls it manually")]
+    public CinematicTrigger cutsceneTrigger;
+
     private bool isComplete = false;
 
     private void Awake()
@@ -91,12 +100,19 @@ public class BookSortingManager : MonoBehaviour
             return;
         }
 
-        correctlyPlacedCount = 0;
-
         BookDrag[] allPieces = sortingUIPanel.GetComponentsInChildren<BookDrag>(true);
         foreach (BookDrag piece in allPieces)
         {
-            piece.ResetToStart();
+            if (piece.IsClone)
+            {
+                // Clones came from an infinite-supply palette piece — just remove them
+                Destroy(piece.gameObject);
+            }
+            else
+            {
+                // Palette source pieces never actually move themselves, but reset just in case
+                piece.ResetToStart();
+            }
         }
 
         BookSlot[] allSlots = sortingUIPanel.GetComponentsInChildren<BookSlot>(true);
@@ -108,14 +124,21 @@ public class BookSortingManager : MonoBehaviour
         CloseSortingUI();
     }
 
-    // Called by BookSlot every time a piece is placed correctly
-    public void OnBookPlacedCorrectly()
+    // Called by BookSlot every time ANY piece is dropped into a slot (right or wrong color).
+    // Rechecks every slot from scratch, since pieces can now be swapped around freely.
+    public void CheckCompletion()
     {
         if (isComplete) return;
 
-        correctlyPlacedCount++;
+        BookSlot[] allSlots = sortingUIPanel.GetComponentsInChildren<BookSlot>(true);
 
-        if (correctlyPlacedCount >= totalBooksRequired)
+        int correctCount = 0;
+        foreach (BookSlot slot in allSlots)
+        {
+            if (slot.IsCorrect()) correctCount++;
+        }
+
+        if (correctCount >= totalBooksRequired && correctCount >= allSlots.Length)
         {
             CompletePuzzle();
         }
@@ -129,6 +152,19 @@ public class BookSortingManager : MonoBehaviour
         if (task2Talk != null)
         {
             task2Talk.CompleteTask();
+        }
+
+        // Teleport NPC2 to the arrival point, then play the camera-turn-and-talk cutscene
+        // — same direct-call pattern as CountVege.CompleteQuest() uses for the old man
+        if (npcToMove != null && arrivalPoint != null)
+        {
+            npcToMove.position = arrivalPoint.position;
+            npcToMove.rotation = arrivalPoint.rotation;
+        }
+
+        if (cutsceneTrigger != null)
+        {
+            cutsceneTrigger.StartCutsceneManually();
         }
 
         // Small delay so the player can see the last piece snap in before the panel closes

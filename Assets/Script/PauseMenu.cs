@@ -11,6 +11,17 @@ public class PauseMenu : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
+            // NEW: if the wiring puzzle is currently open, ESC closes it
+            // (with the same punishment reset as the Cancel button) instead
+            // of opening the pause menu on top of it.
+            if (BookSortingManager.Instance != null
+                && BookSortingManager.Instance.sortingUIPanel != null
+                && BookSortingManager.Instance.sortingUIPanel.activeSelf)
+            {
+                BookSortingManager.Instance.CancelPuzzle();
+                return;
+            }
+
             if (GameIsPaused)
             {
                 Resume();
