@@ -26,6 +26,9 @@ public class ShopManager : MonoBehaviour
     [TextArea(2, 5)]
     public string[] notEnoughMoneyLines;
 
+    private bool hasBoughtMedicine = false;
+    public bool HasBoughtMedicine => hasBoughtMedicine;
+
     private void Awake()
     {
         Instance = this;
@@ -79,13 +82,11 @@ public class ShopManager : MonoBehaviour
         }
     }
 
-    // NEW: wire this to your "Leave" button instead of CloseShop() directly.
-    // If the player can't afford the medicine yet, the merchant gives a hint before closing.
     public void LeaveShop()
     {
         bool canAffordMedicine = WalletManager.Instance != null && WalletManager.Instance.CurrentCash >= medicinePrice;
 
-        if (!canAffordMedicine && notEnoughMoneyLines.Length > 0 && dialogueManager != null)
+        if (!canAffordMedicine && !canAffordMedicine && notEnoughMoneyLines.Length > 0 && dialogueManager != null)
         {
             CloseShop();
             dialogueManager.StartDialogue(merchantName, notEnoughMoneyLines);
@@ -102,17 +103,9 @@ public class ShopManager : MonoBehaviour
         // Check with your WalletManager!
         if (WalletManager.Instance.TryBuyMedicine(medicinePrice))
         {
-            Debug.Log("Successfully bought Medicine! Money deducted.");
-
-            // TODO: Add boolean here like 'hasMedicine = true;' for your final quest
-        }
-        else
-        {
-            Debug.Log("Not enough cash!");
-            // Optional: You could make a UI text flash red here saying "Not enough money"
+            hasBoughtMedicine = true;
         }
 
-        // Clear the selected button so "Buy" doesn't stay highlighted!
         if (EventSystem.current != null)
         {
             EventSystem.current.SetSelectedGameObject(null);

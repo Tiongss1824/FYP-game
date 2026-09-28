@@ -44,6 +44,11 @@ public class TaskManager : MonoBehaviour
 
     [Header("Task 2: Arrange Book NPC")]
     [Tooltip("Drag the task 2 NPC's GameObject (the one with NpcTalk on it)")]
+
+    [Header("Task 3: Alvin finding ring")]
+    public NpcTalk alvinTalk;
+    public int findRingTaskIndex = 3;
+    public int returnToAlvinTaskIndex = 4;
     public NpcTalk task2Talk;
 
     // --- Internal state ---
@@ -58,6 +63,7 @@ public class TaskManager : MonoBehaviour
     private bool hasAdvancedPastCabbageTask = false;
     private bool hasShownTask2 = false;
     private bool hasAdvancedPastTask2 = false;
+    private bool hasShownRingTask = false;
 
     private void Awake()
     {
@@ -130,7 +136,13 @@ public class TaskManager : MonoBehaviour
             ClearTask();
         }
 
-        // --- Add Task 3+ watching here later, following the same clear-then-show pattern ---
+        // --- Task 3: Alvin's lost ring ---
+        if (hasAdvancedPastTask2 && !hasShownRingTask &&
+            alvinTalk != null && alvinTalk.HasBeenAssigned)
+        {
+            hasShownRingTask = true;
+            GoToTask(findRingTaskIndex);
+        }
     }
 
     // --- Sequence control ---
@@ -240,4 +252,9 @@ public class TaskManager : MonoBehaviour
             taskText.text = taskLabel;
         }
     }
+
+    public void MarkRingFound()
+{
+    GoToTask(returnToAlvinTaskIndex);
+}
 }

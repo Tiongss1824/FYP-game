@@ -13,26 +13,36 @@ public class ObjectGrabbable : MonoBehaviour
     public void Grab(Transform objectGrabPointTransform)
     {
         this.objectGrabPointTransform = objectGrabPointTransform;
-        objectRigidbody.useGravity = false;
 
-        // Unity 6 uses linearDamping instead of drag. This stops the item from jittering!
-        objectRigidbody.linearDamping = 10f;
+        objectRigidbody.useGravity = false;
+        objectRigidbody.isKinematic = true;
+
+        objectRigidbody.linearVelocity = Vector3.zero;
+        objectRigidbody.angularVelocity = Vector3.zero;
     }
 
     public void Drop()
     {
         this.objectGrabPointTransform = null;
+
+        objectRigidbody.isKinematic = false;
         objectRigidbody.useGravity = true;
-        objectRigidbody.linearDamping = 0f;
+
+        objectRigidbody.linearVelocity = Vector3.zero;
+        objectRigidbody.angularVelocity = Vector3.zero;
     }
 
     private void FixedUpdate()
     {
-        // If we are holding the object, smoothly pull it to the camera
         if (objectGrabPointTransform != null)
         {
             float lerpSpeed = 10f;
-            Vector3 newPosition = Vector3.Lerp(transform.position, objectGrabPointTransform.position, Time.fixedDeltaTime * lerpSpeed);
+            Vector3 newPosition = Vector3.Lerp(
+                transform.position,
+                objectGrabPointTransform.position,
+                Time.fixedDeltaTime * lerpSpeed
+            );
+
             objectRigidbody.MovePosition(newPosition);
         }
     }

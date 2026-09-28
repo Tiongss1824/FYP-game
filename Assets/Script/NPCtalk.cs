@@ -21,17 +21,20 @@ public class NpcTalk : MonoBehaviour, IInteractable
     public bool isTaskCompleted = false;
     private bool hasTriggeredEvent = false;
 
-    // NEW: read-only flag so other scripts (like TaskProgressTracker) can tell
-    // when this NPC has assigned its quest, without needing any other changes here.
     public bool HasBeenAssigned { get; private set; } = false;
 
     [Header("Before Task Dialogue")]
     public Conversation[] preTaskConversations;
     private int preTaskIndex = 0;
+    private bool hasTriggeredPreTaskEvent = false; // NEW
 
     [Header("After Task Dialogue")]
     public Conversation[] postTaskConversations;
     private int postTaskIndex = 0;
+
+    [Header("Mini-Game Trigger Event")]
+    [Tooltip("Fires exactly when the LAST pre-task dialogue box closes — wire this to whatever opens your minigame UI.")]
+    public UnityEvent onReadyForMinigame; // NEW
 
     [Header("Quest Completion Events")]
     [Tooltip("Fires exactly when the post-task dialogue box closes")]
@@ -53,11 +56,23 @@ public class NpcTalk : MonoBehaviour, IInteractable
     {
         if (!isTaskCompleted)
         {
-            HasBeenAssigned = true; // NEW: just marks that the quest has been given
+            HasBeenAssigned = true;
 
             if (preTaskConversations.Length > 0)
             {
-                dialogueManager.StartDialogue(npcName, preTaskConversations[preTaskIndex].lines);
+                int currentIndex = preTaskIndex; // capture BEFORE it changes
+
+                dialogueManager.StartDialogue(npcName, preTaskConversations[currentIndex].lines);
+
+                // NEW: if this is the last pre-task conversation, hook into
+                // dialogue-finished so the minigame UI opens once the box closes.
+                bool isLastPreTaskConvo = currentIndex == preTaskConversations.Length - 1;
+                if (isLastPreTaskConvo && !hasTriggeredPreTaskEvent)
+                {
+                    hasTriggeredPreTaskEvent = true;
+                    dialogueManager.onDialogueFinished += TriggerPreTaskEvents;
+                }
+
                 if (preTaskIndex < preTaskConversations.Length - 1) preTaskIndex++;
             }
         }
@@ -67,10 +82,8 @@ public class NpcTalk : MonoBehaviour, IInteractable
             {
                 hasTriggeredEvent = true;
 
-                // 1. Tell DialogueManager: "When this text finishes, fire my generic event!"
                 dialogueManager.onDialogueFinished += TriggerQuestEvents;
 
-                // 2. Start the dialogue
                 if (postTaskConversations.Length > 0)
                 {
                     dialogueManager.StartDialogue(npcName, postTaskConversations[postTaskIndex].lines);
@@ -78,7 +91,7 @@ public class NpcTalk : MonoBehaviour, IInteractable
                 }
                 else
                 {
-                    TriggerQuestEvents(); // Failsafe if there is no text
+                    TriggerQuestEvents();
                 }
             }
         }
@@ -94,8 +107,23 @@ public class NpcTalk : MonoBehaviour, IInteractable
         isTaskCompleted = true;
     }
 
+    // NEW: call this from your Cancel button so talking to the NPC again
+    // will re-open the minigame instead of doing nothing.
+    public void ResetMinigameTrigger()
+    {
+        hasTriggeredPreTaskEvent = false;
+    }
+
+    // NEW
+    private void TriggerPreTaskEvents()
+    {
+        dialogueManager.onDialogueFinished -= TriggerPreTaskEvents; // unsubscribe so it only fires once
+        onReadyForMinigame.Invoke();
+    }
+
     private void TriggerQuestEvents()
     {
+        dialogueManager.onDialogueFinished -= TriggerQuestEvents; // unsubscribe so it only fires once
         onQuestDialogueFinished.Invoke();
     }
 }

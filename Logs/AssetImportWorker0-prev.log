@@ -1,11 +1,22 @@
 [Licensing::Module] Trying to connect to existing licensing client channel...
-[Licensing::IpcConnector] Successfully connected to: "LicenseClient-Tiong1824" at "2026-08-09T07:57:15.6519606Z"
 Built from '6000.4/staging' branch; Version is '6000.4.4f1 (360f97ecca93) revision 3542935'; Using compiler version '194234433'; Build Type 'Release'
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-Tiong1824" at "2026-09-27T10:12:35.3913473Z"
 OS: 'Windows 11  (10.0.26200) Professional' Language: 'en' Physical Memory: 32693 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1
 System  architecture: x64
 Process architecture: x64
-Date: 2026-08-09T07:57:15Z
+Date: 2026-09-27T10:12:35Z
+[Licensing::Client] Code 10 while verifying Licensing Client signature (process Id: 21256, path: "D:/Unity Hub/UnityLicensingClient_V1/Unity.Licensing.Client.exe")
+[Licensing::Module] LicensingClient has failed validation; ignoring
+[Licensing::Client] Handshaking with LicensingClient:
+  Version:                 1.18.3+d7ffd15
+  Session Id:              dcdd6de336bb4ae4965d9c744922dd54
+  Correlation Id:          32e30a2166990346a3f2addd7bc8eea2
+  External correlation Id: 2964586872667291755
+  Machine Id:              A1s0c6fEpTDN7KDylYhhwDTqc9o=
+[Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-Tiong1824" (connect: 0.00s, validation: 0.00s, handshake: 0.05s)
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-Tiong1824-notifications" at "2026-09-27T10:12:35.4381075Z"
+[Licensing::Module] Licensing Background thread has ended after 0.05s
 
 COMMAND LINE ARGUMENTS:
 D:\Unity\Hub\Editor\6000.4.4f1\Editor\Unity.exe
@@ -19,7 +30,7 @@ D:/UnityProject/FYP-game
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-59311
+59876
 -licensingIpc
 LicenseClient-Tiong1824
 -force-d3d12
@@ -68,12 +79,12 @@ D:/UnityProject/FYP-game
     "memorysetup-job-temp-allocator-block-size=2097152"
     "memorysetup-job-temp-allocator-block-size-background=1048576"
     "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
-Player connection [9972]  Target information:
+Player connection [13920]  Target information:
 
-Player connection [9972]  * "[IP] 192.168.1.17 [Port] 0 [Flags] 2 [Guid] 2276572938 [EditorId] 2276572938 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-ENL0ACT) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+Player connection [13920]  * "[IP] 192.168.1.17 [Port] 0 [Flags] 2 [Guid] 277458437 [EditorId] 277458437 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-ENL0ACT) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
 
-Player connection [9972] Host joined multi-casting on [225.0.0.222:54997]...
-Player connection [9972] Host joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [13920] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [13920] Host joined alternative multi-casting on [225.0.0.222:34997]...
 JobSystem: Creating JobQueue using job-worker-count value 5
 Input System module state changed to: Initialized.
 [Physics::Module] Initialized fallback backend.
@@ -85,7 +96,7 @@ Library Redirect Path: Library/
 [Physics::Module] SDK Version: 4.1.2
 [Physics::Module] Integration Version: 1.0.0
 [Physics::Module] Threading Mode: Multi-Threaded
-Refreshing native plugins compatible for Editor in 8.16 ms, found 5 plugins.
+Refreshing native plugins compatible for Editor in 11.83 ms, found 5 plugins.
 Initialize engine version: 6000.4.4f1 (360f97ecca93)
 [Subsystems] Discovering subsystems at path D:/Unity/Hub/Editor/6000.4.4f1/Editor/Data/Resources/UnitySubsystems
 [Subsystems] Discovering subsystems at path D:/UnityProject/FYP-game/Assets
@@ -103,18 +114,12 @@ Initialize mono
 Mono path[0] = 'D:/Unity/Hub/Editor/6000.4.4f1/Editor/Data/Managed'
 Mono path[1] = 'D:/Unity/Hub/Editor/6000.4.4f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'D:/Unity/Hub/Editor/6000.4.4f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56408
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56636
 CodeReloadManager initialized
 Begin MonoManager ReloadAssembly
-[Licensing::Client] Error: HandshakeResponse reported an error:
-	ResponseCode: 505
-	ResponseStatus: Unsupported protocol version '1.18.1'.
-[Licensing::Module] Error: Failed to handshake to channel: "LicenseClient-Tiong1824"
-[Licensing::IpcConnector] LicenseClient-Tiong1824 channel disconnected successfully.
-[Licensing::IpcConnector] Successfully connected to: "LicenseClient-Tiong1824-6000.4.4" at "2026-08-09T07:57:16.754857Z"
 Registering precompiled unity dll's ...
 Register platform support module: D:/Unity/Hub/Editor/6000.4.4f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.001464 seconds.
+Registered in 0.001035 seconds.
 Native extension for WindowsStandalone target not found
 Package Manager log level set to [2]
 [Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
@@ -122,32 +127,23 @@ Package Manager log level set to [2]
 [Package Manager] Cannot connect to Unity Package Manager local server
 ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.472 seconds
-Domain Reload Profiling: 1001ms
-	BeginReloadAssembly (148ms)
-	RebuildCommonClasses (45ms)
-	RebuildNativeTypeToScriptingClass (17ms)
-	initialDomainReloadingComplete (70ms)
-	LoadAllAssembliesAndSetupDomain (246ms)
-		LoadAssemblies (147ms)
-		AnalyzeDomain (235ms)
-			TypeCache.Refresh (233ms)
-				TypeCache.ScanAssembly (217ms)
-	FinalizeReload (474ms)
+- Finished resetting the current domain, in  0.375 seconds
+Domain Reload Profiling: 772ms
+	BeginReloadAssembly (119ms)
+	RebuildCommonClasses (36ms)
+	RebuildNativeTypeToScriptingClass (11ms)
+	initialDomainReloadingComplete (48ms)
+	LoadAllAssembliesAndSetupDomain (181ms)
+		LoadAssemblies (118ms)
+		AnalyzeDomain (173ms)
+			TypeCache.Refresh (172ms)
+				TypeCache.ScanAssembly (160ms)
+	FinalizeReload (378ms)
 		SetupLoadedEditorAssemblies (0ms)
-			InitializePlatformSupportModulesInManaged (50ms)
-			BeforeProcessingInitializeOnLoad (113ms)
-			ProcessInitializeOnLoadAttributes (134ms)
-			ProcessInitializeOnLoadMethodAttributes (101ms)
-[Licensing::Client] Handshaking with LicensingClient:
-  Version:                 1.18.1+9fbee8e
-  Session Id:              46871466c0ec45a9ba1c7fc6306add2e
-  Correlation Id:          686cc8283f78377058a07028608cd7a8
-  External correlation Id: 5789078859254136643
-  Machine Id:              A1s0c6fEpTDN7KDylYhhwDTqc9o=
-[Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-Tiong1824-6000.4.4" (connect: 0.00s, validation: 0.01s, handshake: 1.07s)
-[Licensing::IpcConnector] Successfully connected to: "LicenseClient-Tiong1824-6000.4.4-notifications" at "2026-08-09T07:57:17.8324492Z"
-[Licensing::Module] Licensing Background thread has ended after 2.18s
+			InitializePlatformSupportModulesInManaged (40ms)
+			BeforeProcessingInitializeOnLoad (83ms)
+			ProcessInitializeOnLoadAttributes (104ms)
+			ProcessInitializeOnLoadMethodAttributes (78ms)
 Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
 ========================================================================
 Worker process is ready to serve import requests
@@ -197,7 +193,6 @@ Assembly UnityEngine.UI.Tests.dll at Library/ScriptAssemblies/UnityEngine.UI.Tes
 Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
 'Packages/com.unity.cinemachine/Editor/Obsolete/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
 'Packages/com.unity.cinemachine/Editor/Editors/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
-Refreshing native plugins compatible for Editor in 2.27 ms, found 5 plugins.
 Native extension for WindowsStandalone target not found
 Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
 [Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
@@ -214,80 +209,1698 @@ Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInter
 [Package Manager] Cannot connect to Unity Package Manager local server
 ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.761 seconds
-Domain Reload Profiling: 1570ms
-	BeginReloadAssembly (199ms)
+- Finished resetting the current domain, in  0.767 seconds
+Domain Reload Profiling: 1484ms
+	BeginReloadAssembly (186ms)
 		DisableScriptedObjects (6ms)
-		CreateAndSetChildDomain (36ms)
-	RebuildCommonClasses (36ms)
-	RebuildNativeTypeToScriptingClass (14ms)
-	initialDomainReloadingComplete (65ms)
-	LoadAllAssembliesAndSetupDomain (495ms)
-		LoadAssemblies (352ms)
-		AnalyzeDomain (249ms)
-			TypeCache.Refresh (175ms)
-				TypeCache.ScanAssembly (162ms)
-			BuildScriptInfoCaches (61ms)
-			ResolveRequiredComponents (11ms)
-	FinalizeReload (761ms)
+		CreateAndSetChildDomain (29ms)
+	RebuildCommonClasses (37ms)
+	RebuildNativeTypeToScriptingClass (11ms)
+	initialDomainReloadingComplete (56ms)
+	LoadAllAssembliesAndSetupDomain (427ms)
+		LoadAssemblies (297ms)
+		AnalyzeDomain (227ms)
+			TypeCache.Refresh (154ms)
+				TypeCache.ScanAssembly (142ms)
+			BuildScriptInfoCaches (59ms)
+			ResolveRequiredComponents (12ms)
+	FinalizeReload (767ms)
 		SetupLoadedEditorAssemblies (0ms)
-			BeforeProcessingInitializeOnLoad (135ms)
-			ProcessInitializeOnLoadAttributes (338ms)
-			ProcessInitializeOnLoadMethodAttributes (78ms)
+			BeforeProcessingInitializeOnLoad (138ms)
+			ProcessInitializeOnLoadAttributes (350ms)
+			ProcessInitializeOnLoadMethodAttributes (74ms)
 		AwakeInstancesAfterBackupRestoration (6ms)
 WARNING: Shader Unsupported: 'Hidden/Builtin_TerrainVisualization' - All subshaders removed
 WARNING: Shader Did you use #pragma only_renderers and omit this platform?
 WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.02 seconds
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.01 seconds
 Unloading 37 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6759 unused Assets / (8.1 MB). Loaded Objects now: 7645.
-Memory consumption went from 174.4 MB to 166.3 MB.
-Total: 10.036900 ms (FindLiveObjects: 0.652100 ms CreateObjectMapping: 0.419500 ms MarkObjects: 5.409200 ms  DeleteObjects: 3.553600 ms)
+Unloading 6760 unused Assets / (7.6 MB). Loaded Objects now: 7647.
+Memory consumption went from 179.0 MB to 171.4 MB.
+Total: 10.979500 ms (FindLiveObjects: 1.041100 ms CreateObjectMapping: 1.279200 ms MarkObjects: 5.779900 ms  DeleteObjects: 2.876500 ms)
 
 ========================================================================
 Received Import Request.
-  Time since last request: 1713100.203396 seconds.
-  path: Assets/Vlad Belza/Transformer HDRP/Materials/Main.mat
-  importAddress: Guid(c4c9f8db0635d9f4c8b37388572c341e) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Vlad Belza/Transformer HDRP/Materials/Main.mat using Guid(c4c9f8db0635d9f4c8b37388572c341e) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '541e7cf67bcbe949f96d0f79e242f88b') in 0.0840826 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=75b5d146b4bb05d660a5ac055edac2f0 DependenciesID=1b2db22e8095a01da9f5b4a37f85aabe StaticDependenciesID=b12b9ebf394a3cb9b90111d93839fb66 
+  Time since last request: 496149.190665 seconds.
+  path: Assets/Asset_PlayingCards/Prefabs/Deck02/Deck02_Diamond_5.prefab
+  importAddress: Guid(24207d011d52f40afa9dffe4ec803355) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Asset_PlayingCards/Prefabs/Deck02/Deck02_Diamond_5.prefab using Guid(24207d011d52f40afa9dffe4ec803355) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '78d70dd06a031f61a29c54b6fb8515d4') in 0.106136 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=eef5561819f06f49db0d1dc3eed2d914 DependenciesID=3c4923d461683f3c9d253e1b6b4cb3e4 StaticDependenciesID=7add8374c4d57275ca080b90c75da4be 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 13
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Asset_PlayingCards/Prefabs/Deck07/Deck07_Heart_8.prefab
+  importAddress: Guid(926572194ce39428c9c4f4bffe7e157e) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Asset_PlayingCards/Prefabs/Deck07/Deck07_Heart_8.prefab using Guid(926572194ce39428c9c4f4bffe7e157e) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'e9e405f5d8369d8a780a12eaa4184a34') in 0.0067609 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=6a8349b120f9d70d41c1820c79f09136 DependenciesID=e2e4b530c4591246e53f475efccd1522 StaticDependenciesID=24b7f608acaa455c6f00f8a594c26d87 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 13
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/Asset_PlayingCards/Prefabs/Deck06/Deck06_Spade_3.prefab
+  importAddress: Guid(ecc001c13a69340cab9b55f992fa83c2) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Asset_PlayingCards/Prefabs/Deck06/Deck06_Spade_3.prefab using Guid(ecc001c13a69340cab9b55f992fa83c2) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'c1b240f176f69137e8993ff9239815aa') in 0.0064 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=f6f92309e60a95e9a1f769c543454b0b DependenciesID=513b7277b4d46b650bbce8876ceef826 StaticDependenciesID=9ea65e62aa3185513a96f85d6bcb422c 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 13
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Asset_PlayingCards/Prefabs/Deck04/Deck04_Diamond_3.prefab
+  importAddress: Guid(eac066555a06c482382ea8198688c152) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Asset_PlayingCards/Prefabs/Deck04/Deck04_Diamond_3.prefab using Guid(eac066555a06c482382ea8198688c152) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'b4cfce7abc453d3e68a1797f38e98a25') in 0.0050501 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=8c43340499b69b04f950d973ccc754a3 DependenciesID=7dae1458a40ffeb270d6d816af0157aa StaticDependenciesID=241379b1993dc726d5b02b2bdb9a64b2 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 13
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Asset_PlayingCards/Prefabs/Deck02/Deck02_Heart_2.prefab
+  importAddress: Guid(ba2bc32d73aaf45f7b171ebceff720c7) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Asset_PlayingCards/Prefabs/Deck02/Deck02_Heart_2.prefab using Guid(ba2bc32d73aaf45f7b171ebceff720c7) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '9c922428a12f121b314eebeab38f5d9f') in 0.0053187 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=1282a5a71c09300943d79f94a343ff31 DependenciesID=8ade025cc3574bcdc740bcd87db720ca StaticDependenciesID=c315eea7d0d2beaf601e360043d96cd6 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 13
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Asset_PlayingCards/Prefabs/Deck05/Deck05_Diamond_10.prefab
+  importAddress: Guid(150f2c5000b3b4aaa819ca5550238d26) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Asset_PlayingCards/Prefabs/Deck05/Deck05_Diamond_10.prefab using Guid(150f2c5000b3b4aaa819ca5550238d26) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'c26559c75537babce3f5eaf363d759f9') in 0.0052244 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=3d4721332c16b1f8f3d59ffd194d97ee DependenciesID=a6e6b0490e4f9c973802a80cfe067e3a StaticDependenciesID=9be58c7fdc8d9ad592a3573919839f42 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 13
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Asset_PlayingCards/Prefabs/DeckSets/Deck04.prefab
+  importAddress: Guid(ad1860851bb5b4afd9654de6b8f6d3d5) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Asset_PlayingCards/Prefabs/DeckSets/Deck04.prefab using Guid(ad1860851bb5b4afd9654de6b8f6d3d5) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '3f2560a37a9b2aa517819a75a01546dc') in 0.0132522 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=0a83b066e55948990b249e68a7351059 DependenciesID=0dd86c6c2b3f3b9fe3d97ae2703c9ad0 StaticDependenciesID=cf7a3319bad2f947d5ba7586e9f468ba 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 491
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Asset_PlayingCards/Prefabs/Deck08/Deck08_Spade_Q.prefab
+  importAddress: Guid(31a2689bf5cbd47ceb9c02ef54ad7407) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Asset_PlayingCards/Prefabs/Deck08/Deck08_Spade_Q.prefab using Guid(31a2689bf5cbd47ceb9c02ef54ad7407) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'df8deda3d76da39f725b809dc5791975') in 0.0059282 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=04346b94d13e134ddfb21989b621aa41 DependenciesID=c70c329ad839c401732ec019731e82d4 StaticDependenciesID=e6af38e2fbbaf11cac33091f053be8d1 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 13
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Asset_PlayingCards/Prefabs/Deck03/Deck03_Club_J.prefab
+  importAddress: Guid(64038104f7d264ea3a90439177e50e03) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Asset_PlayingCards/Prefabs/Deck03/Deck03_Club_J.prefab using Guid(64038104f7d264ea3a90439177e50e03) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '52b50b25a69919cd6d51ea74e92f9ae3') in 0.0058246 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=de1c8545bc7a14a2a20a59289b24ff94 DependenciesID=e0a798b922d10c33df802c534c179bfa StaticDependenciesID=a63dca133824a9dbda5c942e9c5d94da 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 13
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Asset_PlayingCards/Prefabs
+  importAddress: Guid(b19f391eeef46436eb2b1793abcee23b) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Asset_PlayingCards/Prefabs using Guid(b19f391eeef46436eb2b1793abcee23b) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '74accf193fa70bd528d9044d65cea1c9') in 0.0032328 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=49b5a261494a0ead647a31c40244e865 DependenciesID=63c3f8ef702f9785f5d9ca0efa95ad53 StaticDependenciesID=6db2ae001027a5985fd636ae55039959 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Asset_PlayingCards/Prefabs/Deck04/Deck04_Diamond_Q.prefab
+  importAddress: Guid(d7a99e3d248f345cebae2942d55ef4b3) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Asset_PlayingCards/Prefabs/Deck04/Deck04_Diamond_Q.prefab using Guid(d7a99e3d248f345cebae2942d55ef4b3) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'd593c5c153b6b2e632943d957f74fd41') in 0.0052664 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=904d393a5ac2a8a69199018e32528751 DependenciesID=65c683052579b2988750b66f95b74c68 StaticDependenciesID=432cb51d82b7b8478cfd46a0b246b59d 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 13
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Asset_PlayingCards/Prefabs/Deck04/Deck04_Diamond_7.prefab
+  importAddress: Guid(3ab27c4f4f80d4c8089643e7057c4e1b) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Asset_PlayingCards/Prefabs/Deck04/Deck04_Diamond_7.prefab using Guid(3ab27c4f4f80d4c8089643e7057c4e1b) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '1d0f624f6f86f15c8523ff1efbaf830d') in 0.0060773 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=454401d01a863500b71983e066da3e9f DependenciesID=ce185f40f3fa6a07897f461e282bb7c6 StaticDependenciesID=8dc491503c6a192f5ac62738121e41a9 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 13
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/Asset_PlayingCards/Prefabs/Deck06/Deck06_Heart_10.prefab
+  importAddress: Guid(500079353e11549f98db798a8ec79171) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Asset_PlayingCards/Prefabs/Deck06/Deck06_Heart_10.prefab using Guid(500079353e11549f98db798a8ec79171) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '008f4e5b4980a4b16f7d04a19bbc5072') in 0.0055536 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=a6784b462c77ce9481242381dfe06fc9 DependenciesID=8476bd25ae00efcdd9b4d3774f7a3735 StaticDependenciesID=4f4420ea8c437fe26bb2563f102bf766 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 13
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Asset_PlayingCards/Prefabs/Deck08/Deck08_Diamond_9.prefab
+  importAddress: Guid(8ac29b293ff7e417ca9c2f0ac00d3d23) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Asset_PlayingCards/Prefabs/Deck08/Deck08_Diamond_9.prefab using Guid(8ac29b293ff7e417ca9c2f0ac00d3d23) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '66c68488629e324f5e69b560b0d068f2') in 0.0049548 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=d5e071291c306d69ca01b4d283418330 DependenciesID=2b2d2ecebbc1b3f2b48aed2213d879ef StaticDependenciesID=f07f483ff0318adae207481e63878476 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 13
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Asset_PlayingCards/Prefabs/Deck08/Deck08_Diamond_A.prefab
+  importAddress: Guid(2af5a27348978480a94d875ee17fd3c0) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Asset_PlayingCards/Prefabs/Deck08/Deck08_Diamond_A.prefab using Guid(2af5a27348978480a94d875ee17fd3c0) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '4a2d098ba24cc2ac514bdc7c00a4500d') in 0.0073014 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=8a09f345fdd71c8641114eb19d6a2296 DependenciesID=09aa88fe5590fd33e77ec4e04236ae57 StaticDependenciesID=76c94b0f896f07ec5bea27711ef304ff 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 13
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Asset_PlayingCards/Prefabs/Deck06/Deck06_Heart_J.prefab
+  importAddress: Guid(4bcd1797cd2c041928425580a9ac0439) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Asset_PlayingCards/Prefabs/Deck06/Deck06_Heart_J.prefab using Guid(4bcd1797cd2c041928425580a9ac0439) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '2a70757febaf07142feea6e923207cbe') in 0.0047995 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=8a90ca44574dc739c03455f6f7aaa416 DependenciesID=58a7b066da5dc162e5b15115639fd1f1 StaticDependenciesID=8a7d351983a6f470c9fb265393ce8e2d 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 13
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Asset_PlayingCards/Prefabs/Deck08/Deck08_Diamond_7.prefab
+  importAddress: Guid(d60d64c1d48fa46f6881a9e6bde80ec7) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Asset_PlayingCards/Prefabs/Deck08/Deck08_Diamond_7.prefab using Guid(d60d64c1d48fa46f6881a9e6bde80ec7) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '7f83f4537a0ad929cb5e08615c9fdf04') in 0.0057904 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=aca24d0c62910603b88bd87cba2c23dc DependenciesID=133d69cf7b9ca3ac04f5a02bc901b284 StaticDependenciesID=ea7850f24dff039fef5287f364108a91 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 13
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Asset_PlayingCards/Prefabs/Deck04/Deck04_Heart_J.prefab
+  importAddress: Guid(1ba8b9330a0d64d99970691ee645805d) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Asset_PlayingCards/Prefabs/Deck04/Deck04_Heart_J.prefab using Guid(1ba8b9330a0d64d99970691ee645805d) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '511b95985a47bedb504504e2e53df917') in 0.0053891 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=490a109c9c5142ac7817a52b66851683 DependenciesID=8480df98df46f925c3685424fd28a6d3 StaticDependenciesID=cd831306a1a3c3a50be83ac7c83ce51d 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 13
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Asset_PlayingCards/Prefabs/Deck01/Deck01_Heart_6.prefab
+  importAddress: Guid(8f358cdf6cdaf4109b4e8634dc945afc) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Asset_PlayingCards/Prefabs/Deck01/Deck01_Heart_6.prefab using Guid(8f358cdf6cdaf4109b4e8634dc945afc) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '1aa762910c2b1721da697d09d2a0e0f3') in 0.0059983 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=33f79329f9a47d1b3d62cab245e3540f DependenciesID=0d615108836a2112ec69d120052c874c StaticDependenciesID=c82a3514bc88889856d882171f60cf1a 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 13
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Asset_PlayingCards/Prefabs/Deck03/Deck03_Spade_6.prefab
+  importAddress: Guid(cebe99f54be74435a85943281e3b09c1) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Asset_PlayingCards/Prefabs/Deck03/Deck03_Spade_6.prefab using Guid(cebe99f54be74435a85943281e3b09c1) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '3eba66105b2fb5ea7d3023b2b4be99c2') in 0.00659 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=675e6fc50d7767f8d7fb972494090cfd DependenciesID=5ed685e47ffae63facf40cb133c1ad5c StaticDependenciesID=85a02d198468c8f1746e530177d3e1e9 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 13
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Asset_PlayingCards/Prefabs/Deck01/Deck01_Diamond_4.prefab
+  importAddress: Guid(f9644bd1148a540828a3c876e290385a) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Asset_PlayingCards/Prefabs/Deck01/Deck01_Diamond_4.prefab using Guid(f9644bd1148a540828a3c876e290385a) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '341f44a17fe0f9e9fdf1839806bff188') in 0.0051752 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=67a9a6a5519e49bb1c250deac9eb6b3f DependenciesID=3a9014a2492529e3656cbf7711a22a6a StaticDependenciesID=82c9a8b4666cec98b3a9168d3fe0546c 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 13
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Asset_PlayingCards/Prefabs/Deck02/Deck02_Spade_10.prefab
+  importAddress: Guid(5a3cb7fe271ee4c2fad0f4a62430604c) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Asset_PlayingCards/Prefabs/Deck02/Deck02_Spade_10.prefab using Guid(5a3cb7fe271ee4c2fad0f4a62430604c) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'fce3b6c373dd6fde28b67952648fc428') in 0.0139445 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=43e4aecf7d0dbb18290ca83458f1b077 DependenciesID=313382ba5bfe778c35c4387f364f85e8 StaticDependenciesID=2c07388c795045c01f7eaf2d9307934f 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 13
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/Asset_PlayingCards/Prefabs/Deck01/Deck01_Diamond_A.prefab
+  importAddress: Guid(ba5edeb10dbf243fbaf5bff70dc2915f) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Asset_PlayingCards/Prefabs/Deck01/Deck01_Diamond_A.prefab using Guid(ba5edeb10dbf243fbaf5bff70dc2915f) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '29c95baf3d3963a83b881f325c332f21') in 0.0077791 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=005983dd77e4f2dfd250649127a97231 DependenciesID=263f3a0fbf9cf69e00b8170a47d9eee5 StaticDependenciesID=0fba18366033b5c3748454f49bccb4f8 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 13
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Asset_PlayingCards/Prefabs/Deck01/Deck01_Heart_A.prefab
+  importAddress: Guid(4736e507e70f7481ab7c9502e9208b33) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Asset_PlayingCards/Prefabs/Deck01/Deck01_Heart_A.prefab using Guid(4736e507e70f7481ab7c9502e9208b33) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'bb9b8b3e1f5201fc5b907c0298430ac7') in 0.0069391 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=009e11fc7705a182432731c95000f430 DependenciesID=1274007e8ad53432c7af711f289e5ac3 StaticDependenciesID=801bc2099cde1a0b45e8f1979a055a13 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 13
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Asset_PlayingCards/Prefabs/Deck05/Deck05_Spade_A.prefab
+  importAddress: Guid(3e7110111721248fd8982e06da514efa) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Asset_PlayingCards/Prefabs/Deck05/Deck05_Spade_A.prefab using Guid(3e7110111721248fd8982e06da514efa) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'd259a1fcc670ba961537b4dea958760c') in 0.0063641 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=0788bd97ec1357116b29df7e4b7e1201 DependenciesID=820bf631b64aabdbf1ca019f10019adf StaticDependenciesID=f8538a8f5326fb5d779b8c690d769dc4 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 13
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/Asset_PlayingCards/Prefabs/Deck03/Deck03_Spade_4.prefab
+  importAddress: Guid(f23a5b0c2ba76402b9039cce4d51dda8) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Asset_PlayingCards/Prefabs/Deck03/Deck03_Spade_4.prefab using Guid(f23a5b0c2ba76402b9039cce4d51dda8) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '93300efe7dcfdcdde328a68db8b2c4b3') in 0.0056144 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=74aaae19afa6fca2feb02e3b40379e5b DependenciesID=0dcf9938de45cf363fde29bcc4391205 StaticDependenciesID=cc2f4251546485e795fa4b5880f1cc74 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 13
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Asset_PlayingCards/Prefabs/Deck03/Deck03_Heart_A.prefab
+  importAddress: Guid(57393a9fc30e943cc97076ff8b3a24fd) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Asset_PlayingCards/Prefabs/Deck03/Deck03_Heart_A.prefab using Guid(57393a9fc30e943cc97076ff8b3a24fd) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '53317ab686c4a1fb1c13b9ac01e814d4') in 0.0054543 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=9e28150baa802b5a461d8428a502417c DependenciesID=60d260126bb1bf51a24bcb068a942bf7 StaticDependenciesID=19aefeda93ad37b6d80f9a444c9becda 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 13
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Asset_PlayingCards/Prefabs/Deck01/Deck01_Heart_5.prefab
+  importAddress: Guid(13b9f6b40ed284a8091b1fe3b3ef0b03) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Asset_PlayingCards/Prefabs/Deck01/Deck01_Heart_5.prefab using Guid(13b9f6b40ed284a8091b1fe3b3ef0b03) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '20430052d704df8486e29836f6515239') in 0.0051515 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=c5d47519ffe73f4b6b2f6146a69a757c DependenciesID=b7fc1e27c95b40fb104c6591de47002c StaticDependenciesID=11fb36a7350e8f5d252fbea262ad27e7 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 13
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Asset_PlayingCards/Prefabs/Deck05/Deck05_Club_7.prefab
+  importAddress: Guid(61e9eba355a3a40fabc37f0a27bc0ec2) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Asset_PlayingCards/Prefabs/Deck05/Deck05_Club_7.prefab using Guid(61e9eba355a3a40fabc37f0a27bc0ec2) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '8205dac42177079b61fcdf720eec7186') in 0.0052959 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=f2cfdad5e1f02857f3c455814098143c DependenciesID=536dfabe7a51d673f40081718bbdc6f6 StaticDependenciesID=be1c1634e9e8d8ed34d79917475c7491 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 13
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Asset_PlayingCards/Prefabs/Deck07/Deck07_Club_4.prefab
+  importAddress: Guid(fa9fb5502fb954cc9a3dab67335cbdf5) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Asset_PlayingCards/Prefabs/Deck07/Deck07_Club_4.prefab using Guid(fa9fb5502fb954cc9a3dab67335cbdf5) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '5582c6f52e63a28a7ead5eb10f5e5ce2') in 0.0056939 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=9a31abf168746c5febb85a6d2f2066fa DependenciesID=68129d5033a49f46f3770ad98b856950 StaticDependenciesID=e0dcc3d39a40d4465f1a8ffec1839f8f 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 13
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/Asset_PlayingCards/Prefabs/Deck06/Deck06_Club_9.prefab
+  importAddress: Guid(acb99cd81d14349f1a5986622f62612f) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Asset_PlayingCards/Prefabs/Deck06/Deck06_Club_9.prefab using Guid(acb99cd81d14349f1a5986622f62612f) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'c41404f28f7d5fdaa2852f770bf1c9c2') in 0.0054684 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=a438a2ca9262c8f222137ba92940d042 DependenciesID=87bdb388d5b2a8efe0f8314a1757baf4 StaticDependenciesID=2a7cc3e1a0f05f25b21d7dec3a321003 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 13
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Asset_PlayingCards/Prefabs/Deck07/Deck07_Spade_3.prefab
+  importAddress: Guid(79291bd1893d1428abc27af7a9ee4772) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Asset_PlayingCards/Prefabs/Deck07/Deck07_Spade_3.prefab using Guid(79291bd1893d1428abc27af7a9ee4772) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '24eca879835153d1e762b5f5e4f5fbe5') in 0.0053689 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=4dc4eac4c40486019fc570d5076d97b8 DependenciesID=69b92091ceeed672f564ae933f78cfbe StaticDependenciesID=bc71b6ab757eb8f96770e02c778f9dd3 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 13
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Asset_PlayingCards/Prefabs/Deck03/Deck03_Spade_9.prefab
+  importAddress: Guid(6268c9ab042d54957a23f4664949a9bb) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Asset_PlayingCards/Prefabs/Deck03/Deck03_Spade_9.prefab using Guid(6268c9ab042d54957a23f4664949a9bb) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'd1368844b5db1113c6deae49c2941f05') in 0.0051871 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=c98536df06131406b1381bcb165c3b2e DependenciesID=d73fe9d77695ae53c003306b9349d908 StaticDependenciesID=76787d497e33ff6047d023f0ed3aa15e 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 13
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Asset_PlayingCards/Prefabs/Deck03/Deck03_Diamond_4.prefab
+  importAddress: Guid(1705e28161c844cb6947474a330b9ffb) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Asset_PlayingCards/Prefabs/Deck03/Deck03_Diamond_4.prefab using Guid(1705e28161c844cb6947474a330b9ffb) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '42c01efa1405aa81b4e313d8d70dd06a') in 0.0142654 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=8cc39b892bb49ee0094ae2ebe68a8658 DependenciesID=7bb8774ddb09d7b2799a7679e772dfb6 StaticDependenciesID=7bd5c6d23b5e2dd596ad2086b4c0cfc8 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 13
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Asset_PlayingCards/Prefabs/Deck05/Deck05_Spade_K.prefab
+  importAddress: Guid(4947878d4a0e341fa8db775458f44beb) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Asset_PlayingCards/Prefabs/Deck05/Deck05_Spade_K.prefab using Guid(4947878d4a0e341fa8db775458f44beb) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '147ff7ea483a516660332348b01f5917') in 0.0055144 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=a6c179a6eb3b51ef4b297f6b6ecaf088 DependenciesID=22984fd52a2034fab023f6dd38e82ed8 StaticDependenciesID=f9088db85063afff83da6961e81c55fb 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 13
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/Asset_PlayingCards/Prefabs/Deck02/Deck02_Spade_8.prefab
+  importAddress: Guid(d25f154ae43be4778aaa982e24436ee3) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Asset_PlayingCards/Prefabs/Deck02/Deck02_Spade_8.prefab using Guid(d25f154ae43be4778aaa982e24436ee3) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'a490e2cda8e99e6f625830420b88b1c6') in 0.0055157 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=54b06f5ff6b88b06107dad675c3896b6 DependenciesID=44083f65d5b1bccb9cb11c4e566e6f35 StaticDependenciesID=5aa5ea9330db8315ce5be6085f5c7e28 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 13
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Asset_PlayingCards/Prefabs/Deck06/Deck06_Diamond_6.prefab
+  importAddress: Guid(10c7aeed756474138b40d52bdec4763e) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Asset_PlayingCards/Prefabs/Deck06/Deck06_Diamond_6.prefab using Guid(10c7aeed756474138b40d52bdec4763e) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '0104e9ce84ea0fbebe5126231c4b5ff2') in 0.0059049 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=8ea955ea4118ff35930e8f937923d9f1 DependenciesID=bb10c43a8c0d76e00c1cc9b2d219d02d StaticDependenciesID=e641f59c0e283ea2ed568e212a270747 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 13
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/Asset_PlayingCards/Prefabs/Deck02/Deck02_Spade_6.prefab
+  importAddress: Guid(e11779dd583d344e6b1ac80fb7f490f1) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Asset_PlayingCards/Prefabs/Deck02/Deck02_Spade_6.prefab using Guid(e11779dd583d344e6b1ac80fb7f490f1) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'b944c9bce330e8662e9bec249153a125') in 0.0054555 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=cc973ba827c1b41da9f17b1c11e2986d DependenciesID=2fb70a5273069118bd29ac0896585ba4 StaticDependenciesID=59c49747c9d3881c52a1bec956251ff9 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 13
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Asset_PlayingCards/Prefabs/Deck01/Deck01_Heart_4.prefab
+  importAddress: Guid(139ab9a98a7374814b8d22cb7e4e64ed) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Asset_PlayingCards/Prefabs/Deck01/Deck01_Heart_4.prefab using Guid(139ab9a98a7374814b8d22cb7e4e64ed) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'a8535e204d53fe54283fb2886bfa7caf') in 0.0061977 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=59a208d5584c0dab3e2bcd0744ed1892 DependenciesID=2daad0db3070816ba83a75ccebf2be65 StaticDependenciesID=8ca98f9092b3e825febe63a989f2c1be 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 13
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Asset_PlayingCards/Prefabs/Deck02/Deck02_Heart_Q.prefab
+  importAddress: Guid(2a45b2f2cd6314f3793891cfdc4be381) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Asset_PlayingCards/Prefabs/Deck02/Deck02_Heart_Q.prefab using Guid(2a45b2f2cd6314f3793891cfdc4be381) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'd7e98d032f1db40c8eb7794fe25cec14') in 0.005465 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=f8074afbd8b9f46b59e480578b1e3bce DependenciesID=1d15c37e244b1aca4b41499c4b3bbfa6 StaticDependenciesID=9acc13a9a0ce7c895f95255a4469db10 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 13
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Asset_PlayingCards/Prefabs/Deck07/Deck07_Spade_K.prefab
+  importAddress: Guid(af46a8bdbeb214f939227530b1346463) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Asset_PlayingCards/Prefabs/Deck07/Deck07_Spade_K.prefab using Guid(af46a8bdbeb214f939227530b1346463) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '29ff77392e1d5394999f26750bec5b19') in 0.0064062 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=0e6dad6bb0b3ee3650d052613138508b DependenciesID=f607d55a43138a6ad2d3d6f19376bf90 StaticDependenciesID=61e658a869ca0567888caac9d163dabb 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 13
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Asset_PlayingCards/Prefabs/Deck03/Deck03_Diamond_K.prefab
+  importAddress: Guid(afa1a69f3d03d42448d87720d9d93842) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Asset_PlayingCards/Prefabs/Deck03/Deck03_Diamond_K.prefab using Guid(afa1a69f3d03d42448d87720d9d93842) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '79f2d10f425b7440c58790414868ae2b') in 0.0057055 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=b0cf471a15ad9c3ac38482401643e269 DependenciesID=7852d0b59fad01228d0cf9cbfb48b31f StaticDependenciesID=16d58c69db6f6a268baff92ae1b0f048 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 13
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Asset_PlayingCards/Prefabs/Deck02/Deck02_Heart_4.prefab
+  importAddress: Guid(a8f5ac14f9e3c472bbd64c808111796e) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Asset_PlayingCards/Prefabs/Deck02/Deck02_Heart_4.prefab using Guid(a8f5ac14f9e3c472bbd64c808111796e) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '380350a2db82deb861c61027b347ea8a') in 0.0052781 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=aad3336c31a772e9588ab127839694a7 DependenciesID=fc46375e243a44902f31642da38a096e StaticDependenciesID=a7bc21b7c2c1b55c650e249dca3419ef 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 13
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Asset_PlayingCards/Prefabs/Deck06/Deck06_Club_6.prefab
+  importAddress: Guid(e39afc06d50fb4af892302c98e3ce9fd) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Asset_PlayingCards/Prefabs/Deck06/Deck06_Club_6.prefab using Guid(e39afc06d50fb4af892302c98e3ce9fd) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'e58949bc3b6b0beb5e2061c3a542481f') in 0.0060076 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=7f64cf90b1bc8bba0e1f877e7f395d72 DependenciesID=6d583dc8a7e634cbd91299653718e576 StaticDependenciesID=36d5ed2f60e2a70db05030bd744fa1ed 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 13
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/Asset_PlayingCards/Prefabs/Deck05/Deck05_Diamond_8.prefab
+  importAddress: Guid(5acb47a2bf8674e3d984dec5773b2c1c) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Asset_PlayingCards/Prefabs/Deck05/Deck05_Diamond_8.prefab using Guid(5acb47a2bf8674e3d984dec5773b2c1c) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '471c0af744b9360af124f259970fb07d') in 0.0056319 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=eeb01653fd81cf8892e240254ea780c2 DependenciesID=2637b1909aec09c3635ad038cc47eb61 StaticDependenciesID=a2647afe843bd9517dc93956bbba3800 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 13
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Asset_PlayingCards/Prefabs/Deck07/Deck07_Heart_J.prefab
+  importAddress: Guid(9b2d49b4a25694589ac688a2518f73e3) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Asset_PlayingCards/Prefabs/Deck07/Deck07_Heart_J.prefab using Guid(9b2d49b4a25694589ac688a2518f73e3) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'a76bbb8b077a28aa0e95717f270850fb') in 0.006173 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=f8b5f03af6a9f3dbc7b8f3d28696f72a DependenciesID=8551422abdd691328524c8ea3c6c9e64 StaticDependenciesID=5e634b07939efa2f40d3c0742af9b7eb 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 13
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Asset_PlayingCards/Prefabs/Deck04/Deck04_Club_A.prefab
+  importAddress: Guid(1b898ded65bc247209644a9ef0d3d5e8) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Asset_PlayingCards/Prefabs/Deck04/Deck04_Club_A.prefab using Guid(1b898ded65bc247209644a9ef0d3d5e8) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'e8ea0ccfd5ffe26c331d5a7637fcf89f') in 0.0064204 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=290a77b192b80d5c1e7a053ee357b024 DependenciesID=501b1bd4a2c0c31f6f47bc379da7a3db StaticDependenciesID=41205b3d079b2b59e7c7a726a9e6c965 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 13
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Asset_PlayingCards/Prefabs/Deck07/Deck07_Club_7.prefab
+  importAddress: Guid(2aa16464b7508436382b717bd5077bda) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Asset_PlayingCards/Prefabs/Deck07/Deck07_Club_7.prefab using Guid(2aa16464b7508436382b717bd5077bda) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'fb1452533219072768bc9d7b2717432e') in 0.005798 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=91b88a42736b72e8e3cdc19c61dfee5b DependenciesID=baa511174d04f153b24a20f0b2c69eae StaticDependenciesID=d2cbe1a54915e1c92d161da41418d8dd 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 13
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Asset_PlayingCards/Prefabs/Deck02/Deck02_Spade_J.prefab
+  importAddress: Guid(ae6c047c6fa794837a61a5ac73964423) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Asset_PlayingCards/Prefabs/Deck02/Deck02_Spade_J.prefab using Guid(ae6c047c6fa794837a61a5ac73964423) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'd0b7d40f26fd5ef4bf2320cf22b54fe3') in 0.005162 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=38f06b092af258452eecc6eb8a1b5285 DependenciesID=df1a02c8d71cd5a4a193b5515822bf71 StaticDependenciesID=5ebbebf002060adebffea472fa5aabbe 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 13
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Asset_PlayingCards/Prefabs/Deck03/Deck03_Heart_8.prefab
+  importAddress: Guid(4f6c0f5a30021432e99eccd7f2195b5c) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Asset_PlayingCards/Prefabs/Deck03/Deck03_Heart_8.prefab using Guid(4f6c0f5a30021432e99eccd7f2195b5c) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '1f672f78d8bb83ebf5c16a2c81e64083') in 0.006377 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=4d1207faae0d67d86264032047b7a08b DependenciesID=27de9618dd5f0c6cfbebf46b57b48dfb StaticDependenciesID=9d9cee839b40e671f833e3d0c0d347f0 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 13
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/Asset_PlayingCards/Prefabs/Deck05/Deck05_Heart_9.prefab
+  importAddress: Guid(b9d1d16fa3f4e4e2c88c2f4f470cca17) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Asset_PlayingCards/Prefabs/Deck05/Deck05_Heart_9.prefab using Guid(b9d1d16fa3f4e4e2c88c2f4f470cca17) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '761680c9a2bba83deaf52c204c425d72') in 0.0050275 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=b22657262cd38c3ab8322e0e7fc6d541 DependenciesID=2e17cc66ebcfe409377c22ea78a60dc2 StaticDependenciesID=cfe6786f9ecc9b2499f2e759a93c445c 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 13
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Asset_PlayingCards/Prefabs/Deck01/Deck01_Club_K.prefab
+  importAddress: Guid(6c1291538e5bd49a9b0e3be0e62a3a44) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Asset_PlayingCards/Prefabs/Deck01/Deck01_Club_K.prefab using Guid(6c1291538e5bd49a9b0e3be0e62a3a44) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '34e0e3aa1ebe7f7b31a312911521d408') in 0.0055141 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=73705f24dc6674786d0419e7955a8915 DependenciesID=9e856ab1d8a3c689af1853353414aa6b StaticDependenciesID=c6abcbf6088627788395b3d2aec893af 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 13
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/Asset_PlayingCards/Textures/Deck05.png
+  importAddress: Guid(661156f394d6046c185490657f9bdfed) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Asset_PlayingCards/Textures/Deck05.png using Guid(661156f394d6046c185490657f9bdfed) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '37e0b1aaff1753514117c21cde58b9cf') in 0.0942183 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=b8e0650dfa9e961dd094b3f84f9a69fe DependenciesID=e9941ff1a1eca001e16ccfaf541cc6bf StaticDependenciesID=47052efb545b93f8f4dc8fcdc20852f8 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 59
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Asset_PlayingCards/Prefabs/Deck04/Deck04_Diamond_4.prefab
+  importAddress: Guid(6560fa170270042caaa37f4871ec3f6e) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Asset_PlayingCards/Prefabs/Deck04/Deck04_Diamond_4.prefab using Guid(6560fa170270042caaa37f4871ec3f6e) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'ea6e0c88bf125db071d590cb5707cc9f') in 0.0058669 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=8d8986793fc154b5489e550e27ae0d79 DependenciesID=79d12770f9d47504df09d405d140bc14 StaticDependenciesID=6e5a0e8a227e3ec4a7f61295fde76836 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 13
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Asset_PlayingCards/Prefabs/Deck06/Deck06_Spade_2.prefab
+  importAddress: Guid(dc7389583fe9d4d14bd7776f66dd9dbd) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Asset_PlayingCards/Prefabs/Deck06/Deck06_Spade_2.prefab using Guid(dc7389583fe9d4d14bd7776f66dd9dbd) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '0aa1a12edacd3f9fc61d926828b6e112') in 0.0055688 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=94c9932be52867c2be375f4110031ec8 DependenciesID=e8c979b15da8595221a8985196870a4c StaticDependenciesID=965c0741e3324cacdaffdb8102891f84 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 13
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Asset_PlayingCards/Prefabs/Deck07/Deck07_Spade_10.prefab
+  importAddress: Guid(24ea0cf5f0e254d148348bfe6aa6331b) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Asset_PlayingCards/Prefabs/Deck07/Deck07_Spade_10.prefab using Guid(24ea0cf5f0e254d148348bfe6aa6331b) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'f03cfff4e2f71bf7d96bce0f14430076') in 0.0056296 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=8e872454d0ba75adea5c5336fc5501ed DependenciesID=6868ef6fe070fc062707cb00a86482b7 StaticDependenciesID=04c566b5f4cbc76243c314f46c6cc89b 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 13
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Asset_PlayingCards/Prefabs/Deck05/Deck05_Club_10.prefab
+  importAddress: Guid(d61ca56970e3444709812b821703f2a6) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Asset_PlayingCards/Prefabs/Deck05/Deck05_Club_10.prefab using Guid(d61ca56970e3444709812b821703f2a6) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '5496b6bcd7fefd42e021600ae0682d17') in 0.0057467 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=1f6800ec3422a87e2daf6d3c99518747 DependenciesID=da50bef4ba2d266ddc2e0ec48fecfa7b StaticDependenciesID=34a8233d892972bd8ee92a585ce0c441 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 13
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Asset_PlayingCards/Prefabs/Deck04/Deck04_Club_7.prefab
+  importAddress: Guid(9a0406950c0e94a3a9f6f1fa75f8c7df) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Asset_PlayingCards/Prefabs/Deck04/Deck04_Club_7.prefab using Guid(9a0406950c0e94a3a9f6f1fa75f8c7df) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'e0c276a6ffbb43bf0f214f1bd6eb952e') in 0.0058057 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=6b4aa82e0eeb8d13e9f799a5d35f2dad DependenciesID=81148d0c3c0e76b310181ae1461ae7a1 StaticDependenciesID=0dcc2709ee7219a66f5b023f41f2ec2e 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 13
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Asset_PlayingCards/Prefabs/Deck04/Deck04_Spade_8.prefab
+  importAddress: Guid(91cc08348d140415a8a054b2ebb92676) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Asset_PlayingCards/Prefabs/Deck04/Deck04_Spade_8.prefab using Guid(91cc08348d140415a8a054b2ebb92676) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '1b7d40aabb756752075968151162d4a5') in 0.0051247 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=5429a893ae50b9a04e2f3048b5731df6 DependenciesID=f9bbc4b6a3f05a1e20b8a60a43982e44 StaticDependenciesID=d9d4e9949fc6af52faeac1514a8ed470 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 13
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Asset_PlayingCards/Prefabs/Deck07/Deck07_Club_J.prefab
+  importAddress: Guid(fc1556fa2afad44269df1bcb1baf9d51) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Asset_PlayingCards/Prefabs/Deck07/Deck07_Club_J.prefab using Guid(fc1556fa2afad44269df1bcb1baf9d51) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'd95178de14b750109aab0a99c308e77d') in 0.0058016 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=2a4414e3da40b6feb7fea69ed8e5e74a DependenciesID=0341058175380d6bc08828496b652f60 StaticDependenciesID=9ab8e57829bf03300db2632030491515 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 13
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Asset_PlayingCards/Prefabs/Deck05/Deck05_Diamond_5.prefab
+  importAddress: Guid(c3db79bb52e5e4fc8bc0e2e7edbd4c10) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Asset_PlayingCards/Prefabs/Deck05/Deck05_Diamond_5.prefab using Guid(c3db79bb52e5e4fc8bc0e2e7edbd4c10) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '7259911dbb6e48dd908f7e2b095cfbbc') in 0.0057777 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=b786078cb2305b2cc8b8ec12a5215cf5 DependenciesID=661ef60bf29f617fa3616dc10083425f StaticDependenciesID=fb15619e1d78b72da46776b0c429765e 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 13
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Asset_PlayingCards/Prefabs/Deck02/Deck02_Heart_K.prefab
+  importAddress: Guid(913c092cbb2c64cd3929c57af07f0cc1) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Asset_PlayingCards/Prefabs/Deck02/Deck02_Heart_K.prefab using Guid(913c092cbb2c64cd3929c57af07f0cc1) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '5a75f6e553b07c8a8e349a940fc5813a') in 0.006249 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=ca1b8a79f21fb24b83eb1e4243db7d81 DependenciesID=45be24de64a22bd4dbdb094529ceadd8 StaticDependenciesID=6c926911f9bf6d9875370ad049067845 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 13
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Asset_PlayingCards/Prefabs/Deck06/Deck06_Heart_K.prefab
+  importAddress: Guid(a037bc798a5ab46559287f7f45a26071) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Asset_PlayingCards/Prefabs/Deck06/Deck06_Heart_K.prefab using Guid(a037bc798a5ab46559287f7f45a26071) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '7010f1e0af3b5c4f97a163ae55eccf5c') in 0.0067378 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=771ab7820e38f0d25dd88fc1c161b090 DependenciesID=8b0f1deaa3b03ce2fe4a7ed26fde32df StaticDependenciesID=f55641e77c9aea03bbe9ac72082dbbce 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 13
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Asset_PlayingCards/Prefabs/Deck07/Deck07_Spade_Q.prefab
+  importAddress: Guid(68c265f8b657148669f7b6a38edaba90) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Asset_PlayingCards/Prefabs/Deck07/Deck07_Spade_Q.prefab using Guid(68c265f8b657148669f7b6a38edaba90) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'ba02932e8dba761805bbb2c9794db4bc') in 0.0061288 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=077b93b97e093eda2eb9f2cbf6427292 DependenciesID=e73ffbe18f2b645851662cd8d392b21c StaticDependenciesID=c8ca9a713d2e5f027c176e9a8e7557e9 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 13
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Asset_PlayingCards/Prefabs/Deck07/Deck07_Heart_7.prefab
+  importAddress: Guid(cc99be0465e0b455883860f42e3106f3) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Asset_PlayingCards/Prefabs/Deck07/Deck07_Heart_7.prefab using Guid(cc99be0465e0b455883860f42e3106f3) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '6bdd4ad2cec6859b06ab433c1ecd9bc1') in 0.0057197 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=862eef8dcde06480e3de77d495eb0d60 DependenciesID=632b4639117d9079c52fc36ca0094b6c StaticDependenciesID=7bc7b8c7a2b6cbcc1c585e7a3d31b3cc 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 13
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Asset_PlayingCards/Prefabs/Deck08/Deck08_Club_K.prefab
+  importAddress: Guid(ae47bc66c86d44547884b360436c09b2) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Asset_PlayingCards/Prefabs/Deck08/Deck08_Club_K.prefab using Guid(ae47bc66c86d44547884b360436c09b2) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'f6935aa584c6f1fec9419033f85d5397') in 0.0056104 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=a78c70d71c321420adbf593ab6b263e9 DependenciesID=902563dbcccc4572844cc37960483007 StaticDependenciesID=cea77ff402d003a7fa03877bfe24214f 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 13
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000071 seconds.
+  path: Assets/Asset_PlayingCards/Prefabs/Deck02/Deck02_Club_5.prefab
+  importAddress: Guid(8778d46abb15d4fa9a873df81d3b4d01) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Asset_PlayingCards/Prefabs/Deck02/Deck02_Club_5.prefab using Guid(8778d46abb15d4fa9a873df81d3b4d01) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '1b9b28cc177b6effbdb21542e5d218c5') in 0.005534 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=e2762904255572c42d15071ffe97f0b9 DependenciesID=fe83227b693cc6c4f29b5131e6a0aa26 StaticDependenciesID=deccba0342a8ffc07a57bea5d25a925b 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 13
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Asset_PlayingCards/Textures/Deck03.png
+  importAddress: Guid(a4b4d2618ac8c41b2969ae73399541c6) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Asset_PlayingCards/Textures/Deck03.png using Guid(a4b4d2618ac8c41b2969ae73399541c6) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '71c988ffdeb94f9dd520d7fceb1269a2') in 0.0493713 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=33f8c4eb35f3e345f5c5b1fc9264adb5 DependenciesID=a5a0889d258b7d7b882b4333ddc2eb3f StaticDependenciesID=6668c685ae0172d8336d4bd35b420fda 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 59
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Asset_PlayingCards/Prefabs/Deck07/Deck07_Heart_9.prefab
+  importAddress: Guid(6271d685a8a2f4bf48ab25abe5272b88) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Asset_PlayingCards/Prefabs/Deck07/Deck07_Heart_9.prefab using Guid(6271d685a8a2f4bf48ab25abe5272b88) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'acf2dbac67da30e164feceae0e034c75') in 0.0063693 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=a0a7680718515f86a559a95a2779b95e DependenciesID=08eaf356ad6c2ead817388b8fb55f21d StaticDependenciesID=98811a9c0f29530dfef795c82693d49a 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 13
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/Asset_PlayingCards/Prefabs/Deck03/Deck03_Spade_A.prefab
+  importAddress: Guid(55309dfeb7e7441d9bede6208c9ef102) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Asset_PlayingCards/Prefabs/Deck03/Deck03_Spade_A.prefab using Guid(55309dfeb7e7441d9bede6208c9ef102) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '12a0bec70deb56ba2234c65f494e1dd1') in 0.0055547 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=e9fd579854892768b6fe51cbe188958a DependenciesID=65d6f0bc2de8dd99a4a1b90d83be6f8d StaticDependenciesID=03c960b74c02a70770e857f65f977bab 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 13
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Asset_PlayingCards/Prefabs/Deck06/Deck06_Heart_4.prefab
+  importAddress: Guid(8db4ed1f1ea9246869f6e79da001715f) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Asset_PlayingCards/Prefabs/Deck06/Deck06_Heart_4.prefab using Guid(8db4ed1f1ea9246869f6e79da001715f) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'e5748c396b02b19f43754614fbfb1c35') in 0.006058 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=764fafe14eda32dab2290fd46432567c DependenciesID=8798094d77ebfcc72730878028c69a34 StaticDependenciesID=df0680ba7ffcbaae25e879793a3be65c 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 13
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/Asset_PlayingCards/Prefabs/Deck06/Deck06_Diamond_2.prefab
+  importAddress: Guid(07f948299554545a9a25f29de8b82b59) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Asset_PlayingCards/Prefabs/Deck06/Deck06_Diamond_2.prefab using Guid(07f948299554545a9a25f29de8b82b59) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '524206e5df653955ff7f6a88021c726d') in 0.0054614 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=495c350f51d31e78a6c3e34bb409201f DependenciesID=062b29b7827dd4ecc450e21b667f51f1 StaticDependenciesID=a32db63ccb9d004bb946b9c0b875b7a3 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 13
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Asset_PlayingCards/Prefabs/Deck06/Deck06_Spade_7.prefab
+  importAddress: Guid(962168ca8a6a2421d8f953b800ebb8a2) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Asset_PlayingCards/Prefabs/Deck06/Deck06_Spade_7.prefab using Guid(962168ca8a6a2421d8f953b800ebb8a2) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '2dac5d87bb83253b7eee2848b4859232') in 0.0066645 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=20b20adaab6936561f20be2ab83275e4 DependenciesID=f4e3f12535b5760707ac55541c650769 StaticDependenciesID=9003bbc293808aa9f628529730fda810 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 13
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/Asset_PlayingCards
+  importAddress: Guid(726fc51e86f13bd409e6e06ccf351ae0) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Asset_PlayingCards using Guid(726fc51e86f13bd409e6e06ccf351ae0) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '5c9cbb4dffd1c839ceb64edf2bf187a9') in 0.0028694 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=599f3087e7e0b12952dc1b45843533f6 DependenciesID=d84f2815340270c0cb1593d7efdb487f StaticDependenciesID=edf636c046ec535708a8b4f2605d3646 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000012 seconds.
+  path: Assets/Asset_PlayingCards/Prefabs/Deck01/Deck01_Club_3.prefab
+  importAddress: Guid(512d355e60dbc410d90b31b59294d4c8) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Asset_PlayingCards/Prefabs/Deck01/Deck01_Club_3.prefab using Guid(512d355e60dbc410d90b31b59294d4c8) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '3bc78fff78617c5a7d826d53ff2b46b4') in 0.0066086 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=5a4be100e39ba6efe1753d22017df974 DependenciesID=e5c6540db068b16b41361867c63c3008 StaticDependenciesID=a4d5b1a9f026ca42b68b42f57c9e7040 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 13
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Asset_PlayingCards/Prefabs/Deck06/Deck06_Diamond_10.prefab
+  importAddress: Guid(c1268edc506e346d8a1281b78a61d873) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Asset_PlayingCards/Prefabs/Deck06/Deck06_Diamond_10.prefab using Guid(c1268edc506e346d8a1281b78a61d873) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'e3e4cbf9d0e34cc54512eefdb0c17c94') in 0.0064669 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=0789d0c984efddf4794f05a553a8cf76 DependenciesID=9ecdcb1f08d8e969caddd2fc6fa1b891 StaticDependenciesID=dcf375eec52a07dbc677e9653286188e 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 13
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Asset_PlayingCards/Prefabs/Deck07/Deck07_Heart_2.prefab
+  importAddress: Guid(5d2cbdffee04e419e849fbea4e033e1b) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Asset_PlayingCards/Prefabs/Deck07/Deck07_Heart_2.prefab using Guid(5d2cbdffee04e419e849fbea4e033e1b) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'a1ee0c6e70c92ac7252310c26fde85be') in 0.0058818 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=1b1850acbb9b065031349764673a244f DependenciesID=79614197e69a39f6bb9de07bb21376a3 StaticDependenciesID=e0a04aeee59ec4f2e43227532113e26d 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 13
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Asset_PlayingCards/Prefabs/Deck02/Deck02_Heart_3.prefab
+  importAddress: Guid(672efadc20b664395961cf44e35f9032) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Asset_PlayingCards/Prefabs/Deck02/Deck02_Heart_3.prefab using Guid(672efadc20b664395961cf44e35f9032) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '7e2501e9772aa1a288bf5d424d080b2c') in 0.0049071 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=c3f52a314cdd69a78285cea68617d497 DependenciesID=89cc2f5cd2183f0da3702567dd7c7009 StaticDependenciesID=4bc380fb063ea9ea0d0f34a79ce96ecc 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 13
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Asset_PlayingCards/Prefabs/Deck06/Deck06_Spade_A.prefab
+  importAddress: Guid(e800d7db59169490ba8ecbd263d2f0df) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Asset_PlayingCards/Prefabs/Deck06/Deck06_Spade_A.prefab using Guid(e800d7db59169490ba8ecbd263d2f0df) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '32db3959f1403f51c0e53bfad9364f92') in 0.0058881 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=0a91834ae29d0c5f10bcb0700b8391d3 DependenciesID=b1647ffbfea2a1e3b15ae6c9d7e3dbf5 StaticDependenciesID=1b48dbbce01363bd4cd88e1e4822cbf1 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 13
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Asset_PlayingCards/Prefabs/Deck01/Deck01_Spade_10.prefab
+  importAddress: Guid(9314c044d0ee24d779b74b622d82cf20) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Asset_PlayingCards/Prefabs/Deck01/Deck01_Spade_10.prefab using Guid(9314c044d0ee24d779b74b622d82cf20) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'b851c6044ac1f9dfd09b857d6ede91fa') in 0.0060336 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=f602ab1db0fbf9e0495b880652f403ec DependenciesID=62cfadcd5041962edaf1ea7cdec5aaed StaticDependenciesID=6b05f43726a7590162866395739f02be 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 13
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Asset_PlayingCards/Prefabs/DeckSets/Deck03.prefab
+  importAddress: Guid(1c515cf5540f3421eb016862a9bbd908) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Asset_PlayingCards/Prefabs/DeckSets/Deck03.prefab using Guid(1c515cf5540f3421eb016862a9bbd908) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '1c1bab36e3013310e2d00f16dc11200b') in 0.0131352 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=fc4e6a90b03c7264f8c6a58b8fc9ea25 DependenciesID=a564d710746382df25f34df8dbdcf54a StaticDependenciesID=66c75364447c029aabea77afaad9c1b9 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 491
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Asset_PlayingCards/Prefabs/Deck05/Deck05_Heart_5.prefab
+  importAddress: Guid(1bf171e4e143a41f48429a7e67ec685c) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Asset_PlayingCards/Prefabs/Deck05/Deck05_Heart_5.prefab using Guid(1bf171e4e143a41f48429a7e67ec685c) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '54d61be89ce279d86c1e77d5ebdf6581') in 0.006039 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=1584277fd10ea523ba7138a38b30990b DependenciesID=88f02841351a727236caf39af663fd3c StaticDependenciesID=1688967414757f21844b7ca91a56d13c 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 13
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Asset_PlayingCards/Prefabs/Deck08/Deck08_Club_6.prefab
+  importAddress: Guid(fb7e18e8fd9d545e192e8c2e2f30d841) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Asset_PlayingCards/Prefabs/Deck08/Deck08_Club_6.prefab using Guid(fb7e18e8fd9d545e192e8c2e2f30d841) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '3564d39c143cbea3341ad93a8057cafe') in 0.0059334 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=8b797195cc71fdd701d1599a564f7c69 DependenciesID=5a2cd4464ce75c07869839dd6c815a45 StaticDependenciesID=e0f2384cf541f52152c371e93bc97b78 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 13
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Asset_PlayingCards/Textures/Deck02.png
+  importAddress: Guid(2ee177719f492439ebcf591e83df2d59) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Asset_PlayingCards/Textures/Deck02.png using Guid(2ee177719f492439ebcf591e83df2d59) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'c03c852ef61de9d830c8283db1affbe7') in 0.0536415 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=c9c73b3a072d3f6cf97aa8b9eca1db81 DependenciesID=f6717e62a2a0bcf1a7d5acd8a9f2bff2 StaticDependenciesID=145e03ed24a7ca4fa84033ffa5c1dec0 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 59
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Asset_PlayingCards/Prefabs/Deck06/Deck06_Spade_9.prefab
+  importAddress: Guid(ebeca3aeb6eae4b6b91684b935e6fdf6) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Asset_PlayingCards/Prefabs/Deck06/Deck06_Spade_9.prefab using Guid(ebeca3aeb6eae4b6b91684b935e6fdf6) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'fdb263d18db3139dfcb6999bbec27dea') in 0.0059009 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=b0958cbb0e0621881c05f148a3115a73 DependenciesID=08c91fe610be7100032170a05ccaf166 StaticDependenciesID=8f189354dc4b4482fc8defa03c12b555 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 13
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Asset_PlayingCards/Prefabs/Deck01/Deck01_Heart_3.prefab
+  importAddress: Guid(0bb4b0d39cc3f47a6b413d79cf903172) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Asset_PlayingCards/Prefabs/Deck01/Deck01_Heart_3.prefab using Guid(0bb4b0d39cc3f47a6b413d79cf903172) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '0e274253540f10101d208af3d671f83f') in 0.0062209 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=a11de859ddf68a61969190b40a330791 DependenciesID=fb8092a96ca55ae34942c2efc7afc5be StaticDependenciesID=e6b4da5a83af4ba5a5d78a96309cf82e 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 13
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Asset_PlayingCards/Prefabs/Deck06/Deck06_Club_8.prefab
+  importAddress: Guid(8d61c20a471db431b9a65be881c3b8d0) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Asset_PlayingCards/Prefabs/Deck06/Deck06_Club_8.prefab using Guid(8d61c20a471db431b9a65be881c3b8d0) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'f0da7728e217ceb4ea3b7ab451a78435') in 0.0061667 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=8f230a9d96c53b8ec8362f81799391f9 DependenciesID=765f2b47a5710e58d05ec768054f7711 StaticDependenciesID=524adae18ece46b617cc699e006d0187 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 13
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Asset_PlayingCards/Prefabs/Deck03/Deck03_Diamond_3.prefab
+  importAddress: Guid(27b1262bce2b14fcf8596fd54511f7fd) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Asset_PlayingCards/Prefabs/Deck03/Deck03_Diamond_3.prefab using Guid(27b1262bce2b14fcf8596fd54511f7fd) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '015f483ed435994dd9b6d25d114e3453') in 0.0057497 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=e45410ba1badb05126520ca054123165 DependenciesID=2c59472b3daedc589aaccc4bda4a63fa StaticDependenciesID=af316185f34d466989f2f79c370104cc 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 13
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Asset_PlayingCards/Prefabs/Deck04/Deck04_Diamond_9.prefab
+  importAddress: Guid(5e92b9b205cd247adbf6b058c6b9db05) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Asset_PlayingCards/Prefabs/Deck04/Deck04_Diamond_9.prefab using Guid(5e92b9b205cd247adbf6b058c6b9db05) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '8cf519539a7cc644e2799e813541fcdb') in 0.0060093 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=20446445eea845eecbbd48c047a9ebdd DependenciesID=b4348089260ba1671fd45119f2462cca StaticDependenciesID=3afc07ca87f6b9426631815c8c764df6 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 13
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Asset_PlayingCards/Prefabs/Deck05/Deck05_Spade_5.prefab
+  importAddress: Guid(ce4371295c9be413e8ca19f86ae23572) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Asset_PlayingCards/Prefabs/Deck05/Deck05_Spade_5.prefab using Guid(ce4371295c9be413e8ca19f86ae23572) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '38776f74a1418878a0e006de51575083') in 0.0048942 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=6627a0bcc6aeadfa0da84c73c799d2ec DependenciesID=714daa804df42724a81c0d5a14327aa8 StaticDependenciesID=731d8d264aeffc32ef1031cd34a2ba6e 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 13
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Asset_PlayingCards/Prefabs/Deck05/Deck05_Heart_8.prefab
+  importAddress: Guid(24cc2f8705412420eafee59a8caec624) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Asset_PlayingCards/Prefabs/Deck05/Deck05_Heart_8.prefab using Guid(24cc2f8705412420eafee59a8caec624) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'fcc27dfcb89b668be9e69026680bbc66') in 0.0051682 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=9b1bf66bfbbec95d168e5cbc30a78266 DependenciesID=239c295312e4ad1b86252727d188b5a0 StaticDependenciesID=c918a8e8936509f64a8234fdfcf6c05f 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 13
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Asset_PlayingCards/Prefabs/Deck02/Deck02_Diamond_8.prefab
+  importAddress: Guid(03ce595db861d4fa69833c8167ec2dce) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Asset_PlayingCards/Prefabs/Deck02/Deck02_Diamond_8.prefab using Guid(03ce595db861d4fa69833c8167ec2dce) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '8fe55e3d6dcb493aac16bfe1994c4f42') in 0.005311 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=7c8043bffefd2e6fb291b164e6228710 DependenciesID=5b131214f6c9c160eb7f9603dee718ef StaticDependenciesID=51b52d17f73be288309625379c632498 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 13
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Asset_PlayingCards/Prefabs/Deck02/Deck02_Heart_6.prefab
+  importAddress: Guid(b68bee01934834bf68f845cd194a5a25) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Asset_PlayingCards/Prefabs/Deck02/Deck02_Heart_6.prefab using Guid(b68bee01934834bf68f845cd194a5a25) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '201cfa697a4f4b49e690225b2ce3fc5c') in 0.0058766 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=0e71f0894caf5d624d169979ab1b6c46 DependenciesID=fcbca663736adf0319b5725b73fb6a71 StaticDependenciesID=0171fe7af9e6d441b348491642ccb69c 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 13
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Asset_PlayingCards/Prefabs/Deck04/Deck04_Club_4.prefab
+  importAddress: Guid(274acf45c981c451695882ce45b55c47) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Asset_PlayingCards/Prefabs/Deck04/Deck04_Club_4.prefab using Guid(274acf45c981c451695882ce45b55c47) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '39468b1fa9a09253628d2cf63ac59303') in 0.0056918 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=b098059ea770a1d83b7041b0970b88cf DependenciesID=245146ed31ecca14b74c76bc0768a7bf StaticDependenciesID=55f1bfe531708a08fd3a02c9f8e62dd0 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 13
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Asset_PlayingCards/Prefabs/Deck04/Deck04_Spade_4.prefab
+  importAddress: Guid(e78a9d68d9a694f1389434641966d8a3) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Asset_PlayingCards/Prefabs/Deck04/Deck04_Spade_4.prefab using Guid(e78a9d68d9a694f1389434641966d8a3) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '343920f92ddd1b58e31d9f5ec11cfa11') in 0.0053606 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=74d1a05541cdbc05c2aded7a528ab79f DependenciesID=65d24d71baeb85f68c2180fb8163058a StaticDependenciesID=b5a2002de8f422b1e82fc18d8039ec81 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 13
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Asset_PlayingCards/Textures
+  importAddress: Guid(e954fbac3c9174dfb82902640cd815d0) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Asset_PlayingCards/Textures using Guid(e954fbac3c9174dfb82902640cd815d0) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '0d2a4dff96eea6843739cbbd6019379c') in 0.0022955 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=9953ccbd772d7251ae24cba4b0259c0a DependenciesID=9307d1c6073f8846deec810692ccb248 StaticDependenciesID=969bc326aaddf08ac384a9c113876158 
 Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
 
 ========================================================================
 Received Import Request.
   Time since last request: 0.000018 seconds.
-  path: Assets/Vlad Belza/Transformer HDRP/Materials/Transformer.mat
-  importAddress: Guid(fe534b4937fca71408c91d3d997ceeb4) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Vlad Belza/Transformer HDRP/Materials/Transformer.mat using Guid(fe534b4937fca71408c91d3d997ceeb4) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'eb445368d1306853fd80adfa43dcbb13') in 0.0061628 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=450aa5631d120b22086e39f1709b4d1e DependenciesID=f2964f1b6a43a1728c451cdb440e803e StaticDependenciesID=52ae41a24a6871cdb10285b9513f162a 
+  path: Assets/Asset_PlayingCards/Prefabs/Deck03/Deck03_Heart_Q.prefab
+  importAddress: Guid(50f2b42ef809646359da856a1eb00865) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Asset_PlayingCards/Prefabs/Deck03/Deck03_Heart_Q.prefab using Guid(50f2b42ef809646359da856a1eb00865) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '60dc433adad7c3a8c86cb5b8b5a05302') in 0.0054033 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=2cc8bb49ddf7dc7c5e9a3bb2a51239dd DependenciesID=9c8fbf4e51557d3c6e6c5c0af51a2a7d StaticDependenciesID=e22ed4baa932c29531f50cede31e7c1f 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 13
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Asset_PlayingCards/Prefabs/Deck07/Deck07_Spade_J.prefab
+  importAddress: Guid(ab29203d3434f4c0da307ac2a5ead9bd) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Asset_PlayingCards/Prefabs/Deck07/Deck07_Spade_J.prefab using Guid(ab29203d3434f4c0da307ac2a5ead9bd) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '6635d3437bf6668f15d03e8bd63740ab') in 0.0054269 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=7923703e6bb3027d934dfbc82a1023a8 DependenciesID=4fdc47b040106daaaa8829bdc9a12192 StaticDependenciesID=950b685983e495b8facacc95a8f2d0db 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 13
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/Asset_PlayingCards/Prefabs/Deck02/Deck02_Diamond_J.prefab
+  importAddress: Guid(b1bb1514c5ea347ecb3886c752c4fde4) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Asset_PlayingCards/Prefabs/Deck02/Deck02_Diamond_J.prefab using Guid(b1bb1514c5ea347ecb3886c752c4fde4) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '4432d85ec7b45b6f0d435b8aaa50b5c6') in 0.0056399 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=4173b5f09e57d8b375e42c0762abe883 DependenciesID=6cd8ff3ec801aa3c2b2945540acb80bb StaticDependenciesID=5211ea28440793f2f5a8ac9a39e19cde 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 13
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Asset_PlayingCards/Prefabs/Deck01/Deck01_Heart_7.prefab
+  importAddress: Guid(7158c32e65b7d4c5b8147499976d65df) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Asset_PlayingCards/Prefabs/Deck01/Deck01_Heart_7.prefab using Guid(7158c32e65b7d4c5b8147499976d65df) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'fef8a9e8b0df5c0629db6f0ed2f00749') in 0.0056109 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=f4834b17b9e33fb54597857793903ea0 DependenciesID=5d69672acc3744494de2a89623860f67 StaticDependenciesID=32b62fe136564b717e6080edf92e2f31 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 13
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Asset_PlayingCards/Prefabs/Deck05/Deck05_Spade_6.prefab
+  importAddress: Guid(51f1502b03f1f4fce8f353267c760d13) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Asset_PlayingCards/Prefabs/Deck05/Deck05_Spade_6.prefab using Guid(51f1502b03f1f4fce8f353267c760d13) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '382e951178641301718c0b46b9e52bda') in 0.0057405 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=523352a82b6b5bbeb5f20dea0c3a5a37 DependenciesID=1a252125299becebaad9becc2b226896 StaticDependenciesID=66760b79cc4498ca892279e84ce39662 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 13
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Asset_PlayingCards/Prefabs/Deck05/Deck05_Spade_2.prefab
+  importAddress: Guid(eff289ad0afa94026a06bb5451bcc2a9) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Asset_PlayingCards/Prefabs/Deck05/Deck05_Spade_2.prefab using Guid(eff289ad0afa94026a06bb5451bcc2a9) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'd4d938ddc54e2a42b7f7ea0133cad90a') in 0.0058807 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=29c55d50a2d94bc13a9d82370826a98b DependenciesID=389ee413efefce74fba1d5315c510d57 StaticDependenciesID=0570414c45a8e4d53192ec524e3affb7 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 13
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Asset_PlayingCards/Prefabs/Deck01/Deck01_Joker.prefab
+  importAddress: Guid(90e94d8fe94894ad992bf11b01ea05f5) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Asset_PlayingCards/Prefabs/Deck01/Deck01_Joker.prefab using Guid(90e94d8fe94894ad992bf11b01ea05f5) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '6759d79e0b6b3411c3b283dbb2846026') in 0.0068556 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=9c3e5beafb8989c541f8a564313e3349 DependenciesID=2193753d944a36bb70cdeee9ae979953 StaticDependenciesID=2e19c111db53dcc41c85c3577c5a2992 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 13
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Asset_PlayingCards/Prefabs/Deck08/Deck08_Club_5.prefab
+  importAddress: Guid(6a59e74d610ee488289e2e1fdb4931f1) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Asset_PlayingCards/Prefabs/Deck08/Deck08_Club_5.prefab using Guid(6a59e74d610ee488289e2e1fdb4931f1) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'f33f07c753aa9cd9d417edb420a62754') in 0.0059621 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=9b5e4c4587f0c469b8dc428d0bb8ab3a DependenciesID=eb60ef1dbf6aba64d31d0c9e7809dc78 StaticDependenciesID=ff5caf7577136db509268d832f56729f 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 13
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Asset_PlayingCards/Prefabs/Deck06/Deck06_Diamond_3.prefab
+  importAddress: Guid(935145b8f86224174992e4c0b017ab19) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Asset_PlayingCards/Prefabs/Deck06/Deck06_Diamond_3.prefab using Guid(935145b8f86224174992e4c0b017ab19) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '381e9fd019a5077ef1fc41b66f57c099') in 0.0058613 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=e363ea01ff6ad26c291e22d3b8b1eb76 DependenciesID=7e04363269d2e0d1f80a0d1379057dac StaticDependenciesID=62a619082ac65dbb66b71f2e1bbd4086 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 13
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Asset_PlayingCards/Prefabs/Deck05/Deck05_Diamond_7.prefab
+  importAddress: Guid(82da43075c8aa4f1abbd414003532d68) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Asset_PlayingCards/Prefabs/Deck05/Deck05_Diamond_7.prefab using Guid(82da43075c8aa4f1abbd414003532d68) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '810af0c29201233394e3354c149f5a1d') in 0.006489 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=d267cb63f27c6b7fc6a778bd5f6aabb5 DependenciesID=4f3330b3245ec78634b52be4c6a47418 StaticDependenciesID=895cd12f2b445a2ec46ce70f97bb2356 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 13
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Asset_PlayingCards/Prefabs/Deck06/Deck06_Spade_8.prefab
+  importAddress: Guid(f3bb609659f45481b804aa6976cabeb5) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Asset_PlayingCards/Prefabs/Deck06/Deck06_Spade_8.prefab using Guid(f3bb609659f45481b804aa6976cabeb5) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'd6ed36f6ef8baf510ef087e2b9ce00c0') in 0.0066545 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=3c1a1fedd9fd7aadd49caa0316986d45 DependenciesID=db091f8c05102874e14c0163e936bea5 StaticDependenciesID=e9a6fdff0c14183cbb29d0a6a415f335 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 13
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Asset_PlayingCards/Prefabs/Deck07/Deck07_Diamond_7.prefab
+  importAddress: Guid(faf82c0e938ce4226a28ae1b1c3211a5) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Asset_PlayingCards/Prefabs/Deck07/Deck07_Diamond_7.prefab using Guid(faf82c0e938ce4226a28ae1b1c3211a5) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'c6951494230cbba2a12c6bac75f898f4') in 0.0056818 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=fa7d5c982f651ec72fb308235dae962a DependenciesID=96bce9656a412e33c62f63268d9a8185 StaticDependenciesID=05ede124eec4f6350c30c1aa4821be3e 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 13
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Asset_PlayingCards/Prefabs/Deck01/Deck01_Diamond_5.prefab
+  importAddress: Guid(6aa1678e52b1a40b4aa8a1cbed4e1cba) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Asset_PlayingCards/Prefabs/Deck01/Deck01_Diamond_5.prefab using Guid(6aa1678e52b1a40b4aa8a1cbed4e1cba) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '25a59d0bedcf92784c8774da3a562eb1') in 0.0055097 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=be9639f8a100013a50b888a44ddf5eb1 DependenciesID=2f32a6afde87e6d079cd59baeaf58b2b StaticDependenciesID=63db07c642d27f85e7512e931a5c6dc1 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 13
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Asset_PlayingCards/Prefabs/Deck04/Deck04_Spade_9.prefab
+  importAddress: Guid(376f2600c0c504a74b299a0098d15f9d) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Asset_PlayingCards/Prefabs/Deck04/Deck04_Spade_9.prefab using Guid(376f2600c0c504a74b299a0098d15f9d) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '7a645f6bbf6b53acf4c4c2c86ca261d6') in 0.0057488 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=4da96f904861bc8def8f828360bb5fcc DependenciesID=343e74f901ec04fde6a0a5a46e346d6e StaticDependenciesID=76c733f10b7066f9031675f49cf81d69 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 13
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000037 seconds.
+  path: Assets/Asset_PlayingCards/Prefabs/DeckSets/Deck07.prefab
+  importAddress: Guid(af36c6781469f47788839e1f9db5e867) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Asset_PlayingCards/Prefabs/DeckSets/Deck07.prefab using Guid(af36c6781469f47788839e1f9db5e867) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'f4e2b4f1cecaf7ae0f3499d3580f1fd9') in 0.014357 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=649d4458d935adbabf024ea2d13ded61 DependenciesID=ef162fc36492cfbc899215055179af3e StaticDependenciesID=9763c3ea8c4fa324bcfbd371f2402b5e 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 491
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Asset_PlayingCards/Prefabs/Deck05/Deck05_Heart_4.prefab
+  importAddress: Guid(12fd16f17d3a34beb9207db966c52c84) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Asset_PlayingCards/Prefabs/Deck05/Deck05_Heart_4.prefab using Guid(12fd16f17d3a34beb9207db966c52c84) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'e22e416d8464b3b9f74cd3985ec8d90d') in 0.0056059 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=dc6e80cb1f340b3a425f8dbe214feb83 DependenciesID=e74fc08a4ab54f3e79ef1e5a1c90731d StaticDependenciesID=359f4c1e6fc240ef64b1a9a9ea6f435b 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 13
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Asset_PlayingCards/Prefabs/Deck02/Deck02_Heart_A.prefab
+  importAddress: Guid(990045844ba394054b16be93b85cb3b9) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Asset_PlayingCards/Prefabs/Deck02/Deck02_Heart_A.prefab using Guid(990045844ba394054b16be93b85cb3b9) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '573a0f771d6e52dbe1bec1840001149a') in 0.0054759 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=0f39379fe7087f2075affe04fbfeeef7 DependenciesID=720b33c3d7565066c435db3913b80808 StaticDependenciesID=9b9663646e76fcdca355e26bc0d5b634 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 13
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Asset_PlayingCards/Prefabs/Deck01/Deck01_Club_7.prefab
+  importAddress: Guid(2c1e7d93bedb246638c3aaf765d51269) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Asset_PlayingCards/Prefabs/Deck01/Deck01_Club_7.prefab using Guid(2c1e7d93bedb246638c3aaf765d51269) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '9a87f72ddbc02e4e974a7cdd870c61d2') in 0.0056926 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=ca36f2f1ad145a2a1326dab7c1e1e584 DependenciesID=534a7577cc008e815bca6388a7b90d1b StaticDependenciesID=91b065a2eea34726eae625d64184bf51 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 13
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Asset_PlayingCards/Prefabs/Deck01/Deck01_Diamond_8.prefab
+  importAddress: Guid(e1364862254814254850e8cbee3dc8ed) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Asset_PlayingCards/Prefabs/Deck01/Deck01_Diamond_8.prefab using Guid(e1364862254814254850e8cbee3dc8ed) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '0328a0d4be1aee9060ff6a6801abceb1') in 0.0057056 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=a79ebea4eceafb9db9246b2c71809df9 DependenciesID=6859d84b3df3681468a88726c35b4bc9 StaticDependenciesID=aaa48ce6706415a10540d3b606dc2557 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 13
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Asset_PlayingCards/Prefabs/Deck04/Deck04_Spade_Q.prefab
+  importAddress: Guid(77b099bab17454ac4a060c29182ba86d) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Asset_PlayingCards/Prefabs/Deck04/Deck04_Spade_Q.prefab using Guid(77b099bab17454ac4a060c29182ba86d) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '062314c3235cc36b44ec2e51034bf6b4') in 0.005885 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=53b07693101495878758653fda74cd1e DependenciesID=578e4e1b3ff8b89c46e7799c6a6b3423 StaticDependenciesID=611b75ef6d2dabef4075fd54712d288d 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 13
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Asset_PlayingCards/Prefabs/Deck04/Deck04_Diamond_6.prefab
+  importAddress: Guid(3c821b21a407f4bc194d59747a666705) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Asset_PlayingCards/Prefabs/Deck04/Deck04_Diamond_6.prefab using Guid(3c821b21a407f4bc194d59747a666705) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '430b17e4c8dac6357a5fb532738aabaf') in 0.0055238 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=7f082d87a3f0fd244cda07169036601d DependenciesID=a3a9a38db63b106ce96c48e377b56df3 StaticDependenciesID=36d5e3f7e83800371807e8cb4634cdd8 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 13
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Asset_PlayingCards/Prefabs/Deck04/Deck04_Heart_9.prefab
+  importAddress: Guid(226b41c84fca34d169725996c0b4916f) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Asset_PlayingCards/Prefabs/Deck04/Deck04_Heart_9.prefab using Guid(226b41c84fca34d169725996c0b4916f) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'fec40e74c3b02cbc3243d7a25bbd896c') in 0.0062253 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=6dd0d73f6aa8fa1a7e12bb8b297d0512 DependenciesID=4b52a329bce0e7e25eb0ccb607d8a16b StaticDependenciesID=015ac97acdddf121f48bd6443533e5a9 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 13
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Asset_PlayingCards/Prefabs/Deck01/Deck01_Spade_Q.prefab
+  importAddress: Guid(a4b0980cc28fe4d7f85023a7f4e0d306) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Asset_PlayingCards/Prefabs/Deck01/Deck01_Spade_Q.prefab using Guid(a4b0980cc28fe4d7f85023a7f4e0d306) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '1c464ef9fc6436b99b4ded52f6530885') in 0.0055139 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=c63f20344d6bfe0bb0ef598b678e66b6 DependenciesID=606086c7d87bc5b96172d4270aa059ee StaticDependenciesID=6675a53f5377d1a46bc1ad56a8fbaea4 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 13
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Asset_PlayingCards/Prefabs/Deck05/Deck05_Heart_J.prefab
+  importAddress: Guid(d37162645d3cc4b27b58bec52126ebb1) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Asset_PlayingCards/Prefabs/Deck05/Deck05_Heart_J.prefab using Guid(d37162645d3cc4b27b58bec52126ebb1) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '9b1bf798dc1a927e4e6a100bc0a25107') in 0.0064783 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=a1caf4e41441e7b56d9bba5d689844f1 DependenciesID=898b0e1160a39c4441ec49b04b3cf8d0 StaticDependenciesID=1247bf7943bb8969c9765c8e0fafa162 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 13
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Asset_PlayingCards/Prefabs/Deck06/Deck06_Club_K.prefab
+  importAddress: Guid(cc2493edd36b748a3828c71b18ad39da) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Asset_PlayingCards/Prefabs/Deck06/Deck06_Club_K.prefab using Guid(cc2493edd36b748a3828c71b18ad39da) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '7eada251c99fc44c2e93b2e6e7cacdf8') in 0.0057216 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=7fc39f13e8e07e045c07dc2c5532fd36 DependenciesID=bba2a2da8d9d7eac120e03d171990e90 StaticDependenciesID=bb7578fa1ecb69d2154123cdcc3d681f 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 13
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Asset_PlayingCards/Prefabs/Deck03
+  importAddress: Guid(73ff152c9bf10436cbe3de035d03dbae) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Asset_PlayingCards/Prefabs/Deck03 using Guid(73ff152c9bf10436cbe3de035d03dbae) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'e956e07f9146da7dfb275118bf758d47') in 0.002541 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=6b5e2cdf2307bb058daefa01d46558ec DependenciesID=2c773d5cf975fa3f8717deb040f9eeb3 StaticDependenciesID=59f1b27e349118c71e1bde0e1004a904 
 Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
 
 ========================================================================
 Received Import Request.
-  Time since last request: 131.131410 seconds.
-  path: Assets/Scenes/MainScene.unity
-  importAddress: Guid(99c9720ab356a0642a771bea13969a05) Importer(2089858483,e11c23a36db5f54750b8cd40eac0985b)
-Start importing Assets/Scenes/MainScene.unity using Guid(99c9720ab356a0642a771bea13969a05) Importer(2089858483,e11c23a36db5f54750b8cd40eac0985b) (ScriptedImporter)Opening scene 'Assets/Scenes/MainScene.unity additively'
-Loaded scene 'Assets/Scenes/MainScene.unity'
-	Deserialize:            42.378 ms
-	Integration:            136.884 ms
-	Integration of assets:  2.048 ms
-	Thread Wait Time:       -0.007 ms
-	Total Operation Time:   181.303 ms
- -> (Import Result ID: '04d308fdd140d86fe2902cb4f9c884d2') in 2.4827189 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=6e78e2d5f8a783ff5189e53ce562c598 DependenciesID=d020cc8fc996addb7a9fad1b13a3d641 StaticDependenciesID=891fa66d1dc11c3b05aadbf80e4c8f6e 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 5036
+  Time since last request: 0.000024 seconds.
+  path: Assets/Asset_PlayingCards/Prefabs/Deck04/Deck04_Heart_5.prefab
+  importAddress: Guid(55542047684d2413c96574430f07aaea) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Asset_PlayingCards/Prefabs/Deck04/Deck04_Heart_5.prefab using Guid(55542047684d2413c96574430f07aaea) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '1f58f614f0b4709d98f0078b39a32207') in 0.0060085 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=a5ff42a0e840d34db3d2f7f35a61c645 DependenciesID=f0ecc5aacdcb2781328abca2d1e24374 StaticDependenciesID=33ada7bbee6a9998ec9b0717b54b048f 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 13
 
 ========================================================================
 Received Import Request.
-  Time since last request: 86.989745 seconds.
-  path: Assets/Vlad Belza/Transformer HDRP/Prefab/Transformer 1.prefab
-  importAddress: Guid(bc869a849069de74e92d8024e90d9bbb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Vlad Belza/Transformer HDRP/Prefab/Transformer 1.prefab using Guid(bc869a849069de74e92d8024e90d9bbb) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (Import Result ID: '8116b7f2d6e18d17f3a8e31a414f7516') in 0.7260641 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=7a282beaecf2b4ef0cb012e6c476f667 DependenciesID=4277cb90e885873f3d3a35bd7e22b21c StaticDependenciesID=b8d6c4705f42120637494dcecb5fff67 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 44
+  Time since last request: 0.000018 seconds.
+  path: Assets/Asset_PlayingCards/Prefabs/DeckSets/Deck02.prefab
+  importAddress: Guid(1fd16ac99b6eb4f6caf63f64093daaf8) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Asset_PlayingCards/Prefabs/DeckSets/Deck02.prefab using Guid(1fd16ac99b6eb4f6caf63f64093daaf8) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '67e0398395877e04fee7575b17c5e4f3') in 0.0129512 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=64d8e08d7ff788e90e3fe6a4be84f321 DependenciesID=bbedbeff4b9a27046f23044cbc85f917 StaticDependenciesID=701a66905ebd4a48a240f713622df708 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 491
 
 ========================================================================
 Received Import Request.
-  Time since last request: 7.418084 seconds.
-  path: Assets/Resources
-  importAddress: Guid(dffff9bd0f07f9b4397fe40200fbbb80) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources using Guid(dffff9bd0f07f9b4397fe40200fbbb80) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (Import Result ID: '6d69c733cd29e3f9f34791d43fef2bff') in 0.0004908 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=f2cf61e13b5f5d3483eeb4662f1add34 DependenciesID=c6137cced8cdc5d254a78bbb5ff21f50 StaticDependenciesID=5a57818cee732370043291efda483ae0 
+  Time since last request: 0.000017 seconds.
+  path: Assets/Asset_PlayingCards/Prefabs/Deck01
+  importAddress: Guid(7730765b6cc0447be8ab9ebffd59ccf7) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Asset_PlayingCards/Prefabs/Deck01 using Guid(7730765b6cc0447be8ab9ebffd59ccf7) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '58959920eb69cb80572dc81cfbd70145') in 0.0028438 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=2ff577ec98948cb67b8545c4e2cf93ed DependenciesID=8612b215160bc61a7a17a23484f7e9fc StaticDependenciesID=ce42466341b1f08454588a131efeccb8 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/Asset_PlayingCards/Prefabs/Deck07/Deck07_Spade_A.prefab
+  importAddress: Guid(6a60fd36795394445984f4950905d59c) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Asset_PlayingCards/Prefabs/Deck07/Deck07_Spade_A.prefab using Guid(6a60fd36795394445984f4950905d59c) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'c97b0961281523bcbac4dd5bce037a9a') in 0.006552 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=287ddfc028545b84b0df27b520900356 DependenciesID=84aeb2b00e3189445d8f123dd604bc80 StaticDependenciesID=b69af285f64055cf6e1d11c8f1c1f517 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 13
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Asset_PlayingCards/Prefabs/Deck08/Deck08_Club_J.prefab
+  importAddress: Guid(17be460b80ca14cdb8ee8ecb281fc06f) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Asset_PlayingCards/Prefabs/Deck08/Deck08_Club_J.prefab using Guid(17be460b80ca14cdb8ee8ecb281fc06f) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '90ffb42cdce5737442353f983b2278e7') in 0.0065229 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=b21f1d733c6c069099f84f247599b67c DependenciesID=a269e3ce23ad2bff646c6b0bf571d93a StaticDependenciesID=85b0dc3196098d4c27a4802fc935f276 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 13
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Asset_PlayingCards/Prefabs/Deck03/Deck03_Spade_10.prefab
+  importAddress: Guid(c1b37753337bc4cae886386583de1648) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Asset_PlayingCards/Prefabs/Deck03/Deck03_Spade_10.prefab using Guid(c1b37753337bc4cae886386583de1648) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '4101de07bdeb8a805abb51d877c8a383') in 0.0059152 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=edf096fbdc1b0698928314ddfb5f6db5 DependenciesID=5c7013785f65650918fc625d2184e3f5 StaticDependenciesID=6f1333a56b93dd3f641661e4130b46ba 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 13
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Asset_PlayingCards/Prefabs/Deck04/Deck04_Spade_J.prefab
+  importAddress: Guid(7e12472121c2347339ccc71b99ba5c5a) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Asset_PlayingCards/Prefabs/Deck04/Deck04_Spade_J.prefab using Guid(7e12472121c2347339ccc71b99ba5c5a) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '7555dde17ed31c2cecdbf91cbd811e02') in 0.006425 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=13ced28fec854a603cd14ebd95ea3542 DependenciesID=131b9abf72bb608e88f17b28a98534fb StaticDependenciesID=fcc3177e7574ccfa21939df5616ed62f 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 13
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/Asset_PlayingCards/Prefabs/Deck08/Deck08_Heart_7.prefab
+  importAddress: Guid(e9e934bd77a204e5a96514699103987e) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Asset_PlayingCards/Prefabs/Deck08/Deck08_Heart_7.prefab using Guid(e9e934bd77a204e5a96514699103987e) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'b3c48ab20bb44e2b65dd5863964fdbe3') in 0.0127455 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=d7403ca9bd6124f375859728fe4d6a59 DependenciesID=71330a006901bd778e0b6e5ea4be98c5 StaticDependenciesID=801c40fe894083232d04e41a995a4f46 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 13
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/Asset_PlayingCards/Prefabs/Deck03/Deck03_Diamond_A.prefab
+  importAddress: Guid(e6dad486bf7b04eebbe61df15d0f57bc) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Asset_PlayingCards/Prefabs/Deck03/Deck03_Diamond_A.prefab using Guid(e6dad486bf7b04eebbe61df15d0f57bc) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '84bab5ab5bb458352e53836ee75b8c80') in 0.0057347 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=1b82f851974c2843a2c8d96f54fbe951 DependenciesID=009364647d39b263162e3f0433df4eb1 StaticDependenciesID=a52606df84d78cc731bddbfd75e427b9 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 13
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Asset_PlayingCards/Prefabs/Deck01/Deck01_Spade_J.prefab
+  importAddress: Guid(f84beab53e98e48d3b295eaf274b2cb0) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Asset_PlayingCards/Prefabs/Deck01/Deck01_Spade_J.prefab using Guid(f84beab53e98e48d3b295eaf274b2cb0) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'e59f0b94aec7f8a6142cb0b816d40248') in 0.0062468 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=6a6b02cd27f83e92e5c645089b6def86 DependenciesID=dd315294444291222b41b6f1e6a02a43 StaticDependenciesID=fa854f438dc9aa7a84ed5de4a4414222 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 13
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Asset_PlayingCards/Prefabs/Deck06/Deck06_Heart_7.prefab
+  importAddress: Guid(bbdbf2b2700754bfea7ca2d146480806) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Asset_PlayingCards/Prefabs/Deck06/Deck06_Heart_7.prefab using Guid(bbdbf2b2700754bfea7ca2d146480806) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'a612afbb0e9c282ca79e44dd86510aa7') in 0.00561 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=323530b868e3d0a3aa423ef8bac151e8 DependenciesID=98a0e2bf22e192bc042d5540c0c6d7c8 StaticDependenciesID=4a3a4abac19883de44e0f9cfd109d196 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 13
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Asset_PlayingCards/Prefabs/Deck08/Deck08_Spade_2.prefab
+  importAddress: Guid(2cfeb9fea0cd648358417176d7f0481f) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Asset_PlayingCards/Prefabs/Deck08/Deck08_Spade_2.prefab using Guid(2cfeb9fea0cd648358417176d7f0481f) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '09bc2db54f22ab52ff4bdd65951941da') in 0.005613 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=4be335bef9339451455daa3c6bc3ea8e DependenciesID=47d6b1317be23904d31c65f61f289510 StaticDependenciesID=7ece4e6d2407ab4b777c92feb7e586fa 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 13
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Asset_PlayingCards/Prefabs/Deck03/Deck03_Club_10.prefab
+  importAddress: Guid(a07308399202b42739763e3fa19e1562) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Asset_PlayingCards/Prefabs/Deck03/Deck03_Club_10.prefab using Guid(a07308399202b42739763e3fa19e1562) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '3e7a3380ce94af217109eee3fa817b62') in 0.006323 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=52f241ac8b353187a4b6e6b9680d1b05 DependenciesID=ed98a0794f504056526cc42bbd5677c3 StaticDependenciesID=eddcc559145e79378dc28e3088821e5d 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 13
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Asset_PlayingCards/Prefabs/Deck02/Deck02_Spade_3.prefab
+  importAddress: Guid(d038ac3c14200441f92eac9c7f6ac398) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Asset_PlayingCards/Prefabs/Deck02/Deck02_Spade_3.prefab using Guid(d038ac3c14200441f92eac9c7f6ac398) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '424690b3d80b22baacd45eb8797a0f11') in 0.0052613 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=763ac00cad6ffd102160fa4269c78fe1 DependenciesID=89a6782056da6d1f31120e59b07a3ba1 StaticDependenciesID=af6294746f99b5fbdb7b359748471ba0 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 13
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/Asset_PlayingCards/Prefabs/Deck05/Deck05_Spade_10.prefab
+  importAddress: Guid(c46ab22889b9b4763930a9936eb1e3ec) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Asset_PlayingCards/Prefabs/Deck05/Deck05_Spade_10.prefab using Guid(c46ab22889b9b4763930a9936eb1e3ec) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'd2d184eea0bec89548a97cbd586f98d6') in 0.0052656 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=66e389de629bea7ccea1703fa6f78acc DependenciesID=70664a1f7eee3966412f7723c1977dd7 StaticDependenciesID=c8a3d6f525290844d1329567d5a0ae80 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 13
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Asset_PlayingCards/Prefabs/Deck07/Deck07_Heart_6.prefab
+  importAddress: Guid(ad007db0bc5b54e35845a59db4b24060) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Asset_PlayingCards/Prefabs/Deck07/Deck07_Heart_6.prefab using Guid(ad007db0bc5b54e35845a59db4b24060) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '5c3e4eb1a25e68ef1cea94010e69ebc5') in 0.0065101 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=8c24f4f515f0a05c894421e92d4f6ea0 DependenciesID=1ee24638c7dd91c09cab3abdaa63d7bb StaticDependenciesID=afbd2c693819340893b47b360974acc1 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 13
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Asset_PlayingCards/Textures/Deck08.png
+  importAddress: Guid(fb06f269bfead4a11b13fed95dfa76f7) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Asset_PlayingCards/Textures/Deck08.png using Guid(fb06f269bfead4a11b13fed95dfa76f7) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '4a44961c20b390a662ba9e6eb1869f5e') in 0.0445643 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=7ea0f6227444c72f5300cb59024cb5dd DependenciesID=ae3bfaa884ea69d8f294972401e134df StaticDependenciesID=fd06bfd674de85bc508ff315703118fb 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 59
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Asset_PlayingCards/Prefabs/Deck08/Deck08_Diamond_10.prefab
+  importAddress: Guid(2f586a217620144d2aec5a0f9956379b) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Asset_PlayingCards/Prefabs/Deck08/Deck08_Diamond_10.prefab using Guid(2f586a217620144d2aec5a0f9956379b) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '2a861d49814107ea3f7af9b847a06f2c') in 0.005882 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=e3059513ac92f0d1cde2d86da84408e3 DependenciesID=876f217ec64d705b6e3cf803d238d83e StaticDependenciesID=048dcdd7f544e9efcb0baa453fad5587 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 13
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Asset_PlayingCards/Prefabs/Deck08/Deck08_Heart_2.prefab
+  importAddress: Guid(81a618bd687e84ae1b2f69da78453b26) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Asset_PlayingCards/Prefabs/Deck08/Deck08_Heart_2.prefab using Guid(81a618bd687e84ae1b2f69da78453b26) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '660d99833c624ec856ef6423af8166bd') in 0.0057571 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=f4103d99eeca87c57cdcedbf49a7551d DependenciesID=8c5083e3d152ba13b42d0d57e35b6ea5 StaticDependenciesID=480070374544209f342445f1acfb9072 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 13
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/Asset_PlayingCards/Prefabs/Deck04/Deck04_Heart_3.prefab
+  importAddress: Guid(7e5e751ed2573480887dc533f99b1d1e) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Asset_PlayingCards/Prefabs/Deck04/Deck04_Heart_3.prefab using Guid(7e5e751ed2573480887dc533f99b1d1e) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '77b1b014ebff295c7d82acd1692096b7') in 0.0057505 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=625eeec4349f397d560836bf66a6a5b3 DependenciesID=001ac2c7e506964c41e62e406294c534 StaticDependenciesID=14e9320005a99ac120ab22c81d7906d1 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 13
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/Asset_PlayingCards/Prefabs/Deck02/Deck02_Diamond_A.prefab
+  importAddress: Guid(22d9f72328a544b84b012d072a23f99e) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Asset_PlayingCards/Prefabs/Deck02/Deck02_Diamond_A.prefab using Guid(22d9f72328a544b84b012d072a23f99e) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '5a920808d18e9af7cc5752b3e1f9ff88') in 0.0055442 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=cbe8b6084bc84fb5d93bc1e09ac04237 DependenciesID=e1cf0300caf88d5cfd9312d029e6736e StaticDependenciesID=a970be8dc0231d991c029f979d03ba3b 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 13
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Asset_PlayingCards/Prefabs/Deck01/Deck01_Diamond_2.prefab
+  importAddress: Guid(de399c619e8df49f6bae0e2150a79a43) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Asset_PlayingCards/Prefabs/Deck01/Deck01_Diamond_2.prefab using Guid(de399c619e8df49f6bae0e2150a79a43) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'b052a4d0e17bb6838a8f263bb0f82134') in 0.0051384 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=4b7e1429cd45391ead77bb9813c4c0fc DependenciesID=993aa2f408d46e725fbf0ad8757890eb StaticDependenciesID=8205ab1c9ddec1c715988d3dcf62b524 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 13
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Asset_PlayingCards/Prefabs/Deck08/Deck08_Heart_3.prefab
+  importAddress: Guid(abf7f37d1b2d7410eba467c9d6b4a745) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Asset_PlayingCards/Prefabs/Deck08/Deck08_Heart_3.prefab using Guid(abf7f37d1b2d7410eba467c9d6b4a745) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'b22af0c48465d468e5ca5685e5774d4a') in 0.0062224 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=efc1e929e19543d602efbef7259a9a55 DependenciesID=8234f606aa0a4535df074527096fa35d StaticDependenciesID=5f3461f9567edf1be43eced9d3d0c4f1 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 13
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/Asset_PlayingCards/Prefabs/Deck02/Deck02_Diamond_K.prefab
+  importAddress: Guid(a6e1e7b924c694747a40ad9bdd9809a1) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Asset_PlayingCards/Prefabs/Deck02/Deck02_Diamond_K.prefab using Guid(a6e1e7b924c694747a40ad9bdd9809a1) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '55eb93b474fbbc3e70c401fcc9d0c45f') in 0.0058356 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=98bd30fc18e263015b4d4a8d336891b0 DependenciesID=33bb120753f66d5ac54d34a6b74c710d StaticDependenciesID=64c54286e2508227fa99675cfd3ce433 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 13
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Asset_PlayingCards/Prefabs/Deck03/Deck03_Spade_3.prefab
+  importAddress: Guid(ce572432b06dc4bbca648e0120bf5bf2) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Asset_PlayingCards/Prefabs/Deck03/Deck03_Spade_3.prefab using Guid(ce572432b06dc4bbca648e0120bf5bf2) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '3545b387f052e39483e424af19f3691a') in 0.0071446 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=8845e7285ec6eadb1c40f78a01fb4920 DependenciesID=6b5e15094b3a1426a395c11eb6ed9c0a StaticDependenciesID=1d94ffb6c0e1a3398bd586bf094cfb37 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 13
+
+========================================================================
+Received Prepare
+'Packages/com.unity.cinemachine/Editor/Obsolete/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+'Packages/com.unity.cinemachine/Editor/Editors/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+WARNING: Shader Unsupported: 'Hidden/Builtin_TerrainVisualization' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+Unloading 37 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 6745 unused Assets / (7.3 MB). Loaded Objects now: 7650.
+Memory consumption went from 177.9 MB to 170.6 MB.
+Total: 17.115300 ms (FindLiveObjects: 1.094400 ms CreateObjectMapping: 0.848300 ms MarkObjects: 12.283500 ms  DeleteObjects: 2.887600 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Prepare
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+Begin MonoManager ReloadAssembly
+[Licensing::Client] Successfully resolved entitlement details
+Assembly Assembly-CSharp-Editor-firstpass.dll at Library/ScriptAssemblies/Assembly-CSharp-Editor-firstpass.dll not valid. Loading of assembly skipped.
+Assembly Assembly-CSharp-firstpass.dll at Library/ScriptAssemblies/Assembly-CSharp-firstpass.dll not valid. Loading of assembly skipped.
+Assembly DocCodeExamples.dll at Library/ScriptAssemblies/DocCodeExamples.dll not valid. Loading of assembly skipped.
+Assembly TestNewCustomAssembly.dll at Library/ScriptAssemblies/TestNewCustomAssembly.dll not valid. Loading of assembly skipped.
+Assembly Unity.Collections.BurstCompatibilityGen.dll at Library/ScriptAssemblies/Unity.Collections.BurstCompatibilityGen.dll not valid. Loading of assembly skipped.
+Assembly Unity.Collections.DocCodeSamples.dll at Library/ScriptAssemblies/Unity.Collections.DocCodeSamples.dll not valid. Loading of assembly skipped.
+Assembly Unity.Collections.PerformanceTests.dll at Library/ScriptAssemblies/Unity.Collections.PerformanceTests.dll not valid. Loading of assembly skipped.
+Assembly Unity.Collections.Tests.dll at Library/ScriptAssemblies/Unity.Collections.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.Collections.Tests.Playmode.dll at Library/ScriptAssemblies/Unity.Collections.Tests.Playmode.dll not valid. Loading of assembly skipped.
+Assembly Unity.InputSystem.IntegrationTests.dll at Library/ScriptAssemblies/Unity.InputSystem.IntegrationTests.dll not valid. Loading of assembly skipped.
+Assembly Unity.Mathematics.Tests.dll at Library/ScriptAssemblies/Unity.Mathematics.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.Multiplayer.Center.Editor.Tests.dll at Library/ScriptAssemblies/Unity.Multiplayer.Center.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.Multiplayer.Center.Tests.dll at Library/ScriptAssemblies/Unity.Multiplayer.Center.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.Nuget.Mono-Cecil.dll at Library/ScriptAssemblies/Unity.Nuget.Mono-Cecil.dll not valid. Loading of assembly skipped.
+Assembly Unity.OpenImageIO.Editor.Tests.dll at Library/ScriptAssemblies/Unity.OpenImageIO.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.PathTracing.Editor.Tests.dll at Library/ScriptAssemblies/Unity.PathTracing.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.PathTracing.Runtime.Tests.dll at Library/ScriptAssemblies/Unity.PathTracing.Runtime.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.Performance.Profile-Analyzer.EditorTests.dll at Library/ScriptAssemblies/Unity.Performance.Profile-Analyzer.EditorTests.dll not valid. Loading of assembly skipped.
+Assembly Unity.RenderPipelines.Core.Editor.Tests.dll at Library/ScriptAssemblies/Unity.RenderPipelines.Core.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.RenderPipelines.Core.Runtime.Tests.dll at Library/ScriptAssemblies/Unity.RenderPipelines.Core.Runtime.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.RenderPipelines.Universal.Config.Editor.Tests.dll at Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Config.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.RenderPipelines.Universal.Editor.Tests.dll at Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.RenderPipelines.Universal.Runtime.Tests.dll at Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Runtime.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.Searcher.EditorTests.dll at Library/ScriptAssemblies/Unity.Searcher.EditorTests.dll not valid. Loading of assembly skipped.
+Assembly Unity.Settings.Tests.dll at Library/ScriptAssemblies/Unity.Settings.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.ShaderGraph.Editor.Tests.dll at Library/ScriptAssemblies/Unity.ShaderGraph.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.TestTools.CodeCoverage.Editor.Compatibility.dll at Library/ScriptAssemblies/Unity.TestTools.CodeCoverage.Editor.Compatibility.dll not valid. Loading of assembly skipped.
+Assembly Unity.TextMeshPro.Editor.Tests.dll at Library/ScriptAssemblies/Unity.TextMeshPro.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.TextMeshPro.Tests.dll at Library/ScriptAssemblies/Unity.TextMeshPro.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.UnifiedRayTracing.Editor.Tests.dll at Library/ScriptAssemblies/Unity.UnifiedRayTracing.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly UnityEditor.UI.Common.Tests.dll at Library/ScriptAssemblies/UnityEditor.UI.Common.Tests.dll not valid. Loading of assembly skipped.
+Assembly UnityEditor.UI.EditorTests.dll at Library/ScriptAssemblies/UnityEditor.UI.EditorTests.dll not valid. Loading of assembly skipped.
+Assembly UnityEngine.UI.Tests.dll at Library/ScriptAssemblies/UnityEngine.UI.Tests.dll not valid. Loading of assembly skipped.
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+'Packages/com.unity.cinemachine/Editor/Obsolete/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+'Packages/com.unity.cinemachine/Editor/Editors/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+Native extension for WindowsStandalone target not found
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.986 seconds
+Domain Reload Profiling: 1942ms
+	BeginReloadAssembly (298ms)
+		DisableScriptedObjects (12ms)
+		CreateAndSetChildDomain (83ms)
+	RebuildCommonClasses (55ms)
+	RebuildNativeTypeToScriptingClass (18ms)
+	initialDomainReloadingComplete (64ms)
+	LoadAllAssembliesAndSetupDomain (520ms)
+		LoadAssemblies (391ms)
+		AnalyzeDomain (251ms)
+			TypeCache.Refresh (13ms)
+			BuildScriptInfoCaches (218ms)
+			ResolveRequiredComponents (17ms)
+	FinalizeReload (987ms)
+		SetupLoadedEditorAssemblies (0ms)
+			BeforeProcessingInitializeOnLoad (188ms)
+			ProcessInitializeOnLoadAttributes (418ms)
+			ProcessInitializeOnLoadMethodAttributes (97ms)
+			AfterProcessingInitializeOnLoad (3ms)
+		AwakeInstancesAfterBackupRestoration (30ms)
+WARNING: Shader Unsupported: 'Hidden/Builtin_TerrainVisualization' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+Unloading 37 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 6759 unused Assets / (7.3 MB). Loaded Objects now: 7665.
+Memory consumption went from 189.3 MB to 182.1 MB.
+Total: 11.151600 ms (FindLiveObjects: 0.892100 ms CreateObjectMapping: 0.988400 ms MarkObjects: 5.841900 ms  DeleteObjects: 3.428200 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Import Request.
+  Time since last request: 3932.745073 seconds.
+  path: Assets/Script/Task4Timer.cs
+  importAddress: Guid(d49b070858cd5dc40a479808a7a10310) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Script/Task4Timer.cs using Guid(d49b070858cd5dc40a479808a7a10310) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (Import Result ID: '6a0dadfc733045dcbeb6b3609e3d908e') in 0.0022755 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=75cf9d24e517278c973362099a6bc219 DependenciesID=4f9ad8b5229e7c7a513654b9152f25c1 StaticDependenciesID=6be7d8ede9c1c784ece40df90b9544d8 
 Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
 
+========================================================================
+Received Prepare
+'Packages/com.unity.cinemachine/Editor/Obsolete/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+'Packages/com.unity.cinemachine/Editor/Editors/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+WARNING: Shader Unsupported: 'Hidden/Builtin_TerrainVisualization' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+Refreshing native plugins compatible for Editor in 2.30 ms, found 5 plugins.
+Unloading 37 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 6745 unused Assets / (7.3 MB). Loaded Objects now: 7665.
+Memory consumption went from 184.7 MB to 177.4 MB.
+Total: 13.122200 ms (FindLiveObjects: 0.835100 ms CreateObjectMapping: 0.823700 ms MarkObjects: 7.598000 ms  DeleteObjects: 3.864400 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Import Request.
+  Time since last request: 894.125404 seconds.
+  path: Assets/Script/Task4Timer.cs
+  importAddress: Guid(d49b070858cd5dc40a479808a7a10310) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Script/Task4Timer.cs using Guid(d49b070858cd5dc40a479808a7a10310) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (Import Result ID: '407400a03b3316d8b28fd263a4761ab6') in 0.0007729 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=75cf9d24e517278c973362099a6bc219 DependenciesID=23670d3e431b4a098971eeaf7c5033f4 StaticDependenciesID=4c919e5a87750041a4ab5705a9fda5fc 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Prepare
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+Begin MonoManager ReloadAssembly
+[Licensing::Client] Successfully resolved entitlement details
+Assembly Assembly-CSharp-Editor-firstpass.dll at Library/ScriptAssemblies/Assembly-CSharp-Editor-firstpass.dll not valid. Loading of assembly skipped.
+Assembly Assembly-CSharp-firstpass.dll at Library/ScriptAssemblies/Assembly-CSharp-firstpass.dll not valid. Loading of assembly skipped.
+Assembly DocCodeExamples.dll at Library/ScriptAssemblies/DocCodeExamples.dll not valid. Loading of assembly skipped.
+Assembly TestNewCustomAssembly.dll at Library/ScriptAssemblies/TestNewCustomAssembly.dll not valid. Loading of assembly skipped.
+Assembly Unity.Collections.BurstCompatibilityGen.dll at Library/ScriptAssemblies/Unity.Collections.BurstCompatibilityGen.dll not valid. Loading of assembly skipped.
+Assembly Unity.Collections.DocCodeSamples.dll at Library/ScriptAssemblies/Unity.Collections.DocCodeSamples.dll not valid. Loading of assembly skipped.
+Assembly Unity.Collections.PerformanceTests.dll at Library/ScriptAssemblies/Unity.Collections.PerformanceTests.dll not valid. Loading of assembly skipped.
+Assembly Unity.Collections.Tests.dll at Library/ScriptAssemblies/Unity.Collections.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.Collections.Tests.Playmode.dll at Library/ScriptAssemblies/Unity.Collections.Tests.Playmode.dll not valid. Loading of assembly skipped.
+Assembly Unity.InputSystem.IntegrationTests.dll at Library/ScriptAssemblies/Unity.InputSystem.IntegrationTests.dll not valid. Loading of assembly skipped.
+Assembly Unity.Mathematics.Tests.dll at Library/ScriptAssemblies/Unity.Mathematics.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.Multiplayer.Center.Editor.Tests.dll at Library/ScriptAssemblies/Unity.Multiplayer.Center.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.Multiplayer.Center.Tests.dll at Library/ScriptAssemblies/Unity.Multiplayer.Center.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.Nuget.Mono-Cecil.dll at Library/ScriptAssemblies/Unity.Nuget.Mono-Cecil.dll not valid. Loading of assembly skipped.
+Assembly Unity.OpenImageIO.Editor.Tests.dll at Library/ScriptAssemblies/Unity.OpenImageIO.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.PathTracing.Editor.Tests.dll at Library/ScriptAssemblies/Unity.PathTracing.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.PathTracing.Runtime.Tests.dll at Library/ScriptAssemblies/Unity.PathTracing.Runtime.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.Performance.Profile-Analyzer.EditorTests.dll at Library/ScriptAssemblies/Unity.Performance.Profile-Analyzer.EditorTests.dll not valid. Loading of assembly skipped.
+Assembly Unity.RenderPipelines.Core.Editor.Tests.dll at Library/ScriptAssemblies/Unity.RenderPipelines.Core.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.RenderPipelines.Core.Runtime.Tests.dll at Library/ScriptAssemblies/Unity.RenderPipelines.Core.Runtime.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.RenderPipelines.Universal.Config.Editor.Tests.dll at Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Config.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.RenderPipelines.Universal.Editor.Tests.dll at Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.RenderPipelines.Universal.Runtime.Tests.dll at Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Runtime.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.Searcher.EditorTests.dll at Library/ScriptAssemblies/Unity.Searcher.EditorTests.dll not valid. Loading of assembly skipped.
+Assembly Unity.Settings.Tests.dll at Library/ScriptAssemblies/Unity.Settings.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.ShaderGraph.Editor.Tests.dll at Library/ScriptAssemblies/Unity.ShaderGraph.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.TestTools.CodeCoverage.Editor.Compatibility.dll at Library/ScriptAssemblies/Unity.TestTools.CodeCoverage.Editor.Compatibility.dll not valid. Loading of assembly skipped.
+Assembly Unity.TextMeshPro.Editor.Tests.dll at Library/ScriptAssemblies/Unity.TextMeshPro.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.TextMeshPro.Tests.dll at Library/ScriptAssemblies/Unity.TextMeshPro.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.UnifiedRayTracing.Editor.Tests.dll at Library/ScriptAssemblies/Unity.UnifiedRayTracing.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly UnityEditor.UI.Common.Tests.dll at Library/ScriptAssemblies/UnityEditor.UI.Common.Tests.dll not valid. Loading of assembly skipped.
+Assembly UnityEditor.UI.EditorTests.dll at Library/ScriptAssemblies/UnityEditor.UI.EditorTests.dll not valid. Loading of assembly skipped.
+Assembly UnityEngine.UI.Tests.dll at Library/ScriptAssemblies/UnityEngine.UI.Tests.dll not valid. Loading of assembly skipped.
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+'Packages/com.unity.cinemachine/Editor/Obsolete/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+'Packages/com.unity.cinemachine/Editor/Editors/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+Native extension for WindowsStandalone target not found
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.702 seconds
+Domain Reload Profiling: 1514ms
+	BeginReloadAssembly (224ms)
+		DisableScriptedObjects (9ms)
+		CreateAndSetChildDomain (48ms)
+	RebuildCommonClasses (47ms)
+	RebuildNativeTypeToScriptingClass (15ms)
+	initialDomainReloadingComplete (48ms)
+	LoadAllAssembliesAndSetupDomain (477ms)
+		LoadAssemblies (341ms)
+		AnalyzeDomain (236ms)
+			TypeCache.Refresh (12ms)
+			BuildScriptInfoCaches (208ms)
+			ResolveRequiredComponents (13ms)
+	FinalizeReload (702ms)
+		SetupLoadedEditorAssemblies (0ms)
+			BeforeProcessingInitializeOnLoad (139ms)
+			ProcessInitializeOnLoadAttributes (295ms)
+			ProcessInitializeOnLoadMethodAttributes (68ms)
+		AwakeInstancesAfterBackupRestoration (21ms)
+WARNING: Shader Unsupported: 'Hidden/Builtin_TerrainVisualization' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+Unloading 37 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 6759 unused Assets / (7.1 MB). Loaded Objects now: 7668.
+Memory consumption went from 184.6 MB to 177.4 MB.
+Total: 8.021100 ms (FindLiveObjects: 0.667900 ms CreateObjectMapping: 0.386700 ms MarkObjects: 4.492900 ms  DeleteObjects: 2.473100 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Prepare
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+Begin MonoManager ReloadAssembly
+[Licensing::Client] Successfully resolved entitlement details
+Assembly Assembly-CSharp-Editor-firstpass.dll at Library/ScriptAssemblies/Assembly-CSharp-Editor-firstpass.dll not valid. Loading of assembly skipped.
+Assembly Assembly-CSharp-firstpass.dll at Library/ScriptAssemblies/Assembly-CSharp-firstpass.dll not valid. Loading of assembly skipped.
+Assembly DocCodeExamples.dll at Library/ScriptAssemblies/DocCodeExamples.dll not valid. Loading of assembly skipped.
+Assembly TestNewCustomAssembly.dll at Library/ScriptAssemblies/TestNewCustomAssembly.dll not valid. Loading of assembly skipped.
+Assembly Unity.Collections.BurstCompatibilityGen.dll at Library/ScriptAssemblies/Unity.Collections.BurstCompatibilityGen.dll not valid. Loading of assembly skipped.
+Assembly Unity.Collections.DocCodeSamples.dll at Library/ScriptAssemblies/Unity.Collections.DocCodeSamples.dll not valid. Loading of assembly skipped.
+Assembly Unity.Collections.PerformanceTests.dll at Library/ScriptAssemblies/Unity.Collections.PerformanceTests.dll not valid. Loading of assembly skipped.
+Assembly Unity.Collections.Tests.dll at Library/ScriptAssemblies/Unity.Collections.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.Collections.Tests.Playmode.dll at Library/ScriptAssemblies/Unity.Collections.Tests.Playmode.dll not valid. Loading of assembly skipped.
+Assembly Unity.InputSystem.IntegrationTests.dll at Library/ScriptAssemblies/Unity.InputSystem.IntegrationTests.dll not valid. Loading of assembly skipped.
+Assembly Unity.Mathematics.Tests.dll at Library/ScriptAssemblies/Unity.Mathematics.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.Multiplayer.Center.Editor.Tests.dll at Library/ScriptAssemblies/Unity.Multiplayer.Center.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.Multiplayer.Center.Tests.dll at Library/ScriptAssemblies/Unity.Multiplayer.Center.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.Nuget.Mono-Cecil.dll at Library/ScriptAssemblies/Unity.Nuget.Mono-Cecil.dll not valid. Loading of assembly skipped.
+Assembly Unity.OpenImageIO.Editor.Tests.dll at Library/ScriptAssemblies/Unity.OpenImageIO.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.PathTracing.Editor.Tests.dll at Library/ScriptAssemblies/Unity.PathTracing.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.PathTracing.Runtime.Tests.dll at Library/ScriptAssemblies/Unity.PathTracing.Runtime.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.Performance.Profile-Analyzer.EditorTests.dll at Library/ScriptAssemblies/Unity.Performance.Profile-Analyzer.EditorTests.dll not valid. Loading of assembly skipped.
+Assembly Unity.RenderPipelines.Core.Editor.Tests.dll at Library/ScriptAssemblies/Unity.RenderPipelines.Core.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.RenderPipelines.Core.Runtime.Tests.dll at Library/ScriptAssemblies/Unity.RenderPipelines.Core.Runtime.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.RenderPipelines.Universal.Config.Editor.Tests.dll at Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Config.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.RenderPipelines.Universal.Editor.Tests.dll at Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.RenderPipelines.Universal.Runtime.Tests.dll at Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Runtime.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.Searcher.EditorTests.dll at Library/ScriptAssemblies/Unity.Searcher.EditorTests.dll not valid. Loading of assembly skipped.
+Assembly Unity.Settings.Tests.dll at Library/ScriptAssemblies/Unity.Settings.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.ShaderGraph.Editor.Tests.dll at Library/ScriptAssemblies/Unity.ShaderGraph.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.TestTools.CodeCoverage.Editor.Compatibility.dll at Library/ScriptAssemblies/Unity.TestTools.CodeCoverage.Editor.Compatibility.dll not valid. Loading of assembly skipped.
+Assembly Unity.TextMeshPro.Editor.Tests.dll at Library/ScriptAssemblies/Unity.TextMeshPro.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.TextMeshPro.Tests.dll at Library/ScriptAssemblies/Unity.TextMeshPro.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.UnifiedRayTracing.Editor.Tests.dll at Library/ScriptAssemblies/Unity.UnifiedRayTracing.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly UnityEditor.UI.Common.Tests.dll at Library/ScriptAssemblies/UnityEditor.UI.Common.Tests.dll not valid. Loading of assembly skipped.
+Assembly UnityEditor.UI.EditorTests.dll at Library/ScriptAssemblies/UnityEditor.UI.EditorTests.dll not valid. Loading of assembly skipped.
+Assembly UnityEngine.UI.Tests.dll at Library/ScriptAssemblies/UnityEngine.UI.Tests.dll not valid. Loading of assembly skipped.
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+'Packages/com.unity.cinemachine/Editor/Obsolete/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+'Packages/com.unity.cinemachine/Editor/Editors/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+Native extension for WindowsStandalone target not found
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.708 seconds
+Domain Reload Profiling: 1379ms
+	BeginReloadAssembly (209ms)
+		DisableScriptedObjects (20ms)
+		CreateAndSetChildDomain (43ms)
+	RebuildCommonClasses (37ms)
+	RebuildNativeTypeToScriptingClass (11ms)
+	initialDomainReloadingComplete (47ms)
+	LoadAllAssembliesAndSetupDomain (367ms)
+		LoadAssemblies (272ms)
+		AnalyzeDomain (180ms)
+			TypeCache.Refresh (6ms)
+			BuildScriptInfoCaches (159ms)
+			ResolveRequiredComponents (12ms)
+	FinalizeReload (709ms)
+		SetupLoadedEditorAssemblies (0ms)
+			BeforeProcessingInitializeOnLoad (137ms)
+			ProcessInitializeOnLoadAttributes (291ms)
+			ProcessInitializeOnLoadMethodAttributes (70ms)
+		AwakeInstancesAfterBackupRestoration (21ms)
+WARNING: Shader Unsupported: 'Hidden/Builtin_TerrainVisualization' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+Unloading 37 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 6759 unused Assets / (7.5 MB). Loaded Objects now: 7671.
+Memory consumption went from 189.5 MB to 182.0 MB.
+Total: 11.527700 ms (FindLiveObjects: 0.663700 ms CreateObjectMapping: 0.402500 ms MarkObjects: 7.419700 ms  DeleteObjects: 3.040900 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Prepare
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+Begin MonoManager ReloadAssembly
+Assembly Assembly-CSharp-Editor-firstpass.dll at Library/ScriptAssemblies/Assembly-CSharp-Editor-firstpass.dll not valid. Loading of assembly skipped.
+Assembly Assembly-CSharp-firstpass.dll at Library/ScriptAssemblies/Assembly-CSharp-firstpass.dll not valid. Loading of assembly skipped.
+Assembly DocCodeExamples.dll at Library/ScriptAssemblies/DocCodeExamples.dll not valid. Loading of assembly skipped.
+Assembly TestNewCustomAssembly.dll at Library/ScriptAssemblies/TestNewCustomAssembly.dll not valid. Loading of assembly skipped.
+Assembly Unity.Collections.BurstCompatibilityGen.dll at Library/ScriptAssemblies/Unity.Collections.BurstCompatibilityGen.dll not valid. Loading of assembly skipped.
+Assembly Unity.Collections.DocCodeSamples.dll at Library/ScriptAssemblies/Unity.Collections.DocCodeSamples.dll not valid. Loading of assembly skipped.
+Assembly Unity.Collections.PerformanceTests.dll at Library/ScriptAssemblies/Unity.Collections.PerformanceTests.dll not valid. Loading of assembly skipped.
+Assembly Unity.Collections.Tests.dll at Library/ScriptAssemblies/Unity.Collections.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.Collections.Tests.Playmode.dll at Library/ScriptAssemblies/Unity.Collections.Tests.Playmode.dll not valid. Loading of assembly skipped.
+Assembly Unity.InputSystem.IntegrationTests.dll at Library/ScriptAssemblies/Unity.InputSystem.IntegrationTests.dll not valid. Loading of assembly skipped.
+Assembly Unity.Mathematics.Tests.dll at Library/ScriptAssemblies/Unity.Mathematics.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.Multiplayer.Center.Editor.Tests.dll at Library/ScriptAssemblies/Unity.Multiplayer.Center.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.Multiplayer.Center.Tests.dll at Library/ScriptAssemblies/Unity.Multiplayer.Center.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.Nuget.Mono-Cecil.dll at Library/ScriptAssemblies/Unity.Nuget.Mono-Cecil.dll not valid. Loading of assembly skipped.
+Assembly Unity.OpenImageIO.Editor.Tests.dll at Library/ScriptAssemblies/Unity.OpenImageIO.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.PathTracing.Editor.Tests.dll at Library/ScriptAssemblies/Unity.PathTracing.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.PathTracing.Runtime.Tests.dll at Library/ScriptAssemblies/Unity.PathTracing.Runtime.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.Performance.Profile-Analyzer.EditorTests.dll at Library/ScriptAssemblies/Unity.Performance.Profile-Analyzer.EditorTests.dll not valid. Loading of assembly skipped.
+Assembly Unity.RenderPipelines.Core.Editor.Tests.dll at Library/ScriptAssemblies/Unity.RenderPipelines.Core.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.RenderPipelines.Core.Runtime.Tests.dll at Library/ScriptAssemblies/Unity.RenderPipelines.Core.Runtime.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.RenderPipelines.Universal.Config.Editor.Tests.dll at Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Config.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.RenderPipelines.Universal.Editor.Tests.dll at Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.RenderPipelines.Universal.Runtime.Tests.dll at Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Runtime.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.Searcher.EditorTests.dll at Library/ScriptAssemblies/Unity.Searcher.EditorTests.dll not valid. Loading of assembly skipped.
+Assembly Unity.Settings.Tests.dll at Library/ScriptAssemblies/Unity.Settings.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.ShaderGraph.Editor.Tests.dll at Library/ScriptAssemblies/Unity.ShaderGraph.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.TestTools.CodeCoverage.Editor.Compatibility.dll at Library/ScriptAssemblies/Unity.TestTools.CodeCoverage.Editor.Compatibility.dll not valid. Loading of assembly skipped.
+Assembly Unity.TextMeshPro.Editor.Tests.dll at Library/ScriptAssemblies/Unity.TextMeshPro.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.TextMeshPro.Tests.dll at Library/ScriptAssemblies/Unity.TextMeshPro.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.UnifiedRayTracing.Editor.Tests.dll at Library/ScriptAssemblies/Unity.UnifiedRayTracing.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly UnityEditor.UI.Common.Tests.dll at Library/ScriptAssemblies/UnityEditor.UI.Common.Tests.dll not valid. Loading of assembly skipped.
+Assembly UnityEditor.UI.EditorTests.dll at Library/ScriptAssemblies/UnityEditor.UI.EditorTests.dll not valid. Loading of assembly skipped.
+Assembly UnityEngine.UI.Tests.dll at Library/ScriptAssemblies/UnityEngine.UI.Tests.dll not valid. Loading of assembly skipped.
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+'Packages/com.unity.cinemachine/Editor/Obsolete/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+'Packages/com.unity.cinemachine/Editor/Editors/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+Native extension for WindowsStandalone target not found
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.677 seconds
+Domain Reload Profiling: 1326ms
+	BeginReloadAssembly (193ms)
+		DisableScriptedObjects (9ms)
+		CreateAndSetChildDomain (41ms)
+	RebuildCommonClasses (38ms)
+	RebuildNativeTypeToScriptingClass (13ms)
+	initialDomainReloadingComplete (47ms)
+	LoadAllAssembliesAndSetupDomain (358ms)
+		LoadAssemblies (263ms)
+		AnalyzeDomain (177ms)
+			TypeCache.Refresh (6ms)
+			BuildScriptInfoCaches (158ms)
+			ResolveRequiredComponents (11ms)
+	FinalizeReload (678ms)
+		SetupLoadedEditorAssemblies (0ms)
+			BeforeProcessingInitializeOnLoad (133ms)
+			ProcessInitializeOnLoadAttributes (277ms)
+			ProcessInitializeOnLoadMethodAttributes (68ms)
+		AwakeInstancesAfterBackupRestoration (20ms)
+WARNING: Shader Unsupported: 'Hidden/Builtin_TerrainVisualization' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+Unloading 37 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 6759 unused Assets / (7.4 MB). Loaded Objects now: 7674.
+Memory consumption went from 194.3 MB to 187.0 MB.
+Total: 10.675900 ms (FindLiveObjects: 0.711800 ms CreateObjectMapping: 0.889200 ms MarkObjects: 6.284900 ms  DeleteObjects: 2.789100 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Prepare
+'Packages/com.unity.cinemachine/Editor/Obsolete/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+'Packages/com.unity.cinemachine/Editor/Editors/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+WARNING: Shader Unsupported: 'Hidden/Builtin_TerrainVisualization' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+Unloading 37 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 6745 unused Assets / (7.5 MB). Loaded Objects now: 7674.
+Memory consumption went from 199.3 MB to 191.8 MB.
+Total: 10.810500 ms (FindLiveObjects: 0.728300 ms CreateObjectMapping: 1.133500 ms MarkObjects: 5.420900 ms  DeleteObjects: 3.526800 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Prepare
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+Begin MonoManager ReloadAssembly
+[Licensing::Client] Successfully resolved entitlement details
+Assembly Assembly-CSharp-Editor-firstpass.dll at Library/ScriptAssemblies/Assembly-CSharp-Editor-firstpass.dll not valid. Loading of assembly skipped.
+Assembly Assembly-CSharp-firstpass.dll at Library/ScriptAssemblies/Assembly-CSharp-firstpass.dll not valid. Loading of assembly skipped.
+Assembly DocCodeExamples.dll at Library/ScriptAssemblies/DocCodeExamples.dll not valid. Loading of assembly skipped.
+Assembly TestNewCustomAssembly.dll at Library/ScriptAssemblies/TestNewCustomAssembly.dll not valid. Loading of assembly skipped.
+Assembly Unity.Collections.BurstCompatibilityGen.dll at Library/ScriptAssemblies/Unity.Collections.BurstCompatibilityGen.dll not valid. Loading of assembly skipped.
+Assembly Unity.Collections.DocCodeSamples.dll at Library/ScriptAssemblies/Unity.Collections.DocCodeSamples.dll not valid. Loading of assembly skipped.
+Assembly Unity.Collections.PerformanceTests.dll at Library/ScriptAssemblies/Unity.Collections.PerformanceTests.dll not valid. Loading of assembly skipped.
+Assembly Unity.Collections.Tests.dll at Library/ScriptAssemblies/Unity.Collections.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.Collections.Tests.Playmode.dll at Library/ScriptAssemblies/Unity.Collections.Tests.Playmode.dll not valid. Loading of assembly skipped.
+Assembly Unity.InputSystem.IntegrationTests.dll at Library/ScriptAssemblies/Unity.InputSystem.IntegrationTests.dll not valid. Loading of assembly skipped.
+Assembly Unity.Mathematics.Tests.dll at Library/ScriptAssemblies/Unity.Mathematics.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.Multiplayer.Center.Editor.Tests.dll at Library/ScriptAssemblies/Unity.Multiplayer.Center.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.Multiplayer.Center.Tests.dll at Library/ScriptAssemblies/Unity.Multiplayer.Center.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.Nuget.Mono-Cecil.dll at Library/ScriptAssemblies/Unity.Nuget.Mono-Cecil.dll not valid. Loading of assembly skipped.
+Assembly Unity.OpenImageIO.Editor.Tests.dll at Library/ScriptAssemblies/Unity.OpenImageIO.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.PathTracing.Editor.Tests.dll at Library/ScriptAssemblies/Unity.PathTracing.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.PathTracing.Runtime.Tests.dll at Library/ScriptAssemblies/Unity.PathTracing.Runtime.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.Performance.Profile-Analyzer.EditorTests.dll at Library/ScriptAssemblies/Unity.Performance.Profile-Analyzer.EditorTests.dll not valid. Loading of assembly skipped.
+Assembly Unity.RenderPipelines.Core.Editor.Tests.dll at Library/ScriptAssemblies/Unity.RenderPipelines.Core.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.RenderPipelines.Core.Runtime.Tests.dll at Library/ScriptAssemblies/Unity.RenderPipelines.Core.Runtime.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.RenderPipelines.Universal.Config.Editor.Tests.dll at Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Config.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.RenderPipelines.Universal.Editor.Tests.dll at Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.RenderPipelines.Universal.Runtime.Tests.dll at Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Runtime.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.Searcher.EditorTests.dll at Library/ScriptAssemblies/Unity.Searcher.EditorTests.dll not valid. Loading of assembly skipped.
+Assembly Unity.Settings.Tests.dll at Library/ScriptAssemblies/Unity.Settings.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.ShaderGraph.Editor.Tests.dll at Library/ScriptAssemblies/Unity.ShaderGraph.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.TestTools.CodeCoverage.Editor.Compatibility.dll at Library/ScriptAssemblies/Unity.TestTools.CodeCoverage.Editor.Compatibility.dll not valid. Loading of assembly skipped.
+Assembly Unity.TextMeshPro.Editor.Tests.dll at Library/ScriptAssemblies/Unity.TextMeshPro.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.TextMeshPro.Tests.dll at Library/ScriptAssemblies/Unity.TextMeshPro.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.UnifiedRayTracing.Editor.Tests.dll at Library/ScriptAssemblies/Unity.UnifiedRayTracing.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly UnityEditor.UI.Common.Tests.dll at Library/ScriptAssemblies/UnityEditor.UI.Common.Tests.dll not valid. Loading of assembly skipped.
+Assembly UnityEditor.UI.EditorTests.dll at Library/ScriptAssemblies/UnityEditor.UI.EditorTests.dll not valid. Loading of assembly skipped.
+Assembly UnityEngine.UI.Tests.dll at Library/ScriptAssemblies/UnityEngine.UI.Tests.dll not valid. Loading of assembly skipped.
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+'Packages/com.unity.cinemachine/Editor/Obsolete/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+'Packages/com.unity.cinemachine/Editor/Editors/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+Refreshing native plugins compatible for Editor in 2.13 ms, found 5 plugins.
+Native extension for WindowsStandalone target not found
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.894 seconds
+Domain Reload Profiling: 1732ms
+	BeginReloadAssembly (257ms)
+		DisableScriptedObjects (34ms)
+		CreateAndSetChildDomain (52ms)
+	RebuildCommonClasses (45ms)
+	RebuildNativeTypeToScriptingClass (14ms)
+	initialDomainReloadingComplete (63ms)
+	LoadAllAssembliesAndSetupDomain (458ms)
+		LoadAssemblies (328ms)
+		AnalyzeDomain (229ms)
+			TypeCache.Refresh (9ms)
+			BuildScriptInfoCaches (207ms)
+			ResolveRequiredComponents (11ms)
+	FinalizeReload (895ms)
+		SetupLoadedEditorAssemblies (0ms)
+			BeforeProcessingInitializeOnLoad (167ms)
+			ProcessInitializeOnLoadAttributes (373ms)
+			ProcessInitializeOnLoadMethodAttributes (94ms)
+			AfterProcessingInitializeOnLoad (4ms)
+		AwakeInstancesAfterBackupRestoration (35ms)
+WARNING: Shader Unsupported: 'Hidden/Builtin_TerrainVisualization' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+Refreshing native plugins compatible for Editor in 2.01 ms, found 5 plugins.
+Unloading 37 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 6759 unused Assets / (7.2 MB). Loaded Objects now: 7677.
+Memory consumption went from 204.1 MB to 196.9 MB.
+Total: 11.837500 ms (FindLiveObjects: 0.713900 ms CreateObjectMapping: 0.621400 ms MarkObjects: 7.461900 ms  DeleteObjects: 3.039200 ms)
+
+Prepare: number of updated asset objects reloaded= 0
