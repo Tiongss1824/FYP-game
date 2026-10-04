@@ -44,12 +44,20 @@ public class TaskManager : MonoBehaviour
 
     [Header("Task 2: Arrange Book NPC")]
     [Tooltip("Drag the task 2 NPC's GameObject (the one with NpcTalk on it)")]
+    public NpcTalk task2Talk;
 
     [Header("Task 3: Alvin finding ring")]
     public NpcTalk alvinTalk;
     public int findRingTaskIndex = 3;
     public int returnToAlvinTaskIndex = 4;
-    public NpcTalk task2Talk;
+
+    [Header("Task4: Play with Chris")]
+    public NpcTalk chrisTalk;
+    public int playGame4 = 5;
+
+    [Header("Task5: Buy Medicine")]
+    public NpcTalk buyMedicine;
+    public int finalTask = 6;
 
     // --- Internal state ---
     private int currentTaskIndex = -1;
@@ -64,6 +72,12 @@ public class TaskManager : MonoBehaviour
     private bool hasShownTask2 = false;
     private bool hasAdvancedPastTask2 = false;
     private bool hasShownRingTask = false;
+    private bool alvinDelivered = false;
+
+    // NEW: state for Task 4 (play game with Chris) and the automatic jump to Task 5 (buy medicine)
+    private bool hasAdvancedPastRingTask = false;
+    private bool hasShownPlayGame4 = false;
+    private bool hasAdvancedPastPlayGame4 = false;
 
     private void Awake()
     {
@@ -142,6 +156,32 @@ public class TaskManager : MonoBehaviour
         {
             hasShownRingTask = true;
             GoToTask(findRingTaskIndex);
+        }
+
+        // NEW: Once the ring has been returned to Alvin (his quest is fully complete,
+        // via his after-dialogue), clear the task before Task 4 shows.
+        if (hasShownRingTask && !hasAdvancedPastRingTask && alvinDelivered)
+        {
+            hasAdvancedPastRingTask = true;
+            ClearTask();
+        }
+
+        // NEW: --- Task 4: Play the card game with Chris ---
+        // Only appears once the ring has been returned AND the player has reached Chris
+        // (his cutscene / first line runs automatically, which sets HasBeenAssigned).
+        if (hasAdvancedPastRingTask && !hasShownPlayGame4 && chrisTalk != null && chrisTalk.HasBeenAssigned)
+        {
+            hasShownPlayGame4 = true;
+            GoToTask(playGame4);
+        }
+
+        // NEW: Once Chris's task is fully complete (the minigame is won and the reward
+        // dialogue has played), jump straight to "Buy Medicine" — no need to wait for the
+        // player to reach the merchant, since the shop already opens automatically.
+        if (hasShownPlayGame4 && !hasAdvancedPastPlayGame4 && chrisTalk != null && chrisTalk.isTaskCompleted)
+        {
+            hasAdvancedPastPlayGame4 = true;
+            GoToTask(finalTask);
         }
     }
 
@@ -254,7 +294,11 @@ public class TaskManager : MonoBehaviour
     }
 
     public void MarkRingFound()
-{
-    GoToTask(returnToAlvinTaskIndex);
-}
+    {
+        GoToTask(returnToAlvinTaskIndex);
+    }
+    public void MarkAlvinDelivered()
+    {
+        alvinDelivered = true;
+    }
 }

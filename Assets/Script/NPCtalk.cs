@@ -94,6 +94,12 @@ public class NpcTalk : MonoBehaviour, IInteractable
                     TriggerQuestEvents();
                 }
             }
+            else
+            {
+                // NEW: reward already given once — every interaction after that
+                // just reopens the minigame so the player can replay for fun.
+                onReadyForMinigame.Invoke();
+            }
         }
     }
 

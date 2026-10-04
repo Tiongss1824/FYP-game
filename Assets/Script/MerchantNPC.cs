@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using Unity.VisualScripting;
 
 public class MerchantNpc : MonoBehaviour, IInteractable
 {
@@ -24,23 +25,35 @@ public class MerchantNpc : MonoBehaviour, IInteractable
         return "Press [F] to Talk";
     }
 
+    [Tooltip("What the merchant says after medicine bought.")]
+    [TextArea(2, 5)]
+    public string[] afterPurchaseLines;
+
     public void OnInteract()
     {
+        // Medicine already bought -> new dialogue, no shop
+        if (ShopManager.Instance != null && ShopManager.Instance.HasBoughtMedicine && afterPurchaseLines.Length > 0)
+        {
+            dialogueManager.StartDialogue(npcName, afterPurchaseLines);
+            return;
+        }
+
         if (!hasBeenIntroduced && welcomeLines.Length > 0)
         {
-            hasBeenIntroduced = true; // Only plays once, ever
-
-            // 1. Tell the DialogueManager: "When you finish this text, run my OpenTheShopMenu function!"
-            dialogueManager.onDialogueFinished += OpenTheShopMenu;
-
-            // 2. Start the dialogue
+            hasBeenIntroduced = true;
+            dialogueManager.onDialogueFinished += OpenShopAfterDialogue;
             dialogueManager.StartDialogue(npcName, welcomeLines);
         }
         else
         {
-            // Already introduced (or no welcome lines set) — go straight to the shop
             OpenTheShopMenu();
         }
+    }
+
+    private void OpenShopAfterDialogue()
+    {
+        dialogueManager.onDialogueFinished -= OpenShopAfterDialogue;
+        OpenTheShopMenu();
     }
 
     // Call this from other scripts (e.g. CinematicTrigger) once the NPC

@@ -86,7 +86,7 @@ public class ShopManager : MonoBehaviour
     {
         bool canAffordMedicine = WalletManager.Instance != null && WalletManager.Instance.CurrentCash >= medicinePrice;
 
-        if (!canAffordMedicine && !canAffordMedicine && notEnoughMoneyLines.Length > 0 && dialogueManager != null)
+        if (!hasBoughtMedicine && !canAffordMedicine && notEnoughMoneyLines.Length > 0 && dialogueManager != null)
         {
             CloseShop();
             dialogueManager.StartDialogue(merchantName, notEnoughMoneyLines);
